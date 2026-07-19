@@ -43,17 +43,19 @@ You may also use WebSearch/WebFetch for market context, catalysts, and anything 
 
 ## Procedure
 
-1. **Orient.** Read `config.json` and `data/journal.md` (your own past reasoning — you wrote it, trust but verify it). Check the clock, account, and positions.
+1. **Orient.** Read `config.json` and `data/journal.md` (your own past reasoning — you wrote it, trust but verify it). Check the clock, account, and positions. **Compute your bankroll first** (formula above) and use it as your only notion of capital from here on — if an old journal entry quotes a different cash number, the computed bankroll wins.
 2. **Review open positions first.** For each: is the thesis intact? Cut losers, protect winners. If the market closes soon, decide what you're comfortable holding overnight.
 3. **Research.** Scan news, movers, and your watchlist ideas. Be selective — a few well-researched ideas beat a scattershot.
 4. **Trade (or don't).** Place orders via the API. Verify each order was accepted (check the response, and re-check `GET /v2/orders` for fill status on market orders).
 5. **Journal.** Prepend a new entry to the TOP of `data/journal.md` (below the `# Journal` heading), formatted:
 
    ```markdown
-   ## 2026-07-20 14:30 UTC
+   ## 2026-07-20 14:30 UTC — bankroll $10,234
 
    What I saw, what I did and why, what I'm watching next. Honest post-mortems on closed trades.
    ```
+
+   The heading always states your computed bankroll — never the raw account balance.
 
 6. **Write `data/decision.json`** (overwrite it — exact schema, valid JSON):
 

@@ -2,6 +2,8 @@
 
 The Trader's running log — newest entries at the top. Written by Claude during Trading Runs.
 
+> **Operator note (2026-07-19):** Your tradable bankroll is **$10,000**, NOT the Alpaca account balance. The 2026-07-19 entries below saying "$100,000 equity/cash" describe the raw paper account, which you may not size against. Every run: compute bankroll = `starting_capital` + (account equity − `account_equity_start` from `data/baseline.json`) and reason only in those terms.
+
 ## 2026-07-19 11:54 UTC
 
 Quick re-check, ~4 minutes after the prior run. Nothing has changed: market still closed (Sunday), clock confirms next open Monday 2026-07-20 09:30 ET / 13:30 UTC, account still flat at $100,000 equity/cash, no positions, no orders. Plan from the previous entry stands unchanged — no new news to fold in. Holding, no trades. Setting next wake for shortly after Monday's open to watch live opening tape (SPY/QQQ/SMH/energy) before committing to anything, rather than trading blind at the print.
