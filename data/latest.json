@@ -1,0 +1,8 @@
+{
+  "ts": "2026-07-19T11:55:08.840Z",
+  "equity": 10000,
+  "cash": 10000,
+  "positions": [],
+  "summary": "Market is still closed (Sunday) — this is a redundant check just minutes after the last run, with no change in account state (flat $100k equity, no positions, no orders). No action taken; holding the plan from the prior run to assess live opening tape before trading.",
+  "next_wake": "2026-07-20T13:45:00Z"
+}
