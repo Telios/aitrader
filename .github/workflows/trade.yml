@@ -1,0 +1,65 @@
+name: Trading Run
+
+on:
+  schedule:
+    # Every 30 min, 13:00–21:30 UTC, Mon–Fri — covers US market hours in both EDT and EST.
+    # The Schedule Gate decides which firings become actual Trading Runs.
+    - cron: "*/30 13-21 * * 1-5"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: Run even if the Schedule Gate says skip
+        type: boolean
+        default: false
+
+concurrency:
+  group: trading
+
+permissions:
+  contents: write
+
+jobs:
+  trade:
+    runs-on: ubuntu-latest
+    env:
+      ALPACA_KEY_ID: ${{ secrets.ALPACA_KEY_ID }}
+      ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Schedule Gate
+        id: gate
+        run: node scripts/gate.mjs
+        env:
+          FORCE: ${{ inputs.force }}
+
+      - name: Install Claude Code
+        if: steps.gate.outputs.run == 'true'
+        run: npm install -g @anthropic-ai/claude-code
+
+      - name: Trading Run (Claude)
+        if: steps.gate.outputs.run == 'true'
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+        run: |
+          claude -p "$(cat prompts/trading-run.md)" \
+            --allowedTools "Bash,Read,Write,Edit,WebSearch,WebFetch" \
+            --max-turns 100
+
+      - name: Snapshot
+        if: steps.gate.outputs.run == 'true'
+        run: node scripts/snapshot.mjs
+
+      - name: Commit
+        if: steps.gate.outputs.run == 'true'
+        run: |
+          git config user.name "aitrader-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/
+          git diff --cached --quiet || git commit -m "Trading run $(date -u +%FT%TZ)"
+          git pull --rebase origin main
+          git push

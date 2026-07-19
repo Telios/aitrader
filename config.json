@@ -1,0 +1,10 @@
+{
+  "starting_capital": 10000,
+  "paused": false,
+  "max_runs_per_day": 6,
+  "min_minutes_between_runs": 30,
+  "max_position_pct": 25,
+  "min_stock_price": 5,
+  "allow_short": true,
+  "allow_margin": false
+}

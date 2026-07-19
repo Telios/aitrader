@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Trader</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"></script>
+<style>
+  :root {
+    --bg: #0d1117; --panel: #161b22; --border: #30363d;
+    --text: #e6edf3; --muted: #8b949e;
+    --green: #3fb950; --red: #f85149; --accent: #58a6ff;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #f6f8fa; --panel: #ffffff; --border: #d0d7de;
+      --text: #1f2328; --muted: #656d76;
+      --green: #1a7f37; --red: #cf222e; --accent: #0969da;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body {
+    background: var(--bg); color: var(--text);
+    font: 15px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    max-width: 1000px; margin: 0 auto; padding: 24px 16px 64px;
+  }
+  h1 { font-size: 1.4rem; }
+  h2 { font-size: 1.05rem; margin-bottom: 12px; color: var(--muted); font-weight: 600; }
+  header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+  header .sub { color: var(--muted); font-size: 0.85rem; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-bottom: 20px; }
+  .card { background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; }
+  .card .label { color: var(--muted); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.04em; }
+  .card .value { font-size: 1.35rem; font-weight: 700; margin-top: 2px; }
+  .panel { background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 18px; margin-bottom: 20px; }
+  .pos { color: var(--green); } .neg { color: var(--red); }
+  .table-wrap { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+  th, td { text-align: left; padding: 7px 10px; border-bottom: 1px solid var(--border); white-space: nowrap; }
+  td.rationale { white-space: normal; min-width: 220px; color: var(--muted); }
+  th { color: var(--muted); font-weight: 600; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.04em; }
+  #journal { white-space: pre-wrap; font-size: 0.92rem; }
+  .empty { color: var(--muted); font-style: italic; }
+  canvas { max-width: 100%; }
+  .badge { display: inline-block; padding: 1px 8px; border-radius: 999px; font-size: 0.75rem; font-weight: 600; border: 1px solid var(--border); }
+  .badge.long { color: var(--green); } .badge.short { color: var(--red); }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <h1>🤖 AI Trader <span style="font-weight:400;color:var(--muted)">— Claude vs. the market</span></h1>
+  <div class="sub" id="meta">loading…</div>
+</header>
+
+<div class="cards" id="cards"></div>
+
+<div class="panel">
+  <h2>Portfolio vs. SPY buy-and-hold</h2>
+  <canvas id="chart" height="110"></canvas>
+</div>
+
+<div class="panel">
+  <h2>Positions</h2>
+  <div class="table-wrap"><table id="positions"></table></div>
+</div>
+
+<div class="panel">
+  <h2>Latest reasoning</h2>
+  <div id="journal" class="empty">No runs yet.</div>
+</div>
+
+<div class="panel">
+  <h2>Trade log</h2>
+  <div class="table-wrap"><table id="trades"></table></div>
+</div>
+
+<script>
+const $ = (id) => document.getElementById(id);
+const fmt$ = (n) => n == null ? "—" : n.toLocaleString(undefined, { style: "currency", currency: "USD" });
+const fmtPct = (n) => n == null ? "—" : (n >= 0 ? "+" : "") + (n * 100).toFixed(2) + "%";
+const fmtTs = (ts) => new Date(ts).toLocaleString(undefined, { dateStyle: "medium", timeStyle: "short" });
+const cls = (n) => n > 0 ? "pos" : n < 0 ? "neg" : "";
+const esc = (s) => (s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+async function json(path) {
+  try { const r = await fetch(path + "?t=" + Date.now()); return r.ok ? r.json() : null; }
+  catch { return null; }
+}
+
+async function render() {
+  const [history, latest, trades, baseline] = await Promise.all([
+    json("data/history.json"), json("data/latest.json"),
+    json("data/trades.json"), json("data/baseline.json"),
+  ]);
+
+  if (!history?.length || !latest) {
+    $("meta").textContent = "No trading runs yet — waiting for the first snapshot.";
+    return;
+  }
+
+  const start = baseline?.starting_capital ?? history[0].equity;
+  const equity = latest.equity;
+  const last = history.at(-1);
+  const pl = equity - start;
+  const vsSpy = last.benchmark != null ? equity - last.benchmark : null;
+
+  $("meta").innerHTML =
+    `last run ${fmtTs(latest.ts)} · ` +
+    (latest.next_wake ? `next wake ${fmtTs(latest.next_wake)} · ` : "") +
+    `times in your local timezone`;
+
+  $("cards").innerHTML = [
+    ["Equity", fmt$(equity), ""],
+    ["P&L", fmt$(pl), cls(pl)],
+    ["Return", fmtPct(pl / start), cls(pl)],
+    ["vs. SPY", vsSpy == null ? "—" : fmt$(vsSpy), cls(vsSpy)],
+    ["Cash", fmt$(latest.cash), ""],
+  ].map(([l, v, c]) =>
+    `<div class="card"><div class="label">${l}</div><div class="value ${c}">${v}</div></div>`
+  ).join("");
+
+  const css = getComputedStyle(document.documentElement);
+  new Chart($("chart"), {
+    type: "line",
+    data: {
+      labels: history.map((h) => h.ts),
+      datasets: [
+        { label: "Trader", data: history.map((h) => h.equity),
+          borderColor: css.getPropertyValue("--accent").trim(), tension: 0.25, pointRadius: 0, borderWidth: 2 },
+        { label: "SPY buy-and-hold", data: history.map((h) => h.benchmark),
+          borderColor: css.getPropertyValue("--muted").trim(), borderDash: [6, 4], tension: 0.25, pointRadius: 0, borderWidth: 1.5 },
+      ],
+    },
+    options: {
+      interaction: { mode: "index", intersect: false },
+      plugins: { legend: { labels: { color: css.getPropertyValue("--text").trim() } } },
+      scales: {
+        x: { ticks: { color: css.getPropertyValue("--muted").trim(), maxTicksLimit: 8,
+              callback(v) { return new Date(this.getLabelForValue(v)).toLocaleDateString(undefined, { month: "short", day: "numeric" }); } },
+             grid: { display: false } },
+        y: { ticks: { color: css.getPropertyValue("--muted").trim(), callback: (v) => "$" + (v / 1000) + "k" },
+             grid: { color: css.getPropertyValue("--border").trim() } },
+      },
+    },
+  });
+
+  $("positions").innerHTML = latest.positions?.length
+    ? `<tr><th>Symbol</th><th>Side</th><th>Qty</th><th>Entry</th><th>Now</th><th>Value</th><th>Unrealized</th></tr>` +
+      latest.positions.map((p) => `<tr>
+        <td><strong>${esc(p.symbol)}</strong></td>
+        <td><span class="badge ${p.side}">${esc(p.side)}</span></td>
+        <td>${p.qty}</td><td>${fmt$(p.avg_entry)}</td><td>${fmt$(p.price)}</td>
+        <td>${fmt$(p.market_value)}</td>
+        <td class="${cls(p.unrealized_pl)}">${fmt$(p.unrealized_pl)} (${fmtPct(p.unrealized_plpc)})</td>
+      </tr>`).join("")
+    : `<tr><td class="empty">All cash — no open positions.</td></tr>`;
+
+  const journal = await fetch("data/journal.md?t=" + Date.now()).then((r) => r.ok ? r.text() : "");
+  const entry = journal.split(/\n(?=## )/).find((s) => s.startsWith("## "));
+  if (entry) { $("journal").classList.remove("empty"); $("journal").textContent = entry.trim(); }
+  else if (latest.summary) { $("journal").classList.remove("empty"); $("journal").textContent = latest.summary; }
+
+  $("trades").innerHTML = trades?.length
+    ? `<tr><th>Time</th><th>Symbol</th><th>Side</th><th>Qty</th><th>Price</th><th>Why</th></tr>` +
+      trades.slice(-50).reverse().map((t) => `<tr>
+        <td>${fmtTs(t.ts)}</td><td><strong>${esc(t.symbol)}</strong></td>
+        <td class="${t.side === "buy" ? "pos" : "neg"}">${esc(t.side)}</td>
+        <td>${t.qty}</td><td>${fmt$(t.price)}</td>
+        <td class="rationale">${esc(t.rationale ?? "")}</td>
+      </tr>`).join("")
+    : `<tr><td class="empty">No trades yet.</td></tr>`;
+}
+
+render();
+setInterval(() => location.reload(), 10 * 60 * 1000);
+</script>
+</body>
+</html>
