@@ -1,6 +1,30 @@
 // Schedule Gate: decides whether this cron firing becomes a Trading Run.
 // Writes `run=true|false` and `reason=...` to $GITHUB_OUTPUT.
-import { readFileSync, existsSync, appendFileSync } from "node:fs";
+import { readFileSync, writeFileSync, existsSync, appendFileSync } from "node:fs";
+
+const HEADERS = {
+  "APCA-API-KEY-ID": process.env.ALPACA_KEY_ID,
+  "APCA-API-SECRET-KEY": process.env.ALPACA_SECRET_KEY,
+};
+
+// The Bankroll baseline must exist before the Trader's first run.
+const ensureBaseline = async (config) => {
+  if (existsSync("data/baseline.json")) return;
+  try {
+    const account = await (await fetch("https://paper-api.alpaca.markets/v2/account", { headers: HEADERS })).json();
+    const spy = await (await fetch("https://data.alpaca.markets/v2/stocks/SPY/trades/latest?feed=iex", { headers: HEADERS })).json();
+    const baseline = {
+      start: new Date().toISOString(),
+      starting_capital: config.starting_capital ?? 100000,
+      spy_start: spy.trade?.p,
+      account_equity_start: +account.equity,
+    };
+    writeFileSync("data/baseline.json", JSON.stringify(baseline, null, 2) + "\n");
+    console.log("gate: created baseline", baseline);
+  } catch (e) {
+    console.log("gate: baseline creation failed, snapshot will retry:", e.message);
+  }
+};
 
 const out = (run, reason) => {
   console.log(`gate: run=${run} (${reason})`);
@@ -22,6 +46,7 @@ const config = readJson("config.json", {});
 const now = new Date();
 
 if (force) {
+  await ensureBaseline(config);
   out(true, "forced via workflow_dispatch");
   process.exit(0);
 }
@@ -33,10 +58,7 @@ if (config.paused) {
 
 // Market clock from Alpaca (accurate incl. holidays/half-days).
 const clockRes = await fetch("https://paper-api.alpaca.markets/v2/clock", {
-  headers: {
-    "APCA-API-KEY-ID": process.env.ALPACA_KEY_ID,
-    "APCA-API-SECRET-KEY": process.env.ALPACA_SECRET_KEY,
-  },
+  headers: HEADERS,
 });
 if (!clockRes.ok) {
   out(false, `alpaca clock request failed: ${clockRes.status}`);
@@ -79,4 +101,5 @@ if (latest.next_wake) {
   }
 }
 
+await ensureBaseline(config);
 out(true, "market open, run is due");

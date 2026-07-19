@@ -33,13 +33,14 @@ const positions = await get(`${TRADE_API}/v2/positions`);
 const spy = await get(`${DATA_API}/v2/stocks/SPY/trades/latest?feed=iex`);
 const spyPrice = spy.trade?.p;
 
-// Baseline: fixed on the first snapshot; the Benchmark is measured against it.
+// Baseline: fixed on the first snapshot; the Benchmark and Bankroll are measured against it.
 let baseline = readJson("data/baseline.json", null);
 if (!baseline) {
   baseline = {
     start: now,
     starting_capital: config.starting_capital ?? 100000,
     spy_start: spyPrice,
+    account_equity_start: +account.equity,
   };
   writeJson("data/baseline.json", baseline);
 }
@@ -47,11 +48,19 @@ const benchmark = spyPrice
   ? +(baseline.starting_capital * (spyPrice / baseline.spy_start)).toFixed(2)
   : null;
 
+// The Bankroll is virtual: config starting capital + P&L since baseline.
+// The Alpaca account may hold more cash than the experiment is allowed to use.
+const bankroll = +(
+  baseline.starting_capital + (+account.equity - baseline.account_equity_start)
+).toFixed(2);
+const grossExposure = positions.reduce((s, p) => s + Math.abs(+p.market_value), 0);
+const deployable = +(bankroll - grossExposure).toFixed(2);
+
 const history = readJson("data/history.json", []);
 history.push({
   ts: now,
-  equity: +account.equity,
-  cash: +account.cash,
+  equity: bankroll,
+  cash: deployable,
   spy: spyPrice ?? null,
   benchmark,
 });
@@ -87,9 +96,8 @@ writeJson("data/trades.json", trades);
 
 writeJson("data/latest.json", {
   ts: now,
-  equity: +account.equity,
-  cash: +account.cash,
-  buying_power: +account.buying_power,
+  equity: bankroll,
+  cash: deployable,
   positions: positions.map((p) => ({
     symbol: p.symbol,
     side: p.side,
@@ -104,4 +112,6 @@ writeJson("data/latest.json", {
   next_wake: decision.next_wake ?? null,
 });
 
-console.log(`snapshot: equity=${account.equity} benchmark=${benchmark} trades=${trades.length}`);
+console.log(
+  `snapshot: bankroll=${bankroll} (account=${account.equity}) benchmark=${benchmark} trades=${trades.length}`
+);

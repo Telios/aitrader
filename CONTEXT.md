@@ -32,7 +32,10 @@ The check at the start of each scheduled wake-up that decides whether it becomes
 User-editable settings file in the repo controlling the experiment: run cadence limits (e.g. max Trading Runs per day), Starting Capital, Universe guardrails, and other knobs. Editing it is how the user changes behavior without touching code.
 
 **Starting Capital**
-The simulated cash the Paper Account begins with, declared in the Trading Config. It is the baseline against which all P&L is measured. Changing it implies resetting the Paper Account (a manual step in Alpaca's dashboard) and starting a fresh experiment.
+The simulated cash the experiment begins with, declared in the Trading Config. It is independent of the Paper Account's actual balance and is the baseline against which all P&L is measured.
+
+**Bankroll**
+The capital the Trader may actually use: Starting Capital plus all P&L accumulated since the experiment began. Virtual — the Paper Account may hold more cash than the Bankroll, and the Trader must never size positions off the Paper Account's balance. Erasing the experiment's baseline record starts a fresh experiment.
 
 **Next Wake**
 The Trader's own request, recorded at the end of a Trading Run, for when it next wants to trade. Honored by the Schedule Gate, bounded by the Trading Config's caps.

@@ -21,7 +21,7 @@ The project wants an LLM (Claude) acting as a day trader with simulated money, v
 - GitHub Actions cron is best-effort: firings can be 5–15 minutes late or occasionally skipped, so the Trader cannot rely on tight intraday timing.
 - The repo's commit history doubles as the audit log of every run.
 - Alpaca owns fill realism and market-hours enforcement — less code, but the experiment depends on a third-party free tier (IEX data feed).
-- Resetting the experiment (changing starting capital) is a manual step in Alpaca's dashboard.
+- The experiment's bankroll is virtual (config-defined starting capital + P&L vs. a recorded baseline), since Alpaca's paper balance can't always be reset; restarting the experiment = deleting the baseline and history files. The LLM is trusted (and instructed) to size trades off the bankroll, not the larger paper-account balance; the snapshot script reports bankroll numbers either way.
 
 ## Alternatives considered
 

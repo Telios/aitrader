@@ -6,7 +6,7 @@ One-time steps to get the AI Trader live. Everything after this runs itself.
 
 1. Sign up at <https://alpaca.markets> (choose the regular Trading account signup — paper trading is included, no funding needed).
 2. In the dashboard, switch to **Paper Trading** (toggle top-left).
-3. Note your paper account balance. To match `starting_capital` in `config.json` (default $100,000 — also Alpaca's default), you're done. To change it: use the **reset** option on the paper account overview and set your amount, and keep `config.json` in sync — it's the P&L baseline for the dashboard.
+3. Your paper account balance does **not** need to match `starting_capital` in `config.json`. The experiment's bankroll is virtual: the Trader may only use `starting_capital` plus accumulated P&L, regardless of how much cash the paper account holds. To restart the experiment (or change starting capital), delete `data/baseline.json`, empty `data/history.json` and `data/trades.json` to `[]`, and push — the next run re-baselines.
 4. Generate **API keys** for the paper account (dashboard → API Keys). Copy the Key ID and Secret.
 
 ## 2. Claude subscription token
