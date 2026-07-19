@@ -1,6 +1,6 @@
 name: Trading Run
 
-on:
+"on":
   schedule:
     # Every 30 min, 13:00–21:30 UTC, Mon–Fri — covers US market hours in both EDT and EST.
     # The Schedule Gate decides which firings become actual Trading Runs.
