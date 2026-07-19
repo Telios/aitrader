@@ -46,8 +46,14 @@ jobs:
         env:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
         run: |
+          MODEL=$(node -p "JSON.parse(require('fs').readFileSync('config.json','utf8')).model || ''")
+          EFFORT=$(node -p "JSON.parse(require('fs').readFileSync('config.json','utf8')).effort || ''")
+          ARGS=()
+          [ -n "$MODEL" ] && ARGS+=(--model "$MODEL")
+          [ -n "$EFFORT" ] && ARGS+=(--effort "$EFFORT")
           claude -p "$(cat prompts/trading-run.md)" \
-            --allowedTools "Bash,Read,Write,Edit,WebSearch,WebFetch" \
+            "${ARGS[@]}" \
+            --allowedTools "Bash,Read,Write,Edit,WebSearch,WebFetch,Skill" \
             --max-turns 100
 
       - name: Snapshot

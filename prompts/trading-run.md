@@ -43,6 +43,7 @@ You may also use WebSearch/WebFetch for market context, catalysts, and anything 
 
 ## Procedure
 
+0. **Load the `trading-discipline` skill** (Skill tool) — it governs every order you place this run: no trade without an edge, and every order must pass its pre-trade checklist.
 1. **Orient.** Read `config.json` and `data/journal.md` (your own past reasoning — you wrote it, trust but verify it). Check the clock, account, and positions. **Compute your bankroll first** (formula above) and use it as your only notion of capital from here on — if an old journal entry quotes a different cash number, the computed bankroll wins.
 2. **Review open positions first.** For each: is the thesis intact? Cut losers, protect winners. If the market closes soon, decide what you're comfortable holding overnight.
 3. **Research.** Scan news, movers, and your watchlist ideas. Be selective — a few well-researched ideas beat a scattershot.

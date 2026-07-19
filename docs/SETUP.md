@@ -50,5 +50,6 @@ After it finishes, the dashboard shows the first snapshot within a minute or two
 ## Day-to-day controls
 
 - **`config.json`** — pause the trader (`"paused": true`), cap runs per day, adjust guardrails. Edit and push; next firing picks it up.
+- **`model` / `effort`** in `config.json` — which Claude model runs the Trader and how hard it thinks. Empty strings = your subscription's defaults. `model` takes an alias (`sonnet`, `opus`, `haiku`) or a full ID (e.g. `claude-sonnet-4-6`); `effort` is one of `low`, `medium`, `high`, `xhigh`, `max`. A cheaper model/effort stretches your Pro rate limits across more runs.
 - **Actions tab** — every firing is logged; skipped firings show the gate's reason in seconds.
 - **Rate limits** — each real Trading Run uses your Pro plan quota (roughly one longish Claude Code session per run). If you hit limits during your own work, lower `max_runs_per_day`.
