@@ -4,6 +4,24 @@ The Trader's running log — newest entries at the top. Written by Claude during
 
 > **Operator note (2026-07-19):** Your tradable bankroll is **$10,000**, NOT the Alpaca account balance. The 2026-07-19 entries below saying "$100,000 equity/cash" describe the raw paper account, which you may not size against. Every run: compute bankroll = `starting_capital` + (account equity − `account_equity_start` from `data/baseline.json`) and reason only in those terms.
 
+## 2026-07-20 15:15 UTC — bankroll $10,000
+
+First live-market run. Market open, ~4h45m to close. Account still flat ($100k raw equity → bankroll = 10,000 + (100,000−100,000) = **$10,000**), no positions, no orders. Day-trade count: 0/3 this window. Since baseline SPY 743.28 → 744.98 (+0.2%); I'm at 0%, immaterial gap.
+
+**Tape:** SPY −0.3% from open, QQQ −0.35%, semis SMH weak (−0.8%) despite record $46B ETF inflows headline. Big single-name moves: **TSLA −3%** (386→374, XPeng saying it's "not far from beating Model Y" + pre-earnings de-risk) and **GOOGL +1.7%** (351→358 then faded, on positive AI headlines — new efficient 'Frozen' chip, Pentagon AI wins). INTC soaring (up 163% YTD into earnings). Energy firm (XLE/XOM green); "Energy overtakes Tech as 2026's best sector."
+
+**Macro/geopolitics:** Fear & Greed in "Fear," Dow −400 Friday. New today: a **10-day US–Iran ceasefire proposal** + "Trump says Iran very badly damaged" — de-escalation chatter, but IRGC still claims fresh strikes on bases in Bahrain/Kuwait. Unconfirmed. This cuts *against* the oil risk premium, so it undermines the energy-momentum long rather than supporting it.
+
+**Earnings this week (confirmed):** GOOGL + TSLA Wed 7/22 after close; INTC Thu 7/23 after close. Options imply ~7.6% swing on TSLA, ~15% on INTC. The week is dominated by binary events.
+
+**Decision: no trade.** Ran the 5-point checklist on every candidate and all failed:
+- *Long GOOGL* — news already public, stock already gapped; chasing into a Wed earnings binary. Fails edge + asymmetry.
+- *Short TSLA* — already down 3%, huge earnings coin-flip Wed. Fails edge.
+- *Long energy* — momentum real but today's fresh catalyst (ceasefire) is bearish for the very premium the thesis rests on. Fails R/R.
+- *Relief-rally via SPY/QQQ* — even if right, expressing it through the index just matches my benchmark = no alpha; and it's unconfirmed. No.
+
+Dodging **activity bias**: the market being open is not an edge, and this is a fearful, binary-clustered week with no articulable mispricing. Dry powder is a position. The real opportunity set is *after* Wed/Thu earnings — a big gap that overshoots is a fadeable/continuation setup with an actual catalyst behind it. Staying 100% cash. Next look Tuesday midday to reassess before the Wed prints; not going dark given fast-moving geopolitics + earnings.
+
 ## 2026-07-19 11:54 UTC
 
 Quick re-check, ~4 minutes after the prior run. Nothing has changed: market still closed (Sunday), clock confirms next open Monday 2026-07-20 09:30 ET / 13:30 UTC, account still flat at $100,000 equity/cash, no positions, no orders. Plan from the previous entry stands unchanged — no new news to fold in. Holding, no trades. Setting next wake for shortly after Monday's open to watch live opening tape (SPY/QQQ/SMH/energy) before committing to anything, rather than trading blind at the print.
