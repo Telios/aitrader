@@ -4,6 +4,26 @@ The Trader's running log — newest entries at the top. Written by Claude during
 
 > **Operator note (2026-07-19):** Your tradable bankroll is **$10,000**, NOT the Alpaca account balance. The 2026-07-19 entries below saying "$100,000 equity/cash" describe the raw paper account, which you may not size against. Every run: compute bankroll = `starting_capital` + (account equity − `account_equity_start` from `data/baseline.json`) and reason only in those terms.
 
+## 2026-07-21 15:10 UTC — bankroll $10,000
+
+Tuesday, ~5h to close. Account still flat (raw equity $100k → bankroll = 10,000 + (100,000−100,000) = **$10,000**), no positions, no orders. Day-trade count 0/3. Since baseline SPY 743.28 → 746.00 today (**+0.37%**); I'm at 0%, a 37bps gap over two days — immaterial against a months-long benchmark, and not a reason to force a binary bet.
+
+**Tape:** Modest risk-on recovery — SPY +0.52% vs yesterday's close, futures headline "Tech Stocks Lead the Rally." Today's story is a **semiconductor reversal narrative**: record SOXX/SOXL inflows ($2.1B in one day), "NVDA cheapest in 10 years" pieces, Marvell/Arm jumping on AI-infra capex. But real-time it's *fading* — NVDA opened 207.5, now 205.6 (−0.9% from open); SMH opened 581.5, now 578.9 (−0.4% from open). Classic already-moved-and-cooling. TSLA bouncing **+3.3% to 382** off yesterday's 369 low; Ackman calls the robotaxi fear a cheap entry — for UBER, not TSLA. INTC headline "surges 5%" but back to flat (103.24) with mixed news: Google AI deal + memory upgrade vs. data-center layoffs.
+
+**Macro:** ADP weekly softer (16.5K vs 19.8K prior), Redbook retail strong (+7.8% YoY), Bessent flags China cutting Iranian-oil purchases (de-escalation / oil-bearish). Nothing that changes the risk picture materially.
+
+**Earnings cluster still dominates:** GOOGL + TSLA Wed 7/22 after close (~7.6% implied on TSLA); INTC Thu 7/23 after close (~15% implied). Every liquid name I'd want to touch is a binary this week.
+
+**Decision: no trade (2nd run running).** Checklist on each candidate:
+- *Long semis/NVDA* — rally is public and fading intraday; buying now is chasing / exit liquidity. Fails edge + asymmetry.
+- *Long or short TSLA* — already bounced 3.3%; Wed print is a ~7.6% coin-flip. Fails edge.
+- *Long GOOGL / INTC* — Wed/Thu earnings binaries. No edge.
+- *Long SPY/QQQ* — even if the risk-on recovery continues, expressing it via the index just tracks my benchmark = no alpha. No.
+
+Naming the trap: **activity bias** (a green tape and a tiny benchmark gap tempt a trade) and **chasing** (the semi-rally headline). Neither is an edge. Dry powder stays a position. My real setup is the post-earnings gaps — GOOGL/TSLA reaction Thursday, INTC reaction Friday — where a catalyst-backed overshoot is fadeable/continuation with actual information behind it, not a coin-flip. Watching: semi complex (SMH/NVDA/SOXX) as the reversal-vs-fade tell into INTC's print, and whether SPY holds the 742–746 area. Next look Wednesday afternoon before the Wed-close prints — staying engaged during the most event-dense stretch, not going dark, but not gambling on the binaries.
+
+
+
 ## 2026-07-20 15:15 UTC — bankroll $10,000
 
 First live-market run. Market open, ~4h45m to close. Account still flat ($100k raw equity → bankroll = 10,000 + (100,000−100,000) = **$10,000**), no positions, no orders. Day-trade count: 0/3 this window. Since baseline SPY 743.28 → 744.98 (+0.2%); I'm at 0%, immaterial gap.
