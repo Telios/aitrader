@@ -4,6 +4,22 @@ The Trader's running log — newest entries at the top. Written by Claude during
 
 > **Operator note (2026-07-19):** Your tradable bankroll is **$10,000**, NOT the Alpaca account balance. The 2026-07-19 entries below saying "$100,000 equity/cash" describe the raw paper account, which you may not size against. Every run: compute bankroll = `starting_capital` + (account equity − `account_equity_start` from `data/baseline.json`) and reason only in those terms.
 
+## 2026-07-21 16:55 UTC — bankroll $10,000
+
+Tuesday 12:55 ET, ~3h to close. Still flat (raw equity $100k → bankroll = 10,000 + (100,000−100,000) = **$10,000**), no positions/orders, day-trades 0/3. Woken ~1h45m early; re-argued against fresh tape rather than defaulting to yesterday's plan. SPY 749.02 (+0.93%, printing new HOD) vs baseline 743.28 (**+0.77%**); I'm at 0%. A ~77bps gap over 2 days — immaterial vs a months-long benchmark.
+
+**Tape (decisively risk-on, strengthening into the afternoon):** SPY/QQQ at new highs (QQQ +1.94%). Semis ripping — **SMH +4.65%**, INTC **+7.9%**, TSLA +3.1%, NVDA +0.99% (but NVDA fading from its 207.5 open to 205.3). The semi-reversal narrative from yesterday has legs today (record SOXX inflows, "NVDA cheapest in 10yrs," Marvell/Arm on AI-capex). Lone laggard: **GOOGL −0.72%**, red into a green tape ahead of its Wed print.
+
+**News:** No fresh un-priced catalyst. Everything is already-moved momentum (semis/INTC/TSLA) or pre-earnings chatter — multiple "GOOGL on sale / attractive entry" analyst pieces (public = priced), GLJ reiterates TSLA sell ($24.86 target), Gary Black calls the Cybercab milestone "irrelevant." Geopolitics still simmering (Trump: "Iran wants to desperately meet"), Canada/tariff headlines — nothing that changes the risk picture.
+
+**Decision: no trade (100% cash).** Checklist killed every candidate:
+- *Long semis/SMH/INTC* — +4.65%/+8% near HOD = chasing/exit liquidity; INTC is a Thu earnings binary. Fails edge + asymmetry.
+- *Long GOOGL* (the coiled laggard) — holding through Wed-close is a coin-flip; "attractive entry" view is already published = priced. No edge.
+- *Short TSLA* — +3% today, bears already loud, Wed ~7.6%-implied coin-flip. No edge.
+- *Long SPY/QQQ* — chasing a late-day extension at new highs and it just tracks my benchmark = no alpha.
+
+Traps named: **activity bias** (green tape + a wake-up ≠ a signal) and **chasing** (semi/INTC headlines). Beating SPY comes from edged, asymmetric bets — not from matching the index to "keep up." My edge window is the *post-earnings overshoot*: GOOGL/TSLA reaction Thursday, INTC reaction Friday — a catalyst-backed move with real information to fade/ride, not a binary. Dry powder stays a position; capital preserved for that. Watching: whether SPY's new-high push sustains or blows off, the semi complex (SMH/NVDA) as the reversal-vs-fade tell, and Iran headlines. Next look Wednesday early-afternoon to reassess before the Wed-close prints — engaged through the event-dense stretch, not gambling on the binaries.
+
 ## 2026-07-21 15:10 UTC — bankroll $10,000
 
 Tuesday, ~5h to close. Account still flat (raw equity $100k → bankroll = 10,000 + (100,000−100,000) = **$10,000**), no positions, no orders. Day-trade count 0/3. Since baseline SPY 743.28 → 746.00 today (**+0.37%**); I'm at 0%, a 37bps gap over two days — immaterial against a months-long benchmark, and not a reason to force a binary bet.
