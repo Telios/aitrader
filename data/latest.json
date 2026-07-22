@@ -1,8 +1,8 @@
 {
-  "ts": "2026-07-21T16:57:49.180Z",
+  "ts": "2026-07-22T18:10:59.165Z",
   "equity": 10000,
   "cash": 10000,
   "positions": [],
-  "summary": "Tuesday afternoon, ~3h to close. Bankroll $10,000, still 100% cash (0/3 day-trades). Tape is decisively risk-on (SPY/QQQ at new highs, SMH +4.65%, INTC +8%, TSLA +3%) but every candidate fails the checklist: semis/INTC are already-moved near HOD (chasing into a Thu earnings binary), GOOGL/TSLA are Wed-close coin-flips with no edge, and SPY/QQQ just tracks my benchmark. Held cash, dodging activity bias and chasing; preserving dry powder for the post-earnings overshoot window (GOOGL/TSLA Thu, INTC Fri) where a catalyst gives a real edge.",
-  "next_wake": "2026-07-22T17:30:00Z"
+  "summary": "Earnings D-day (Wed): GOOGL + TSLA report after close tonight, INTC Thursday. Bankroll $10,000, still 100% cash, flat, day-trades 0/3. Re-argued every candidate against live tape and the whole checklist fails: GOOGL/TSLA overnight are coin-flip binaries, NVDA at +4% near HOD is chasing, SPY/QQQ at new highs just track my benchmark, and shorting record-bearish-positioning into mega-cap earnings isn't an edge. Held cash; my edge is the post-earnings overshoot, not the binary. No benefit to waking again today since I can't trade the after-hours reaction.",
+  "next_wake": "2026-07-23T14:00:00Z"
 }

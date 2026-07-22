@@ -4,6 +4,22 @@ The Trader's running log — newest entries at the top. Written by Claude during
 
 > **Operator note (2026-07-19):** Your tradable bankroll is **$10,000**, NOT the Alpaca account balance. The 2026-07-19 entries below saying "$100,000 equity/cash" describe the raw paper account, which you may not size against. Every run: compute bankroll = `starting_capital` + (account equity − `account_equity_start` from `data/baseline.json`) and reason only in those terms.
 
+## 2026-07-22 18:12 UTC — bankroll $10,000
+
+Wednesday 14:12 ET, ~1h48m to close — **earnings D-day: GOOGL + TSLA report after close tonight**, INTC Thursday. Still flat (raw equity $100k → bankroll = 10,000 + (100,000−100,000) = **$10,000**), no positions/orders, day-trades 0/3. Re-argued against today's live tape rather than defaulting to the standing "wait for the overshoot" plan (narrative-lock check) — and the conclusion holds *harder* now because the binaries are still binaries and the momentum names have run even further.
+
+**Tape:** SPY 748.41 (+0.69% vs baseline 743.28) at/near new highs; I'm 0% — a ~69bps gap over 3 sessions, immaterial vs a months-long benchmark. QQQ 707.5. The semi-reversal narrative kept working: **NVDA +4% today** (opened 205.9, now 213.6, near HOD 214.4). GOOGL 347.11 (flat/slightly red, coiled into its print). TSLA 375.79 (off yesterday's ~382). INTC 104.34 into Thursday's report.
+
+**News:** No fresh un-priced catalyst — pre-earnings previews (TSLA "did any profit show up?", INTC preview) and macro caution flags: 30Y yield >5% (longest since 2007), *record* bearish equity bets, S&P breadth/price divergence at dot-com-bubble frequency, top-24 stocks >50% of index. Real risks, but not a trade edge for today; "record bearish bets" actually cuts contrarian-bullish.
+
+**Decision: no trade (100% cash).** Checklist killed every candidate:
+- *Long GOOGL / long-or-short TSLA* — hold-overnight into tonight's print = coin-flip (~7.6%+ implied on TSLA); the "attractive entry" bull case is published = priced. Fails edge + asymmetry.
+- *Long NVDA* — +4% near HOD is chasing, and it'll be whipped by GOOGL/TSLA capex commentary after close = uncontrolled overnight binary. Fails edge.
+- *Long SPY/QQQ* — new highs, chasing, and just tracks my benchmark = no alpha; breadth divergence is a caution, not a catalyst.
+- *Short SPY* — record bearish bets is contrarian-bullish; shorting new highs the night of mega-cap earnings isn't an edge.
+
+Traps named: **activity bias** ("big day" ≠ signal), **chasing** (NVDA/semis), **narrative lock** (dodged by re-checking live tape). My edge lives in the *post-earnings overshoot* — Thursday's GOOGL/TSLA reactions, Friday's INTC — where real information exists to fade/ride, not a coin-flip. I cannot trade tonight's after-hours reaction (day orders, market hours), so no benefit to waking again today. Dry powder stays a position, preserved for the setups I've been waiting all week for. Next look **Thursday ~30 min after open** (14:00 UTC), to read how the GOOGL/TSLA gaps settle before committing.
+
 ## 2026-07-21 16:55 UTC — bankroll $10,000
 
 Tuesday 12:55 ET, ~3h to close. Still flat (raw equity $100k → bankroll = 10,000 + (100,000−100,000) = **$10,000**), no positions/orders, day-trades 0/3. Woken ~1h45m early; re-argued against fresh tape rather than defaulting to yesterday's plan. SPY 749.02 (+0.93%, printing new HOD) vs baseline 743.28 (**+0.77%**); I'm at 0%. A ~77bps gap over 2 days — immaterial vs a months-long benchmark.
