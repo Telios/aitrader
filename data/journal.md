@@ -4,6 +4,19 @@ The Trader's running log — newest entries at the top. Written by Claude during
 
 > **Operator note (2026-07-19):** Your tradable bankroll is **$10,000**, NOT the Alpaca account balance. The 2026-07-19 entries below saying "$100,000 equity/cash" describe the raw paper account, which you may not size against. Every run: compute bankroll = `starting_capital` + (account equity − `account_equity_start` from `data/baseline.json`) and reason only in those terms.
 
+## 2026-07-23 19:56 UTC — bankroll $10,000
+
+Thursday **15:56 ET — woken ~2 min before the close** (I'd planned the 2:45 PM look; the scheduler landed me at the bell). Still flat (raw equity $100k → bankroll = 10,000 + (100,000−100,000) = **$10,000**), 0 positions/orders, day-trades 0/3. Account `shorting_enabled:false` reconfirmed — bearish ideas remain unexecutable. SPY **737.47, −0.78% vs baseline 743.28**; I'm at 0%, so still fractionally *ahead* of the benchmark purely on dry powder through this week's binaries.
+
+**GOOGL, my one live setup (overshoot-fade long).** Intraday: bottomed **~314.96 at 11:15 ET**, bounced to ~321, then chopped a **315–321 range all afternoon** — it *did base* (no new lows for ~4.5h, seller-exhaustion tell I was waiting for). But it's closing **soft at 318.62**, lower third of that range, drifting back toward the lows into the bell (320.9 → 319.6 → 318.6) — a held base, **not a decisive higher-low reclaim**.
+
+**Decision: no trade (still 100% cash).** This is precisely the branch I pre-registered last run: *"stabilizes into an entry I'd hold, or closes weak → defer to Friday, dust settled + INTC digested."* It's closing weak. Checklist kills a bell entry:
+- *Edge/timing* — one afternoon of chop isn't a confirmed reclaim; buying the lower end of a soft-closing range is not the base-reclaim setup I defined.
+- *Uncontrolled overnight binary* — **INTC reports tonight**; a weak semis/AI read spills into GOOGL tomorrow and I can't react until the open. Layering that on the thesis = a coin-flip I don't control.
+- *Process* — ~2 min to the close is no time to validate a first-ever position; a market-on-close fill held overnight fails asymmetry (my intraday stop under 314.96 offers zero protection against a gap).
+
+Traps named: **activity bias** (a week of patience + "the window is here" tempts a bell trade), **chasing** (grabbing at the close for fear of missing the fade), **narrative lock** (dodged — I traded the *setup*, and the setup said defer). Friday gives me INTC digested, a full session, and a real base to anchor defined risk under — a far better entry than gambling the overnight gap. GOOGL stays the active watch: I want a **held higher-low / reclaim of ~321–325** to trigger a long toward the low-$390s analyst cluster. Next look **Friday ~14:00 UTC (10:00 ET)** to read the post-INTC open. Dry powder stays a position.
+
 ## 2026-07-23 15:15 UTC — bankroll $10,000
 
 Thursday 11:15 ET, ~4h45m to close — **the edge window I waited all week for is here** (GOOGL + TSLA reported Wed after close). Still flat (raw equity $100k → bankroll = 10,000 + (100,000−100,000) = **$10,000**), 0 positions/orders, day-trades 0/3. The patience is paying: SPY **737.18, −0.82% vs baseline 743.28**; I'm at 0%, so I'm now *ahead* of the benchmark this week purely by holding dry powder through the binaries. Mechanical note: account `shorting_enabled:false` — I cannot express any short here regardless of config, so all bearish ideas are off the table.
