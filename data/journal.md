@@ -4,6 +4,21 @@ The Trader's running log — newest entries at the top. Written by Claude during
 
 > **Operator note (2026-07-19):** Your tradable bankroll is **$10,000**, NOT the Alpaca account balance. The 2026-07-19 entries below saying "$100,000 equity/cash" describe the raw paper account, which you may not size against. Every run: compute bankroll = `starting_capital` + (account equity − `account_equity_start` from `data/baseline.json`) and reason only in those terms.
 
+## 2026-07-23 15:15 UTC — bankroll $10,000
+
+Thursday 11:15 ET, ~4h45m to close — **the edge window I waited all week for is here** (GOOGL + TSLA reported Wed after close). Still flat (raw equity $100k → bankroll = 10,000 + (100,000−100,000) = **$10,000**), 0 positions/orders, day-trades 0/3. The patience is paying: SPY **737.18, −0.82% vs baseline 743.28**; I'm at 0%, so I'm now *ahead* of the benchmark this week purely by holding dry powder through the binaries. Mechanical note: account `shorting_enabled:false` — I cannot express any short here regardless of config, so all bearish ideas are off the table.
+
+**The gaps:** GOOGL **~316 (−9% from Wed's 347)**, TSLA **~322 (−14% from ~375)**, NVDA 206.8, QQQ 690.6. Broad mega-cap risk-off — "Mag 7 worst day since Trump's tariff turmoil," Nasdaq −400.
+- **GOOGL** — the drop is a *capex/negative-FCF spending scare*, not a demand scare: record-profit quarter, Gemini shining, AI demand supply-constrained, "took AI-chip offensive to NVDA." Analyst PTs cluster **$395–445** (even the *lowered* ones — Piper $395, Wells $411, Cantor $420, Barclays $425 — sit ~25–40% above $316). €890M EU fine is a rounding error.
+- **TSLA** — genuine Q2 EPS *miss*, margins hit by discounting ("feeding the top line"), "AI bet flounders." Fundamentally justified, not a clean overshoot.
+
+**Decision: no trade (still 100% cash) — patience, not passivity.** My highest-conviction setup is *long GOOGL as an overshoot fade*, and the checklist killed entering **today**:
+- *Edge* is thin — the higher targets and strong results are public; the market is selling anyway on the live "is-AI-capex-justified" debate. Betting "−9% is too much" is a guess, not a mispricing I read better than the tape.
+- *Timing/invalidation* fails hard — GOOGL is making a **new low on every 15-min bar** (321→318→317→316, printing at LOD); TSLA the same (340→322, near LOD). No base = no held support to anchor a stop under. Entering mid-bleed on a risk-off day is catching a knife with an invented invalidation and poor asymmetry.
+- *INTC* reports tonight — can't trade the after-hours move; buying now = a ~15% overnight binary, no edge. *SPY/QQQ long* just tracks my benchmark = no alpha.
+
+Traps named: **chasing** (the −9%/−14% falls), **activity bias** (a violent tape tempts a trade), **narrative lock** (my journal said "trade the overshoot" — but I trade the *setup*, not the calendar; the overshoot hasn't shown exhaustion yet). GOOGL is now an **active watch**: I want a *base / higher-low / level-reclaim* to anchor a defined-risk long — recovery to even the low-$390s targets is a fat, asymmetric payoff off a proper base. Next look **~18:45 UTC (2:45 PM ET, ~75m before close)** to check whether GOOGL stabilizes into an entry I'd hold, or closes weak (then I defer to Friday, dust settled + INTC digested). Dry powder stays a position.
+
 ## 2026-07-22 18:12 UTC — bankroll $10,000
 
 Wednesday 14:12 ET, ~1h48m to close — **earnings D-day: GOOGL + TSLA report after close tonight**, INTC Thursday. Still flat (raw equity $100k → bankroll = 10,000 + (100,000−100,000) = **$10,000**), no positions/orders, day-trades 0/3. Re-argued against today's live tape rather than defaulting to the standing "wait for the overshoot" plan (narrative-lock check) — and the conclusion holds *harder* now because the binaries are still binaries and the momentum names have run even further.
