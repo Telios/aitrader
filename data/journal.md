@@ -4,6 +4,21 @@ The Trader's running log — newest entries at the top. Written by Claude during
 
 > **Operator note (2026-07-19):** Your tradable bankroll is **$10,000**, NOT the Alpaca account balance. The 2026-07-19 entries below saying "$100,000 equity/cash" describe the raw paper account, which you may not size against. Every run: compute bankroll = `starting_capital` + (account equity − `account_equity_start` from `data/baseline.json`) and reason only in those terms.
 
+## 2026-07-24 16:43 UTC — bankroll $10,000
+
+Friday **12:43 ET, ~3h17m to close** — woken again despite my "look Monday" plan; re-read the live tape rather than defaulting. Still flat (raw equity $100k → bankroll = 10,000 + (100,000−100,000) = **$10,000**), 0 positions/orders, day-trades 0/3. **SPY 741.78, −0.20% vs baseline 743.28** — SPY clawed back from this morning's −0.53%, so my dry-powder lead over buy-and-hold narrowed to ~20bps (immaterial vs a months-long benchmark; I'm still fractionally ahead at 0%).
+
+**GOOGL — my one live setup — has now rejected the reclaim zone a *third* time.** Since the 11:00 ET entry it climbed back to ~321.75–322 (~11:15–11:30 ET), poked 322.1, then failed again and bled to **319.4** now. Intraday high stands at the 9:45 ET **324.17** poke; every push into 321–324 since has been sold. The two-day higher low holds (Thu 314.96 → Fri 317.36) but the structure is a **coiling 317.4–324 range that keeps declining my reclaim**, not the *held* higher-low reclaim of 321–325 my trigger requires. Repeated rejection of the level is evidence against the entry, not a coiled spring in my favor.
+
+**Regime unchanged, still a headwind.** Freshest headline (16:35 UTC): *"Alphabet's Q2 Earnings — Why Wall Street's Frosty Reaction Spells Danger For The AI Rally"* — the anti-capex / negative-FCF scare is still the active narrative, not exhausting. One mild bull tell (Kevin Simpson said on CNBC he bought more GOOGL Class A) but a televised buy-the-dip mention is public = priced, not an un-priced catalyst. A fresh Iran military-threat headline (16:21 UTC) adds weekend geopolitical tail risk.
+
+**Decision: no trade (still 100% cash).** Checklist:
+- *Long GOOGL (my thesis)* — fails **timing/edge**: trigger (held reclaim of 321–325) rejected a third time today; regime is a live capex headwind, not seller exhaustion; and it's Friday afternoon — a fresh mega-cap long carried over a closed weekend, into an active "danger for the AI rally" rotation + Iran tail risk, is an uncontrolled gap binary with no catalyst in my favor. My intraday stop under 317 offers zero protection against a Monday gap.
+- *Short the fallen mega-caps* — fails **chasing**: names already −8/−17%; crowded, snap-back risk. Late ≠ edge.
+- *Long the rotation (RSP)* — fails **alpha**: front-page/crowded and as an outright long it just tracks my benchmark.
+
+Traps named: **activity bias** (an off-schedule wake-up is not a signal — most runs shouldn't trade), **chasing** (both the shorts and the crowded rotation), **narrative lock** (dodged — I've nurtured this GOOGL fade all week, but three failed reclaims today say the setup isn't triggering, so I don't take it). The bar is unchanged and unmet: I need a **held reclaim of 321–325** *or* a clearly exhausting selloff with real higher-low structure. If GOOGL instead loses the 314–317 base, the fade thesis is dead and I drop it. **No benefit to waking again today** — no position to manage, the setup needs more than one session, and I won't hold a fresh weekend mega-cap long regardless. Next look **Monday ~14:00 UTC (10:00 ET)** to read the new week and whether GOOGL's base survived the weekend. Dry powder stays a position.
+
 ## 2026-07-24 15:00 UTC — bankroll $10,000
 
 Friday **11:00 ET, ~5h to close.** Still flat (raw equity $100k → bankroll = 10,000 + (100,000−100,000) = **$10,000**), 0 positions/orders, day-trades 0/3. **Benchmark check: SPY 739.37, −0.53% vs baseline 743.28**; I'm at 0%, so a full week of patience has me *fractionally ahead* of buy-and-hold — and, more meaningfully, ahead of where I'd be had I bought any mega-cap I was tempted by (GOOGL ~356 Mon, TSLA ~375 Wed → both down ~10–17% now). The discipline paid in real dollars this week. Mechanical note: account `shorting_enabled` flipped to **true** this run (was false all week) — shorts are now executable, though I have no edged short to place.

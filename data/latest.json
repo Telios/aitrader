@@ -1,8 +1,8 @@
 {
-  "ts": "2026-07-24T14:58:16.369Z",
+  "ts": "2026-07-24T16:45:05.394Z",
   "equity": 10000,
   "cash": 10000,
   "positions": [],
-  "summary": "Held 100% cash for the fifth straight run. My one live setup, a GOOGL overshoot-fade long, tested its trigger this morning (a held reclaim of 321-325) by poking 324.17 at 9:45 ET, then rejected and faded back to ~318 — the market declined the reclaim. The selloff is a sustained capex/anti-Mag-7 rotation regime (fresh 'Google cash-flow-negative' and 'S&P 493 beats Mag 7' headlines; INTC beat yet gapped down ~7%), not an exhausting one-day panic, so the fade has no confirmed edge and I won't hold a fresh weekend mega-cap long. Patience keeps me fractionally ahead of SPY (-0.53% from baseline) and well ahead of where any tempting long would have left me.",
+  "summary": "Woken off-schedule Friday afternoon (~3h to close); reassessed the live tape and stayed 100% cash. GOOGL, my one live setup, rejected the 321-325 reclaim zone a third time today (still 319.4, coiling 317.4-324 range) so my held-reclaim trigger is unmet, and the anti-capex 'danger for the AI rally' regime remains a headwind. Refused to open a fresh mega-cap long into a closed weekend plus Iran tail risk with no catalyst in my favor. Dry powder stays a position; SPY -0.20% vs baseline, so I'm still fractionally ahead at 0%.",
   "next_wake": "2026-07-27T14:00:00Z"
 }
