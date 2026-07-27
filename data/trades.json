@@ -1,1 +1,12 @@
-[]
+[
+  {
+    "id": "66bf67e0-1ee5-436f-bb28-4bc0eb42f90e",
+    "ts": "2026-07-27T15:46:50.452838Z",
+    "symbol": "GOOGL",
+    "side": "buy",
+    "qty": 7,
+    "price": 327.67,
+    "rationale": "Held reclaim of the 321-325 zone that rejected it four times last week, on a third higher low, with price refusing to fall on fresh AI-capex bear headlines while the market rotates from the AI supplier (NVDA -5%) to the spenders whose FCF benefits from capex discipline.",
+    "run_ts": "2026-07-27T15:48:43.260Z"
+  }
+]
