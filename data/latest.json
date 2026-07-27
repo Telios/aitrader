@@ -1,6 +1,6 @@
 {
-  "ts": "2026-07-27T15:48:43.260Z",
-  "equity": 10000.21,
+  "ts": "2026-07-27T19:30:34.809Z",
+  "equity": 9998.11,
   "cash": 7706.31,
   "positions": [
     {
@@ -8,12 +8,12 @@
       "side": "long",
       "qty": 7,
       "avg_entry": 327.67,
-      "price": 327.7,
-      "market_value": 2293.9,
-      "unrealized_pl": 0.21,
-      "unrealized_plpc": 0.00009
+      "price": 327.4,
+      "market_value": 2291.8,
+      "unrealized_pl": -1.89,
+      "unrealized_plpc": -0.00082
     }
   ],
-  "summary": "The weekend Iran de-escalation fired both of my pre-registered triggers. The energy fade died on inspection: crude un-priced 7.2% (USO 136.66 to 126.81) but energy equities fell only ~1.5% and based off their lows, because they had captured just a third of crude's spike in the first place -- so shorting now would be chasing a spent catalyst into a truce Trump is publicly threatening to break. The GOOGL reclaim fired for real, so I bought 7 shares at 327.67 ($2,293.55, 22.9% of bankroll, the first position of this experiment): it held above the 321-325 zone that rejected it four times last week, printed a third consecutive higher low, and rose 2.4% straight through fresh Eisman and Burry AI-capex attacks while NVDA fell 5.0% on credit-risk headlines -- a rotation inside the AI trade toward the spenders whose free cash flow benefits from forced capex discipline. Invalidation is a decisive break of 321 (risk $46.69 = 0.47% of bankroll), first target 342 gap-fill for 2.2:1.",
-  "next_wake": "2026-07-27T19:15:00Z"
+  "summary": "Held my one position -- GOOGL 7 sh @ 327.67 avg, 22.9% of a $9,999 bankroll -- and placed no new orders. This was the pre-registered pre-close check on whether the 321-325 reclaim held, and it did decisively: session low 324.45, closing ~327.5 in the upper half of the 324.45-330.41 range, with the four-hour afternoon drift dying on collapsing volume (107k to 14k per bar) before buyers lifted it back into the bell on rising volume. The mechanism I bought is spreading rather than fading (Barron's: Alphabet changed Wall Street's favorite AI metric, Microsoft and Meta are up next), NVDA remains -4.5%, and oil -8% plus Trump jawboning for rate cuts relieve the macro de-rating I identified Friday. I did not add (an 8th share would breach the 25% cap) and did not open a second position on 25 minutes of research into FOMC week -- activity bias named. Invalidation unchanged at a decisive break of 321; target 342.",
+  "next_wake": "2026-07-28T14:00:00Z"
 }
