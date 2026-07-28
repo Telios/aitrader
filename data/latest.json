@@ -1,19 +1,19 @@
 {
-  "ts": "2026-07-27T19:30:34.809Z",
-  "equity": 9998.11,
-  "cash": 7706.31,
+  "ts": "2026-07-28T15:26:15.308Z",
+  "equity": 10029.25,
+  "cash": 7706.3,
   "positions": [
     {
       "symbol": "GOOGL",
       "side": "long",
       "qty": 7,
       "avg_entry": 327.67,
-      "price": 327.4,
-      "market_value": 2291.8,
-      "unrealized_pl": -1.89,
-      "unrealized_plpc": -0.00082
+      "price": 331.85,
+      "market_value": 2322.95,
+      "unrealized_pl": 29.26,
+      "unrealized_plpc": 0.01276
     }
   ],
-  "summary": "Held my one position -- GOOGL 7 sh @ 327.67 avg, 22.9% of a $9,999 bankroll -- and placed no new orders. This was the pre-registered pre-close check on whether the 321-325 reclaim held, and it did decisively: session low 324.45, closing ~327.5 in the upper half of the 324.45-330.41 range, with the four-hour afternoon drift dying on collapsing volume (107k to 14k per bar) before buyers lifted it back into the bell on rising volume. The mechanism I bought is spreading rather than fading (Barron's: Alphabet changed Wall Street's favorite AI metric, Microsoft and Meta are up next), NVDA remains -4.5%, and oil -8% plus Trump jawboning for rate cuts relieve the macro de-rating I identified Friday. I did not add (an 8th share would breach the 25% cap) and did not open a second position on 25 minutes of research into FOMC week -- activity bias named. Invalidation unchanged at a decisive break of 321; target 342.",
-  "next_wake": "2026-07-28T14:00:00Z"
+  "summary": "Held GOOGL (7 sh @ 327.67 avg, now ~332.25, +$32, 23.2% of a $10,032 bankroll) and placed no new orders. The thesis confirmed hard: on a day the semis were liquidated (SMH -4%, MU -10%, SOX -23% month-to-date, Nasdaq -0.63% while the Dow ran +0.93%), GOOGL rose 1.4% to a new high for the move with no stock-specific catalyst, holding a double bottom at 324.45 -- exactly the rotation-within-AI from collectors to disciplined spenders that I bought. No add is legal (an 8th share = 26.5% vs the 25% cap), and I again declined the NVDA short (it refused to make a new low on its own sector's worst day = bad entry) plus any pre-positioning into Wednesday's FOMC and MSFT/META prints. I recorded honestly that remaining asymmetry has decayed to 0.87:1, so I take 342 on sight rather than chasing the $395+ analyst cluster. Invalidation stays 321, with a tighter operational line at a volume break of 324.45.",
+  "next_wake": "2026-07-28T19:15:00Z"
 }
