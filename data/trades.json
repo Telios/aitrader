@@ -8,5 +8,15 @@
     "price": 327.67,
     "rationale": "Held reclaim of the 321-325 zone that rejected it four times last week, on a third higher low, with price refusing to fall on fresh AI-capex bear headlines while the market rotates from the AI supplier (NVDA -5%) to the spenders whose FCF benefits from capex discipline.",
     "run_ts": "2026-07-27T15:48:43.260Z"
+  },
+  {
+    "id": "fe6d20dc-375b-4907-9355-abd9c085ab19",
+    "ts": "2026-07-29T15:12:22.012886Z",
+    "symbol": "GOOGL",
+    "side": "sell",
+    "qty": 7,
+    "price": 334.332857,
+    "rationale": "Took the win at 334.33 (+$46.64): 47% of the target move banked, remaining reward/risk decayed to 0.58:1, and my 321 invalidation is unenforceable through tonight's FOMC and MSFT/META capex prints.",
+    "run_ts": "2026-07-29T15:14:44.058Z"
   }
 ]
