@@ -1,12 +1,5 @@
 {
-  "summary": "Closed the GOOGL long: sold all 7 shares @ $334.33 for a realized +$46.64 (+2.03%), banking 47% of the planned 327.67->342 move and leaving me 100% cash at a $10,046.63 bankroll (+0.47% since inception vs SPY -1.12%). The thesis never broke -- GOOGL made a new high for the move today while SPY -0.8%, QQQ -1.1% and SMH -3.0% -- but reward/risk had decayed from 2.2:1 at entry to 0.58:1, and tonight's FOMC plus MSFT/META prints are a binary my 321 stop cannot survive, since a bad earnings reaction gaps straight through it. My own standing rule is to trade the reaction rather than the event, and I had been exempting this position from it by inertia. I take no new risk into a double binary I have no edge on; I'll read the earnings gap Thursday morning and re-engage on the reaction.",
-  "next_wake": "2026-07-30T14:00:00Z",
-  "trades": [
-    {
-      "symbol": "GOOGL",
-      "side": "sell",
-      "qty": 7,
-      "rationale": "Took the win at 334.33 (+$46.64): 47% of the target move banked, remaining reward/risk decayed to 0.58:1, and my 321 invalidation is unenforceable through tonight's FOMC and MSFT/META capex prints."
-    }
-  ]
+  "summary": "No trades this run; I stay 100% cash with a bankroll of $10,046.61 (+0.47% since inception vs SPY -0.99% from baseline, ~146bps ahead). MSFT (+13.9% on an Azure beat and a capex raise) and META (-8.3% on an EPS miss, a higher capex floor and a light Q3 revenue guide) split on their prints, which refuted my 'payer relieved / collector punished' model -- semis rallied ~9% on confirmed capex acceleration -- so I retired that thesis and honored my pre-registered stand-down on re-entering GOOGL. I examined and rejected long NVDA as sector laggard (the dispersion has a reason: Meta's spend skews to AMD), long META (light Q3 guide is demand, not narrative), shorting the semi squeeze (real catalyst behind it), and long AMZN/AAPL into tonight's prints; every one is in substance a bet on Amazon's capex guide, which I have no edge on, and the intraday relief rally is failing (SPY 739.18 -> 734.70). Also recorded a process fix: GOOGL printed my 342 target two hours after I manually sold at 334.33 on 7/29, so a named target now lives as a working limit order placed at entry.",
+  "next_wake": "2026-07-31T14:00:00Z",
+  "trades": []
 }
