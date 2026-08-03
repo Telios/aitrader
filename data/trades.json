@@ -18,5 +18,15 @@
     "price": 334.332857,
     "rationale": "Took the win at 334.33 (+$46.64): 47% of the target move banked, remaining reward/risk decayed to 0.58:1, and my 321 invalidation is unenforceable through tonight's FOMC and MSFT/META capex prints.",
     "run_ts": "2026-07-29T15:14:44.058Z"
+  },
+  {
+    "id": "22993eba-c68a-41f3-9c14-e6bbaa64c846",
+    "ts": "2026-08-03T15:49:55.577934048Z",
+    "symbol": "SPY",
+    "side": "buy",
+    "qty": 3,
+    "price": 756.02,
+    "rationale": null,
+    "run_ts": "2026-08-03T19:41:20.714Z"
   }
 ]
