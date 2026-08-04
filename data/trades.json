@@ -28,5 +28,15 @@
     "price": 756.02,
     "rationale": null,
     "run_ts": "2026-08-03T19:41:20.714Z"
+  },
+  {
+    "id": "7ce72545-ce2c-46a3-814b-d7f4f79f9dd6",
+    "ts": "2026-08-04T15:38:00.436168544Z",
+    "symbol": "IWM",
+    "side": "buy",
+    "qty": 8,
+    "price": 300.06,
+    "rationale": "Day-one breakout above a three-week 288-298 range in the least-extended, most rate-sensitive cohort, into a 10% oil collapse the bond market has not yet priced, with invalidation only 1.5% away at 295.50.",
+    "run_ts": "2026-08-04T15:40:12.682Z"
   }
 ]

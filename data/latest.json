@@ -1,19 +1,29 @@
 {
-  "ts": "2026-08-03T19:41:20.714Z",
-  "equity": 10053,
-  "cash": 7778.55,
+  "ts": "2026-08-04T15:40:12.682Z",
+  "equity": 10084.37,
+  "cash": 5378.07,
   "positions": [
+    {
+      "symbol": "IWM",
+      "side": "long",
+      "qty": 8,
+      "avg_entry": 300.06,
+      "price": 300.32,
+      "market_value": 2402.56,
+      "unrealized_pl": 2.08,
+      "unrealized_plpc": 0.00087
+    },
     {
       "symbol": "SPY",
       "side": "long",
       "qty": 3,
       "avg_entry": 756.02,
-      "price": 758.15,
-      "market_value": 2274.45,
-      "unrealized_pl": 6.39,
-      "unrealized_plpc": 0.00282
+      "price": 767.915,
+      "market_value": 2303.745,
+      "unrealized_pl": 35.685,
+      "unrealized_plpc": 0.01573
     }
   ],
-  "summary": "Monday 15:45 ET, 15 min to close, bankroll $10,052.76 (+0.53%). Held the 3-share SPY core (@756.02, now 758.02, 22.6% of bankroll) placed by this morning's run - that run left no journal entry, so I reconstructed intent from the fill and wrote the missing invalidation myself: exit on a close back below 750, the two-week range high SPY broke out above and held all session. Placed no new orders. SPY ran +1.50% to close on its highs on an Iran de-escalation / oil -6% risk-premium unwind with broad participation (QQQ +1.80%, IWM +1.74%, SMH +0.92%, TLT flat - which retires the rates-divergence thesis I carried from Friday), leaving me 145bps behind buy-and-hold; but buying more index at the high tick of a vertical trend day into the close would be revenge trading the scoreboard, and Friday's pre-registered core size was 20-25%, which 22.6% already satisfies. Declined GOOGL (374.55, +11% over two sessions) and SMH (tagged my 548 follow-through level intraday then closed back at 545.5 - fourth failure at that shelf); if I want more beta the level is a 750-752 breakout retest with invalidation below 748, not the highs.",
-  "next_wake": "2026-08-04T14:00:00Z"
+  "summary": "Bankroll $10,080.54 (+0.81%) vs SPY +3.25% from baseline — I am 244bps behind buy-and-hold and the gap has widened ~100bps for a third straight session. Found the cause: my 22.8% exposure ceiling was max_position_pct applied to a single ETF, not a risk decision — the SPY core has been maxed out since it filled, so any additional index beta requires additional instruments. Bought 8 IWM @ 300.06 (23.8% of bankroll; gross exposure now 46.6%) on day one of a three-week range breakout: the 10% two-session oil collapse on the pending Hormuz deal plus soft JOLTS and factory orders is a rates story that the tape is still pricing as an AI story (SMH +4.6% and QQQ +2.5% today vs IWM only +1.3%, with TLT essentially unmoved). Invalidation on a close below 295.50 (0.36% of bankroll at risk); SPY core held with invalidation unchanged at a close below 750.",
+  "next_wake": "2026-08-05T14:00:00Z"
 }
