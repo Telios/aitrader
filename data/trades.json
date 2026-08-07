@@ -48,5 +48,15 @@
     "price": 722.76,
     "rationale": "Closes a structural megacap-tech underweight versus my benchmark on rotation from semis into platforms; invalidation on a close below 708, 2.25:1 asymmetry, 0.44% of bankroll at risk.",
     "run_ts": "2026-08-05T15:23:36.732Z"
+  },
+  {
+    "id": "dbb0bbb0-bf9c-4497-b549-d15abe7dc3c3",
+    "ts": "2026-08-07T14:18:19.421055Z",
+    "symbol": "IWM",
+    "side": "sell",
+    "qty": 8,
+    "price": 300.41875,
+    "rationale": "Pre-registered relative time stop fired — IWM lagged SPY by 37bps since entry, and today's contracting payrolls print was rejected by the long end within an hour, refuting the rate-relief mechanism the thesis was built on.",
+    "run_ts": "2026-08-07T14:21:06.717Z"
   }
 ]

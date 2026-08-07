@@ -1,12 +1,12 @@
 {
-  "summary": "Executed yesterday's pre-registered third tranche: bought 3 QQQ @ 722.76 (21.5% of bankroll), taking the book to SPY + IWM + QQQ = 68.2% gross, up from 46.8%. The trigger conditions held (IWM 300.89 > 297.80, SPY 772.50 > 760), but the selection rule attached to it ('least extended leg') returned nothing — every candidate sits within 1% of its 6-week high — so I ran the full checklist on each instead: XLF (1.38:1), RSP (1.53:1) and KRE (1.96:1) all failed the 2:1 asymmetry test and only QQQ cleared it. The edge is the QQQ/SMH dispersion: semis got their best possible news from AMD and reversed 2.2% off the high, while QQQ absorbed the same tape for -0.14%, which reads as rotation within tech rather than out of it. Held SPY and IWM, but added a relative time stop to IWM — its rate-relief leg is unconfirmed with TLT flat against a 17% crude collapse, so if it hasn't outperformed SPY from entry by Friday's close I exit regardless of price.",
-  "next_wake": "2026-08-06T14:00:00Z",
+  "summary": "Sold 8 IWM @ 300.42, closing the small-cap catch-up trade essentially flat (+$2.87), because the relative time stop I pre-registered on 8/5 fired: IWM underperformed SPY by 37bps since entry, and this morning's jobs report refuted the thesis outright — payrolls contracted (-23K vs +85K est) with wage growth at 0.1% m/m, yet TLT popped to 83.03 and round-tripped to 82.55 within 75 minutes, so the rate-relief transmission the thesis depended on is broken. Holding SPY (invalidation: close below 750) and QQQ (close below 708) for 44.3% gross; QQQ's rotation edge is underperforming but its price stop is intact and 1.5% away, so I'm honoring it rather than renegotiating mid-flight, and I pre-registered a QQQ/SMH relative time stop for Tuesday's close instead. Declined GLD (+7.2% in four sessions — the edge is gone and 2:1 only works by extrapolating a parabola) and XLV (relative strength I can't attribute, no measured move), and declined to redeploy IWM's capital purely to close a benchmark gap. Going into a 65-hour weekend lighter by choice: record S&P call volume, three flat sessions at record highs with internals rotating into healthcare and gold, and Hormuz turning escalatory with crude already +4.3% off Wednesday's low.",
+  "next_wake": "2026-08-07T19:30:00Z",
   "trades": [
     {
-      "symbol": "QQQ",
-      "side": "buy",
-      "qty": 3,
-      "rationale": "Closes a structural megacap-tech underweight versus my benchmark on rotation from semis into platforms; invalidation on a close below 708, 2.25:1 asymmetry, 0.44% of bankroll at risk."
+      "symbol": "IWM",
+      "side": "sell",
+      "qty": 8,
+      "rationale": "Pre-registered relative time stop fired — IWM lagged SPY by 37bps since entry, and today's contracting payrolls print was rejected by the long end within an hour, refuting the rate-relief mechanism the thesis was built on."
     }
   ]
 }
