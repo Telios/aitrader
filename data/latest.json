@@ -1,29 +1,39 @@
 {
-  "ts": "2026-08-07T14:21:06.717Z",
-  "equity": 10088.9,
-  "cash": 5613.08,
+  "ts": "2026-08-10T14:30:36.747Z",
+  "equity": 10106.86,
+  "cash": 3194.37,
   "positions": [
     {
       "symbol": "QQQ",
       "side": "long",
       "qty": 3,
       "avg_entry": 722.76,
-      "price": 720.19,
-      "market_value": 2160.57,
-      "unrealized_pl": -7.71,
-      "unrealized_plpc": -0.00356
+      "price": 723.81,
+      "market_value": 2171.43,
+      "unrealized_pl": 3.15,
+      "unrealized_plpc": 0.00145
+    },
+    {
+      "symbol": "RSP",
+      "side": "long",
+      "qty": 11,
+      "avg_entry": 219.88,
+      "price": 219.795,
+      "market_value": 2417.745,
+      "unrealized_pl": -0.935,
+      "unrealized_plpc": -0.00039
     },
     {
       "symbol": "SPY",
       "side": "long",
       "qty": 3,
       "avg_entry": 756.02,
-      "price": 771.75,
-      "market_value": 2315.25,
-      "unrealized_pl": 47.19,
-      "unrealized_plpc": 0.02081
+      "price": 774.44,
+      "market_value": 2323.32,
+      "unrealized_pl": 55.26,
+      "unrealized_plpc": 0.02436
     }
   ],
-  "summary": "Sold 8 IWM @ 300.42, closing the small-cap catch-up trade essentially flat (+$2.87), because the relative time stop I pre-registered on 8/5 fired: IWM underperformed SPY by 37bps since entry, and this morning's jobs report refuted the thesis outright — payrolls contracted (-23K vs +85K est) with wage growth at 0.1% m/m, yet TLT popped to 83.03 and round-tripped to 82.55 within 75 minutes, so the rate-relief transmission the thesis depended on is broken. Holding SPY (invalidation: close below 750) and QQQ (close below 708) for 44.3% gross; QQQ's rotation edge is underperforming but its price stop is intact and 1.5% away, so I'm honoring it rather than renegotiating mid-flight, and I pre-registered a QQQ/SMH relative time stop for Tuesday's close instead. Declined GLD (+7.2% in four sessions — the edge is gone and 2:1 only works by extrapolating a parabola) and XLV (relative strength I can't attribute, no measured move), and declined to redeploy IWM's capital purely to close a benchmark gap. Going into a 65-hour weekend lighter by choice: record S&P call volume, three flat sessions at record highs with internals rotating into healthcare and gold, and Hormuz turning escalatory with crude already +4.3% off Wednesday's low.",
-  "next_wake": "2026-08-07T19:30:00Z"
+  "summary": "Bought 11 RSP @ 219.88 (23.9% of bankroll), taking gross from 44.5% to 68.4% — a deliberate structural fix rather than a new idea. My 2:1 asymmetry test is unsatisfiable by any broad or low-vol instrument in an uptrend (XLF 1.38, RSP 1.53, KRE 1.96, XLE 0.72, XOP 1.03 — five priced, zero passes), so it was banning benchmark exposure while I am measured against a benchmark, and all 307bps of my deficit is exposure, not selection. RSP adds the 400 names SPY has that my SPY+QQQ book doesn't, bought as the laggard (+1.22% vs SPY +2.13% since 8/3); invalidation is a close below 214.50, costing 0.59% of bankroll. Declined the energy chase on arithmetic — XLE and XOP are already priced for crude 12% above spot and OIH's driver is unnameable — and honored Friday's GLD pre-registration (the 386-390 zone never came; GLD is 398). Held QQQ to its pre-registered Tuesday-close relative time stop rather than cutting early: the ratio is failing at 1.2519 vs 1.2682 and I expect to sell tomorrow, but today SMH sold a TSMC +45% revenue print while QQQ held flat, which is the exact mechanism I bought.",
+  "next_wake": "2026-08-11T19:30:00Z"
 }

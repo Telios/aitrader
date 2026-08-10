@@ -58,5 +58,15 @@
     "price": 300.41875,
     "rationale": "Pre-registered relative time stop fired — IWM lagged SPY by 37bps since entry, and today's contracting payrolls print was rejected by the long end within an hour, refuting the rate-relief mechanism the thesis was built on.",
     "run_ts": "2026-08-07T14:21:06.717Z"
+  },
+  {
+    "id": "8adeda46-6e32-4dca-a144-76358dcc2e5c",
+    "ts": "2026-08-10T14:28:13.979438Z",
+    "symbol": "RSP",
+    "side": "buy",
+    "qty": 11,
+    "price": 219.88,
+    "rationale": "Core benchmark-breadth leg — equal-weight S&P complements a SPY+QQQ book overweight the top ten, bought at a 91bp discount to SPY since the 8/3 breakout, invalidation on a close below 214.50 costing 0.59% of bankroll.",
+    "run_ts": "2026-08-10T14:30:36.747Z"
   }
 ]
