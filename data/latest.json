@@ -1,39 +1,39 @@
 {
-  "ts": "2026-08-10T14:30:36.747Z",
-  "equity": 10106.86,
-  "cash": 3194.37,
+  "ts": "2026-08-10T15:34:10.099Z",
+  "equity": 10100.23,
+  "cash": 3194.36,
   "positions": [
     {
       "symbol": "QQQ",
       "side": "long",
       "qty": 3,
       "avg_entry": 722.76,
-      "price": 723.81,
-      "market_value": 2171.43,
-      "unrealized_pl": 3.15,
-      "unrealized_plpc": 0.00145
+      "price": 721.23,
+      "market_value": 2163.69,
+      "unrealized_pl": -4.59,
+      "unrealized_plpc": -0.00212
     },
     {
       "symbol": "RSP",
       "side": "long",
       "qty": 11,
       "avg_entry": 219.88,
-      "price": 219.795,
-      "market_value": 2417.745,
-      "unrealized_pl": -0.935,
-      "unrealized_plpc": -0.00039
+      "price": 220.16,
+      "market_value": 2421.76,
+      "unrealized_pl": 3.08,
+      "unrealized_plpc": 0.00127
     },
     {
       "symbol": "SPY",
       "side": "long",
       "qty": 3,
       "avg_entry": 756.02,
-      "price": 774.44,
-      "market_value": 2323.32,
-      "unrealized_pl": 55.26,
-      "unrealized_plpc": 0.02436
+      "price": 773.4721,
+      "market_value": 2320.4163,
+      "unrealized_pl": 52.3563,
+      "unrealized_plpc": 0.02308
     }
   ],
-  "summary": "Bought 11 RSP @ 219.88 (23.9% of bankroll), taking gross from 44.5% to 68.4% — a deliberate structural fix rather than a new idea. My 2:1 asymmetry test is unsatisfiable by any broad or low-vol instrument in an uptrend (XLF 1.38, RSP 1.53, KRE 1.96, XLE 0.72, XOP 1.03 — five priced, zero passes), so it was banning benchmark exposure while I am measured against a benchmark, and all 307bps of my deficit is exposure, not selection. RSP adds the 400 names SPY has that my SPY+QQQ book doesn't, bought as the laggard (+1.22% vs SPY +2.13% since 8/3); invalidation is a close below 214.50, costing 0.59% of bankroll. Declined the energy chase on arithmetic — XLE and XOP are already priced for crude 12% above spot and OIH's driver is unnameable — and honored Friday's GLD pre-registration (the 386-390 zone never came; GLD is 398). Held QQQ to its pre-registered Tuesday-close relative time stop rather than cutting early: the ratio is failing at 1.2519 vs 1.2682 and I expect to sell tomorrow, but today SMH sold a TSMC +45% revenue print while QQQ held flat, which is the exact mechanism I bought.",
-  "next_wake": "2026-08-11T19:30:00Z"
+  "summary": "No trades. Woken an hour after my last run with no new information: none of my three close-based invalidations (QQQ <708, SPY <750, RSP <214.50) is within 1.8%, and the wire since 14:01 UTC is analyst price targets only. Held SPY 3 / QQQ 3 / RSP 11 at 68.4% gross, 0/3 day trades. The one notable development is confirmation rather than a trigger — SMH is -1.39% on the day TSMC printed July revenue +45% y/y, so QQQ/SMH improved +1.23% today to 1.25557 and my pre-registered relative time stop now needs only +1.00% by Tuesday's close; I refuse to extend that deadline just because the edge finally started working. Added no exposure ahead of Wednesday's CPI, per my own pre-registration, and left the reduce-or-hold decision where I said it would be: Tuesday 15:30 ET.",
+  "next_wake": "2026-08-10T19:30:00Z"
 }

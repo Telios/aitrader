@@ -4,6 +4,41 @@ The Trader's running log — newest entries at the top. Written by Claude during
 
 > **Operator note (2026-07-19):** Your tradable bankroll is **$10,000**, NOT the Alpaca account balance. The 2026-07-19 entries below saying "$100,000 equity/cash" describe the raw paper account, which you may not size against. Every run: compute bankroll = `starting_capital` + (account equity − `account_equity_start` from `data/baseline.json`) and reason only in those terms.
 
+## 2026-08-10 15:35 UTC — bankroll $10,103
+
+Monday **11:35 ET, ~4h25m to close.** Bankroll = 10,000 + (100,102.50 − 100,000) = **$10,102.50**, +1.03%. **No trades.** Book unchanged: **SPY 3 @ 756.02 ($2,321, 23.0%, +$53.34) + QQQ 3 @ 722.76 ($2,165, 21.4%, −$3.18) + RSP 11 @ 219.88 ($2,421, 24.0%, +$2.53) = 68.4% gross.** Day-trades **0/3**.
+
+**This run exists because the scheduler woke me an hour after the last one, not because anything happened.** I want that stated at the top, because a run that produces no trade needs to defend itself as vigorously as one that does. I checked the three levels, re-argued the three theses against fresh prices, read the tape and the wire, and found no new information. **Activity bias — dodged, and this is the specific flavour of it: the pressure to justify a wake-up.** Sixty minutes after buying RSP, the only honest output is a levels check.
+
+**Scoreboard.** SPY 743.28 → **773.76 = +4.10%**. I am **+1.03%**. **307bps behind** — 145 (8/3), 244 (8/4), 291 (8/5), 290 (8/7), 307 (8/10 10:35), **307 now.** Flat across the hour, which is exactly what 68% gross on a flat tape should produce. That is the first mechanical evidence the structural fix does what I built it for: at 44% gross the gap compounded on every up day, at 68% it doesn't. It also doesn't close — I still give back ~32% of every index gain, and I am choosing that rather than pretending it away.
+
+**Levels, all close-based, none near.** QQQ 721.70 vs 708 (−1.87% required). SPY 773.76 vs 750 (−3.07%). RSP 220.11 vs 214.50 (−2.55%). No exit is live.
+
+**QQQ — the rotation edge is confirming, hard, and I am not touching the deadline.** Entry ratio 722.76/569.91 = **1.2682**. Friday's close: 722.89/582.92 = **1.24029**. Now: 721.70/574.80 = **1.25557** — the ratio has improved **+1.23% today alone**, and the stop needs **+1.00%** more by tomorrow's close (it needed +1.30% at 10:35 this morning). The mechanism is visible in the prints: **TSMC July revenue +45% y/y — the most bullish semiconductor datapoint available — and SMH is −1.39% on the day** (it was −0.87% at my last run, so semis have *weakened further* into the good news) while QQQ is −0.16%. Good news sold in semis, absorbed by platforms. That is my 8/5 thesis, stated in advance, happening on a maximum-strength test.
+
+The temptation this creates is to **extend** the deadline now that it's working, and I'm refusing it. On 8/7 I wrote that *tightening* an exit is legitimate and *loosening* one to avoid a loss is the failure mode the never-renegotiate rule exists to stop. Pushing a time stop out because the position finally moved my way is the loosening case wearing a confirmation costume — and it would retroactively convert every past pre-registration into "I exit when I feel like it." **The stop fires at Tuesday 8/11's close if the ratio is under 1.2682. It may well pass on its own now. If it misses by 20bps I sell anyway.**
+
+**SPY — nothing to argue.** Core leg, +2.35%, thesis is "don't be short my benchmark," which is intact by construction. My only real winner. I'm not taking profit on a position whose entire job is to still be there.
+
+**RSP — one hour old, so re-arguing it is theatre, and I'll say what would change my mind instead.** Bought at 219.88, now 220.11. The exempted-asymmetry core leg (0.80:1, stated openly). Nothing about breadth-vs-cap-weight resolves in sixty minutes. **The audit I pre-registered for this run was the fence: have I argued a sector or a single name into the "core"? No — the book is SPY, QQQ, RSP, three diversified index ETFs, and every candidate I've declined since (XLE, XOP, OIH, GLD, XLV) was declined under the unrelaxed trade-book rules.** The fence is holding.
+
+**Energy extended, and my decline cost me — recording it because I'd otherwise only record the dodges that paid.** OIH **406.92 (+4.71%)**, a fresh high above the 404.74 I looked at this morning; USO **124.58 (+5.56%)**, XLE **59.42 (+3.36%)**. I passed on OIH at ~403–405 on the grounds that its driver has de-linked from spot crude and I can't name it. It has since made me ~0.9% on a position I don't own — call it **21bps of bankroll foregone.** The reasoning stands unchanged: an instrument at 5-week highs with crude 12% below its previous highs is trading on something I can't articulate, and "it went up after I declined it" is not evidence the decline was wrong. But the ledger should show both columns.
+
+**The rest of the tape confirms this morning's read.** XLV **167.54 (+1.13%)**, now five straight sessions of defensive bid; GLD 399.06 (+0.15%, and still eight dollars above the 386–390 zone I pre-registered on 8/7, so I still don't own it); TLT **82.20 (−0.65%)**, the long end soft again; IWM 300.19 (−0.44%); KRE 76.08, still bleeding. **A flat index carried by energy, with healthcare and gold bid and rate-sensitives soft, is the same weak-tape-in-a-green-shirt I described at 10:35.** Nothing in the wire since — I read the full feed to 15:28 UTC and it is analyst price targets and a Colombian earthquake. No catalyst.
+
+**Why I am not reducing into Wednesday's CPI today.** My own pre-registration an hour ago said **no adding exposure before the print, and Tuesday's 15:30 ET run is my last chance to reduce.** Cutting risk today, sixty minutes after sizing it up, with zero new information, would not be prudence — it would be an admission that this morning's sizing was a mood rather than a decision. **Today's crude spike is not a CPI input:** the print covers July, and July's crude path (104 → 139 → 114) is already in the data. If I reduce, it will be tomorrow, with tomorrow's tape, at the point I said I'd decide.
+
+**Traps named.** **Activity bias — the live one, dodged**, as above. **Renegotiation-by-confirmation — dodged**, the QQQ deadline stands despite the edge working. **Narrative lock — checked in the uncomfortable direction:** I went looking for what would refute my book and found it (energy running, defensives bid, long end soft, my whole book one correlated beta bet into a CPI print), wrote it down, and concluded it changes nothing *today* because it was all true when I sized the book this morning. **Chasing — declined a fourth time** on OIH, now with the cost of that decline priced.
+
+**Pre-registered, unchanged from 10:35 except where noted.**
+1. **Exits, the only three: QQQ closes below 708. SPY closes below 750. RSP closes below 214.50.** All close-based.
+2. **QQQ relative time stop fires at Tuesday 8/11's close** if QQQ/SMH < 1.2682. Currently 1.25557, needs +1.00%. **I now think it has a real chance of passing, and I am recording that expectation in advance so tomorrow's entry can't claim I always knew.** Either way the freed capital is not automatically redeployed.
+3. **CPI Wednesday 8/12, 08:30 ET.** No new exposure before it. Reduce-or-hold is decided at Tuesday's 15:30 ET run, not before.
+4. **GLD only on a pullback into 386–390 holding the 8/5 gap.** At 399.06 I don't own it.
+5. **Hormuz still trending the wrong way** and it is the single risk that hits all three legs together. The three levels above are the whole answer.
+
+**Next look today 2026-08-10 ~19:30 UTC (15:30 ET)** — my exits are close-based and can only be enforced near the close, QQQ is the tightest at −1.87%, and I want Monday's final QQQ/SMH ratio in hand one day before the time stop fires. **Closing thought: the useful output of a run is sometimes just a verified list of things that did not happen.**
+
 ## 2026-08-10 14:35 UTC — bankroll $10,108
 
 Monday **10:35 ET, ~5h25m to close.** Bankroll = 10,000 + (100,108.15 − 100,000) = **$10,108.15**, +1.08%. **Bought 11 RSP @ 219.88.** Book is now **SPY 3 @ 756.02 ($2,322, 23.0%, +$54.39) + QQQ 3 @ 722.76 ($2,170, 21.5%, +$1.88) + RSP 11 @ 219.88 ($2,418, 23.9%) = 68.4% gross.** Day-trades **0/3**.
