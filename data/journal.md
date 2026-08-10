@@ -4,6 +4,24 @@ The Trader's running log — newest entries at the top. Written by Claude during
 
 > **Operator note (2026-07-19):** Your tradable bankroll is **$10,000**, NOT the Alpaca account balance. The 2026-07-19 entries below saying "$100,000 equity/cash" describe the raw paper account, which you may not size against. Every run: compute bankroll = `starting_capital` + (account equity − `account_equity_start` from `data/baseline.json`) and reason only in those terms.
 
+## 2026-08-10 19:58 UTC — bankroll $10,095
+
+Monday **15:58 ET — two minutes to the closing bell.** Bankroll = 10,000 + (100,094.75 − 100,000) = **$10,094.75**, +0.95%. **No trades.** Book unchanged for the third run running: **SPY 3 @ 756.02 ($2,317, 23.0%, +$49.29) + QQQ 3 @ 722.76 ($2,162, 21.4%, −$6.15) + RSP 11 @ 219.88 ($2,421, 24.0%, +$2.26) = $6,900 gross, 68.4%.** Day-trades **0/3** — today's RSP buy is an open overnight hold, not a day trade.
+
+**The scheduler woke me with 120 seconds of session left.** That is not a trading window, it is a bookkeeping window. Anything I send now is a market order into the closing auction — I'd be paying the imbalance spread for the privilege of acting, and I'd be sizing a fresh beta position without a single minute to watch how it prints. **Activity bias at the buzzer — named and dodged.** The clock decides this run, not conviction.
+
+**Scoreboard.** SPY 743.28 → **772.45 = +3.92%**. I am **+0.95%**. **298bps behind** — 145 (8/3), 244 (8/4), 291 (8/5), 290 (8/7), 307 (8/10 10:35), 307 (8/10 11:35), **298 now.** The gap narrowed nine basis points this afternoon, and I want to be precise about why: **it narrowed because SPY faded from 773.76 to 772.45, not because I gained.** Equity went 100,102.50 → 100,094.75, −$7 on the session. At 68% gross I lose less on down moves — that is the whole and only mechanism. Catching up by having my benchmark drop is not a strategy, it is arithmetic I don't control.
+
+**Position review against my own pre-registered levels, not against vibes.** Close-based invalidations were set as QQQ <708, SPY <750, RSP <214.50. Today's closes: **QQQ 720.57 (+1.8% of room), SPY 772.45 (+3.0%), RSP 220.09 (+2.6%).** All three intact, none tested, no exit triggered. SPY +2.17% is working; QQQ −0.28% and RSP +0.09% are flat, which is chop, not thesis failure. Overnight gap risk on a diversified ETF book *is* market risk, and market risk is the exposure I am deliberately buying. **Comfortable holding all three overnight.**
+
+**The QQQ/SMH relative time stop moved further my way into the bell.** Ratio closed **1.26419** vs 1.25557 this morning — **+0.69% of the +1.00% I need by Tuesday's close**, leaving ~0.31%. The edge is finally working after days of not working, and that is exactly when I am most tempted to quietly extend the deadline to let it finish. **I am not extending it.** A time stop I move once is not a time stop. Tuesday's close settles it, and the reduce-or-hold decision stays pre-registered for **Tuesday 15:30 ET**, ahead of **Wednesday's CPI** — which is also why I add no fresh exposure into tomorrow without pricing that event first.
+
+**The structural problem, stated plainly so I can't quietly drop it.** 68% gross against a 100% benchmark means I keep ~32% of every index gain out of the race. Guardrails allow ~95% gross with a 25% per-position cap, so a fourth broad-ETF sleeve at ~24% would put me near 92%. But I should be clear-eyed that **that move can at best draw with SPY, never beat it** — 92% beta minus friction is a closet index fund. Beating the benchmark needs either leverage (banned) or selection alpha, so the real work is finding an actual idea rather than a fourth index ticker.
+
+**And I am holding myself to the CPI pre-registration on the timing.** I said I would add no exposure ahead of Wednesday's CPI; wanting to close a 298bps gap is not a reason to tear that up one day later. Lifting gross into a binary macro print is how a structural fix turns into a coin flip. **Sequence: research single names tomorrow, take the reduce-or-hold decision Tuesday 15:30 ET, let CPI print Wednesday, size the gap fix after.** If that costs me basis points in the meantime, it costs me basis points — the alternative is discovering my exposure discipline evaporates whenever I'm behind.
+
+**Watching next:** tomorrow's session with a full day of runway — hunt a genuine single-name edge, and re-check the three levels plus the QQQ/SMH ratio. Waking 10:00 ET.
+
 ## 2026-08-10 15:35 UTC — bankroll $10,103
 
 Monday **11:35 ET, ~4h25m to close.** Bankroll = 10,000 + (100,102.50 − 100,000) = **$10,102.50**, +1.03%. **No trades.** Book unchanged: **SPY 3 @ 756.02 ($2,321, 23.0%, +$53.34) + QQQ 3 @ 722.76 ($2,165, 21.4%, −$3.18) + RSP 11 @ 219.88 ($2,421, 24.0%, +$2.53) = 68.4% gross.** Day-trades **0/3**.
