@@ -68,5 +68,15 @@
     "price": 219.88,
     "rationale": "Core benchmark-breadth leg — equal-weight S&P complements a SPY+QQQ book overweight the top ten, bought at a 91bp discount to SPY since the 8/3 breakout, invalidation on a close below 214.50 costing 0.59% of bankroll.",
     "run_ts": "2026-08-10T14:30:36.747Z"
+  },
+  {
+    "id": "f4d3dbf5-6101-4a52-9a02-4ff6b4d870ae",
+    "ts": "2026-08-11T19:03:40.646458Z",
+    "symbol": "QQQ",
+    "side": "sell",
+    "qty": 3,
+    "price": 717.283333,
+    "rationale": "Pre-registered relative time stop fired at its 8/11 deadline — QQQ/SMH 1.2559 vs 1.2682 at entry — so the semis-to-platforms rotation thesis is refuted and the position is out.",
+    "run_ts": "2026-08-11T19:06:06.956Z"
   }
 ]

@@ -1,39 +1,29 @@
 {
-  "ts": "2026-08-11T14:26:55.141Z",
-  "equity": 10108.83,
-  "cash": 3194.36,
+  "ts": "2026-08-11T19:06:06.956Z",
+  "equity": 10083.88,
+  "cash": 5346.19,
   "positions": [
-    {
-      "symbol": "QQQ",
-      "side": "long",
-      "qty": 3,
-      "avg_entry": 722.76,
-      "price": 721.08,
-      "market_value": 2163.24,
-      "unrealized_pl": -5.04,
-      "unrealized_plpc": -0.00232
-    },
     {
       "symbol": "RSP",
       "side": "long",
       "qty": 11,
       "avg_entry": 219.88,
-      "price": 220.995,
-      "market_value": 2430.945,
-      "unrealized_pl": 12.265,
-      "unrealized_plpc": 0.00507
+      "price": 220.68,
+      "market_value": 2427.48,
+      "unrealized_pl": 8.8,
+      "unrealized_plpc": 0.00364
     },
     {
       "symbol": "SPY",
       "side": "long",
       "qty": 3,
       "avg_entry": 756.02,
-      "price": 773.43,
-      "market_value": 2320.29,
-      "unrealized_pl": 52.23,
-      "unrealized_plpc": 0.02303
+      "price": 770.07,
+      "market_value": 2310.21,
+      "unrealized_pl": 42.15,
+      "unrealized_plpc": 0.01858
     }
   ],
-  "summary": "No trades. Bankroll $10,111 (+1.11%) vs SPY +4.06%, 295bps behind; book unchanged at 68.4% gross (SPY 3, QQQ 3, RSP 11), 0/3 day trades. The QQQ/SMH relative time stop I pre-registered for today's close has failed decisively — ratio 1.2505 vs 1.2682 at entry, needing +1.41% with SMH +1.27% and QQQ +0.05% on memory-scarcity and TSMC/Sony JV news — so I will sell 3 QQQ at the close rather than reclassify it into the laxer 'core' book to escape its own stop, which was exactly the fence failure I set myself to audit. Hunted a single-name edge and found none worth taking: INTC's post-$20B-secondary setup passes the arithmetic but has no articulable edge, memory names are parabolic, and OIH keeps making highs on a driver I still cannot name. No new exposure before Wednesday's 08:30 ET CPI — ~50% odds of a September hike are priced into a record-high tape with Brent near $90, so downside is convex and upside partly spent — but I have dated the rebuild to ~68-70% gross for Wednesday after the print so today's de-risk is a decision, not drift.",
-  "next_wake": "2026-08-11T19:00:00Z"
+  "summary": "Executed the pre-registered QQQ relative time stop: sold 3 QQQ @ 717.28 for a realized -$16.43 (-16bps of bankroll). The 8/5 thesis that platforms would take leadership from semis is refuted — QQQ/SMH sat at 1.2559 against the 1.2682 entry ratio and would have needed +0.98% in 55 minutes. I could have voided the stop by reclassifying QQQ into the 'core' book I created on 8/10; I flagged that dodge this morning in advance and sold instead. Book is now SPY 3 + RSP 11 = $4,738 gross (47.0%) with both invalidations far away (SPY <750, RSP <214.50), and I am adding no exposure into tomorrow's 08:30 ET CPI print with September hike odds near 51% at record highs — the rebuild to ~68-70% gross is already dated for Wednesday after the number.",
+  "next_wake": "2026-08-12T14:00:00Z"
 }
