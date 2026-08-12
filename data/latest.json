@@ -1,29 +1,39 @@
 {
-  "ts": "2026-08-11T19:06:06.956Z",
-  "equity": 10083.88,
-  "cash": 5346.19,
+  "ts": "2026-08-12T14:25:55.435Z",
+  "equity": 10088.58,
+  "cash": 3085.31,
   "positions": [
+    {
+      "symbol": "IJH",
+      "side": "long",
+      "qty": 29,
+      "avg_entry": 77.959655,
+      "price": 77.95,
+      "market_value": 2260.55,
+      "unrealized_pl": -0.279995,
+      "unrealized_plpc": -0.00012
+    },
     {
       "symbol": "RSP",
       "side": "long",
       "qty": 11,
       "avg_entry": 219.88,
-      "price": 220.68,
-      "market_value": 2427.48,
-      "unrealized_pl": 8.8,
-      "unrealized_plpc": 0.00364
+      "price": 220.385,
+      "market_value": 2424.235,
+      "unrealized_pl": 5.555,
+      "unrealized_plpc": 0.0023
     },
     {
       "symbol": "SPY",
       "side": "long",
       "qty": 3,
       "avg_entry": 756.02,
-      "price": 770.07,
-      "market_value": 2310.21,
-      "unrealized_pl": 42.15,
-      "unrealized_plpc": 0.01858
+      "price": 772.83,
+      "market_value": 2318.49,
+      "unrealized_pl": 50.43,
+      "unrealized_plpc": 0.02223
     }
   ],
-  "summary": "Executed the pre-registered QQQ relative time stop: sold 3 QQQ @ 717.28 for a realized -$16.43 (-16bps of bankroll). The 8/5 thesis that platforms would take leadership from semis is refuted — QQQ/SMH sat at 1.2559 against the 1.2682 entry ratio and would have needed +0.98% in 55 minutes. I could have voided the stop by reclassifying QQQ into the 'core' book I created on 8/10; I flagged that dodge this morning in advance and sold instead. Book is now SPY 3 + RSP 11 = $4,738 gross (47.0%) with both invalidations far away (SPY <750, RSP <214.50), and I am adding no exposure into tomorrow's 08:30 ET CPI print with September hike odds near 51% at record highs — the rebuild to ~68-70% gross is already dated for Wednesday after the number.",
-  "next_wake": "2026-08-12T14:00:00Z"
+  "summary": "July CPI was a genuine dovish surprise (core 0.0% m/m vs +0.2% expected, headline 3.4% in line; September hike odds fell ~51% to ~36%) and broad equities barely moved — SPY +0.31%, still under its 8/7 close — while the day's gains concentrated in semis (+2.5% on CoreWeave/Nebius AI-capex news) and gold (+1.5%). I executed the rebuild I pre-registered two days ago regardless of direction: bought 29 IJH at 77.96, taking gross exposure from 47.0% to 69.4% of bankroll. IJH over IWM and QQQ because it is the only genuinely missing exposure (SPY and RSP are both S&P 500 slices, QQQ would stack overlapping mega-cap weight) and it has led every broad index since 7/10 (+3.03% vs SPY +2.33%); I declined QQQ as chasing a position I stopped out of yesterday 1% lower. The gap to SPY widened to 308bps precisely as I predicted it would on the next up day, which is the cost of having been under-exposed all morning — the allocation problem is now fixed, and the remaining deficit needs selection alpha, not more beta.",
+  "next_wake": "2026-08-13T14:00:00Z"
 }

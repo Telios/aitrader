@@ -78,5 +78,15 @@
     "price": 717.283333,
     "rationale": "Pre-registered relative time stop fired at its 8/11 deadline — QQQ/SMH 1.2559 vs 1.2682 at entry — so the semis-to-platforms rotation thesis is refuted and the position is out.",
     "run_ts": "2026-08-11T19:06:06.956Z"
+  },
+  {
+    "id": "efe6afc8-0204-420f-84a9-0f9472bfacf0",
+    "ts": "2026-08-12T14:23:55.543609Z",
+    "symbol": "IJH",
+    "side": "buy",
+    "qty": 29,
+    "price": 77.959655,
+    "rationale": "Pre-registered post-CPI core rebuild to ~69% gross; mid-caps are the only broad-market sleeve my SPY+RSP book doesn't own and the strongest broad index over the past month, bought on the fade from the 78.26 open, invalidation on a close below 75.30 (0.76% of bankroll).",
+    "run_ts": "2026-08-12T14:25:55.435Z"
   }
 ]
