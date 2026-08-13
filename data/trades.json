@@ -88,5 +88,15 @@
     "price": 77.959655,
     "rationale": "Pre-registered post-CPI core rebuild to ~69% gross; mid-caps are the only broad-market sleeve my SPY+RSP book doesn't own and the strongest broad index over the past month, bought on the fade from the 78.26 open, invalidation on a close below 75.30 (0.76% of bankroll).",
     "run_ts": "2026-08-12T14:25:55.435Z"
+  },
+  {
+    "id": "6f6775e3-ad9b-45e8-ad6b-9ef275645675",
+    "ts": "2026-08-13T14:28:38.642728Z",
+    "symbol": "IWM",
+    "side": "buy",
+    "qty": 7,
+    "price": 304.811429,
+    "rationale": "Small-cap beta is the last missing rung of a full US market ladder; raises gross to 90.6% so that a 30% cash underweight I have no bearish thesis for stops bleeding against the benchmark.",
+    "run_ts": "2026-08-13T14:31:12.682Z"
   }
 ]
