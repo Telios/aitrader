@@ -4,6 +4,54 @@ The Trader's running log — newest entries at the top. Written by Claude during
 
 > **Operator note (2026-07-19):** Your tradable bankroll is **$10,000**, NOT the Alpaca account balance. The 2026-07-19 entries below saying "$100,000 equity/cash" describe the raw paper account, which you may not size against. Every run: compute bankroll = `starting_capital` + (account equity − `account_equity_start` from `data/baseline.json`) and reason only in those terms.
 
+## 2026-08-14 18:40 UTC — bankroll $10,143
+
+Friday **14:40 ET, ~1h20m to close. No trades.** Bankroll = 10,000 + (100,142.89 − 100,000) = **$10,142.89**, +1.43%. Book unchanged: **SPY 3 @ 756.02 ($2,328, 22.95%, +$60.06) + RSP 11 @ 219.88 ($2,452, 24.17%, +$33.00) + IJH 29 @ 77.96 ($2,279, 22.47%, +$17.99) + IWM 7 @ 304.81 ($2,132, 21.02%, −$1.76) = $9,191 gross, 90.61%.** Cash sleeve $952 (9.39%). Day-trades **0/3** — no orders placed today at all. No open orders.
+
+**Fifth wake today against a schedule that asked for Monday. Same three-part gate, run before I looked at a price: invalidation hit, guardrail breach, or genuinely new information.** None. Stops 3.4–4.2% away, RSP 24.17% inside the cap, gross 90.61% inside 95%. **Nothing to execute, so nothing executed.** But the run produced the most important finding of the experiment so far, and it says that three consecutive entries — including two I was pleased with — were reasoning from a misdiagnosis I wrote myself.
+
+**Finding — my 298bp deficit is not structural beta drag. 100% of it was created in three sessions, and I have spent three days analyzing the wrong thing.** On 8/14 16:25 I measured my book beta at 0.842 and concluded "an 0.84-beta book cannot keep pace with a 1.00-beta benchmark in an up-market, no matter how disciplined it is." That sentence has anchored every entry since. Today I finally decomposed the equity curve instead of re-quoting the conclusion:
+
+| window | SPY | me | capture | gap change |
+|---|---|---|---|---|
+| **7/31 18:58 → 8/5 15:23** | **+3.53%** | **+0.56%** | **15.8%** | **−297bps** |
+| 8/5 15:23 → now (9 sessions) | +0.47% | +0.40% | 85.1% | −7bps |
+| inception → now | +4.41% | +1.43% | 32.4% | −298bps |
+
+**The entire hole is one window.** Three sessions at the start of August, SPY +3.53%, me +0.56% — 16% capture, which is only possible if I was barely invested. Since getting to ~90% on 8/5 I have captured **85.1%** of SPY's move against a **measured beta of 0.842**. That is not drift, that is my book doing exactly what its beta says it should, to within a basis point.
+
+**So the honest attribution: ~228bps of the 298 is "I was in cash while the market rallied," and ~70bps is the tilt.** Had I held today's exact book from inception, total beta drag would be **70bps**, not 298. I have spent three entries dissecting the 70 and never once looked at the 228.
+
+**Three consequences, and the first one is uncomfortable.**
+
+**1. Rule #8 was built on the misdiagnosis, and the urgency it manufactured is the most dangerous thing in this journal.** I wrote: *"the deficit is a single-name problem... Monday's work is the fifth position, or an honest account of why no candidate cleared the checklist. Six declines is a record I'm no longer allowed to be proud of."* That is a deadline I imposed on myself to recover a loss — and the loss is **sunk, caused by a specific past error, and not compounding.** My book bleeds under 1bp/session at the current market pace. **There is no fire.** Pressuring myself to produce a fifth position to win back 298bps is revenge trading with a spreadsheet attached: sizing up the hunt for alpha in proportion to a past loss. The discipline names revenge trading as a trap and I walked into a slow-motion version of it while congratulating myself on trap-spotting. **Rule #8 is rewritten below — the search for alpha stays, the deadline goes.**
+
+**2. The most expensive thing this portfolio has ever done is hold cash during an up move — 228bps, in three days.** Nothing else in the record is within an order of magnitude. Every refinement I have made since — stop placement, beta measurement, the cash-sleeve arithmetic — has moved outcomes by single-digit basis points. **That reframes the whipsaw risk I found on 8/14 16:25 from a hypothetical into a repeat offense.** IWM and SPY, 44% of the book, both exit on a routine ~3% SPY pullback; the June base rate says that happens and then SPY makes new highs. **That is not an abstract concern about stop width — it is the exact error that dug this hole, pre-wired to happen again.** Rule #7 (post-stop default is SPY, not cash) was written on reasoning; it now has 228bps of evidence behind it and it is carrying more weight than I realized when I wrote it. **Stops stay where they are — I will not renegotiate levels while green, and I said so yesterday — but #7 is now the most load-bearing rule I have.**
+
+**3. I must not launder this into "the tilt is free."** 7bps of drag in 9 sessions is not evidence the tilt costs nothing; it is evidence **SPY moved 0.47%.** Beta drag is proportional to the market's move, and it simply has not been charged yet. If SPY runs +4% next month the tilt costs ~64bps. The forward cost is real and rule #5's −100bps trigger stays live. **The claim I am making is narrow: beta explains almost none of the *existing* gap. It says nothing about the future.**
+
+**Correction to yesterday's 17:35 entry.** I wrote that "1 IWM — the only clean fit" for the cash sleeve. Wrong: **1 IJH also fits** (gross 91.39%, IJH 23.24% — both inside guardrails), and it is the better instrument, lower beta and the widest stop distance. The conclusion is unchanged and now more strongly held — $79 of IJH buys **0.7bps per 1% SPY**, which is indistinguishable from nothing. But I said I'd stop letting unexamined numbers ride, and that one was mine, one day old.
+
+**Nothing new on the tape.** Index wire unchanged since 17:22 UTC: Baker Hughes rigs +1, Canada/US critical-minerals talks, the Aramco Najran headline I already priced as non-information (oil didn't tick). Today's 30-headline flood is the **Q2 13F deadline** — June 30 holdings, 45 days stale **by construction**, the purest non-information the wire produces. Russell 2000 extending records is consistent with my tilt and is not a reason to add. **I skipped a web search on weekend risk deliberately: I've pre-committed against cutting without a bearish thesis and I won't open a new name into a Friday close, so no result could change an action. A check that cannot change a decision is theater.**
+
+**Scoreboard.** SPY 743.28 → **776.04 = +4.41%.** I am **+1.43%. 298bps behind** — 145 (8/3), 244, 291, 290, 307, 298, 295, 277, 308, 336 (8/13), 317, 307, 306, 296, **298 now.** Flat, as it has been for nine sessions, which is now the expected reading rather than a mystery.
+
+**Positions.** All four core beta, none near a stop: **SPY <750 (−3.36% away), RSP <214.50 (−3.76%), IJH <75.30 (−4.17%), IWM <294.00 (−3.47%).** Holding all four through the weekend — no bearish thesis, and today's finding says cutting exposure without one is the single most expensive mistake available to me.
+
+**Traps named.** **Revenge trading, disguised as diligence — the live one and the worst I've caught.** Rule #8 turned a sunk loss into a self-imposed deadline to produce a trade; the arithmetic that killed it took one query I could have run any day this week. **Narrative lock — third consecutive day, and this time the stale number was one I authored.** I've caught a stale factor spread (8/14 15:30), a gross figure mistaken for exposure (16:25), an unpriced cash drag (17:35), and now **a causal story I invented and then reasoned from for three entries.** The pattern has sharpened: I don't repeat other people's bad numbers, I repeat my own conclusions. **Statistic-laundering — refused:** 7bps/9 sessions is not "the tilt is free." **Activity bias — gated, fifth time today.** **Chasing — nothing:** Russell at records, my IWM sleeve is flat, no add.
+
+**Pre-registered.**
+1. **Exits, close-based: SPY <750, RSP <214.50, IJH <75.30, IWM <294.00.** Unchanged, not widened.
+2. **~90.6% gross is the ceiling.** The 95% guardrail leaves $444 of headroom worth ~3.9bps per 1% SPY. Cash is headroom, not a slot.
+3. **If RSP > 25% of bankroll, trim to ~23%.** Mechanical, no view.
+4. **New ideas are funded by trimming RSP/IJH/IWM, never from cash.**
+5. **If the 1-month relative of RSP/IJH/IWM vs SPY averages worse than −100bps, rebalance toward SPY.** Last reading −14bps. **Still live — the tilt's forward cost is real even though it explains ~70bps, not 298.**
+6. **AMAT: gross margin guiding *up* sequentially. XLV: policy pullback plus cleared crowding. Energy: no entry on a geopolitical premium I can't forecast. BIRK: ≤36.76 plus real work. GLD: no line.**
+7. **Post-stop default is SPY, not cash** — within two sessions, a written bearish thesis with invalidation and timescale, or the notional goes to SPY. Silence defaults to SPY. **Now the most load-bearing rule I have: 228bps of the deficit is exactly this error, unmitigated.**
+8. **REWRITTEN — there is no deadline on the fifth position.** The deficit is a sunk cost from a past under-investment error, not an ongoing bleed, and it will not be recovered by a hero trade. Alpha is still the only way to close it, but **a forced entry costs more than the gap does.** Seven declines is a fine record if the eighth idea is real. **The deadline is retired; the standing search is not.**
+
+**Next look Monday 2026-08-17 ~14:00 UTC (10:00 ET).** No sixth run today — every stop is >3.3% away, I've pre-committed against reducing weekend risk, and nothing reachable in 80 minutes changes an action. **Closing thought: for three days I've been proud of auditing numbers, and today I found that the number most in need of auditing was my own explanation. A stale statistic is someone else's error that I failed to re-date. A misdiagnosis is mine, and it's worse, because every subsequent entry built on it made it feel better established rather than more suspect. I analyzed 70 basis points for three days because they were interesting, and never looked at the 228 sitting next to them.**
+
 ## 2026-08-14 17:35 UTC — bankroll $10,140
 
 Friday **13:34 ET, ~2h26m to close. No trades.** Bankroll = 10,000 + (100,140.09 − 100,000) = **$10,140.09**, +1.40%. Book unchanged: **SPY 3 @ 756.02 ($2,327, 22.95%, +$59.34) + RSP 11 @ 219.88 ($2,450, 24.16%, +$31.46) + IJH 29 @ 77.96 ($2,278, 22.47%, +$17.41) + IWM 7 @ 304.81 ($2,133, 21.03%, −$1.06) = $9,188 gross, 90.61%.** Cash sleeve $952 (9.39%). Day-trades **0/3** — no orders placed today at all. No open orders.
