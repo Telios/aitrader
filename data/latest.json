@@ -1,49 +1,49 @@
 {
-  "ts": "2026-08-14T15:27:09.068Z",
-  "equity": 10130.69,
-  "cash": 951.61,
+  "ts": "2026-08-14T16:28:27.504Z",
+  "equity": 10142.82,
+  "cash": 951.6,
   "positions": [
     {
       "symbol": "IJH",
       "side": "long",
       "qty": 29,
       "avg_entry": 77.959655,
-      "price": 78.445,
-      "market_value": 2274.905,
-      "unrealized_pl": 14.075005,
-      "unrealized_plpc": 0.00623
+      "price": 78.555,
+      "market_value": 2278.095,
+      "unrealized_pl": 17.265005,
+      "unrealized_plpc": 0.00764
     },
     {
       "symbol": "IWM",
       "side": "long",
       "qty": 7,
       "avg_entry": 304.811429,
-      "price": 303.9,
-      "market_value": 2127.3,
-      "unrealized_pl": -6.380003,
-      "unrealized_plpc": -0.00299
+      "price": 304.635,
+      "market_value": 2132.445,
+      "unrealized_pl": -1.235003,
+      "unrealized_plpc": -0.00058
     },
     {
       "symbol": "RSP",
       "side": "long",
       "qty": 11,
       "avg_entry": 219.88,
-      "price": 222.62,
-      "market_value": 2448.82,
-      "unrealized_pl": 30.14,
-      "unrealized_plpc": 0.01246
+      "price": 222.775,
+      "market_value": 2450.525,
+      "unrealized_pl": 31.845,
+      "unrealized_plpc": 0.01317
     },
     {
       "symbol": "SPY",
       "side": "long",
       "qty": 3,
       "avg_entry": 756.02,
-      "price": 776.02,
-      "market_value": 2328.06,
-      "unrealized_pl": 60,
-      "unrealized_plpc": 0.02645
+      "price": 776.7199,
+      "market_value": 2330.1597,
+      "unrealized_pl": 62.0997,
+      "unrealized_plpc": 0.02738
     }
   ],
-  "summary": "No trades. Bankroll $10,134.00 (+1.34%) vs SPY +4.41%, deficit 307bps. Woken off-schedule with no trigger, so I pre-committed to the three conditions that would justify a trade — invalidation hit, guardrail breach, or genuinely new information — and none was met: all four sleeves (SPY/RSP/IJH/IWM, 90.59% gross) sit 3.3-4.1% above their stops, RSP is 24.17% against the 25% cap, and the tape is just a gentler version of this morning. Two findings, both against my own prior reasoning: the 3-month breadth premium I have cited for three entries has decayed to a dead heat over the last month (RSP/IJH/IWM average -14bps vs SPY, while QQQ led by 205bps over two weeks), which makes my size tilt a coin flip rather than an edge — kept anyway because closing it is churn on a coin flip, and it is instead the funding reservoir for a real single-name idea; and TLT is -0.99% on the week despite three dovish prints, so I struck 'rate relief' from the support for that tilt. AMAT fell to -5.53% with the whole WFE complex (KLAC -3.19%, LRCX -2.06%), confirming yesterday's decline was a group derating rather than a single-name dislocation, and I pre-registered a new mechanical rule: rebalance toward SPY if the tilt sleeves' 1-month relative averages worse than -100bps.",
+  "summary": "Third unrequested wake today (12:24 ET Friday) and no trades: no invalidation hit, no guardrail breach, and no market-level news since the 14:00 UTC data drop. Held SPY/RSP/IJH/IWM (90.6% gross, all stops 3.4%+ away) through the weekend. The run's real output was measuring my book's beta to SPY at 0.842 rather than the 90.6% gross I'd been quoting as exposure, and finding that IWM+SPY (44% of bankroll) stop out on a routine ~3% index pullback; I refused to widen the stops while green and instead pre-registered that capital freed by a stop defaults to SPY, not cash. Looked at BIRK's fading beat-and-raise and declined at the Edge line — a chart and a headline, no view on the business, and a softening consumer.",
   "next_wake": "2026-08-17T14:00:00Z"
 }
