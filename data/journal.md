@@ -4,6 +4,46 @@ The Trader's running log — newest entries at the top. Written by Claude during
 
 > **Operator note (2026-07-19):** Your tradable bankroll is **$10,000**, NOT the Alpaca account balance. The 2026-07-19 entries below saying "$100,000 equity/cash" describe the raw paper account, which you may not size against. Every run: compute bankroll = `starting_capital` + (account equity − `account_equity_start` from `data/baseline.json`) and reason only in those terms.
 
+## 2026-08-14 17:35 UTC — bankroll $10,140
+
+Friday **13:34 ET, ~2h26m to close. No trades.** Bankroll = 10,000 + (100,140.09 − 100,000) = **$10,140.09**, +1.40%. Book unchanged: **SPY 3 @ 756.02 ($2,327, 22.95%, +$59.34) + RSP 11 @ 219.88 ($2,450, 24.16%, +$31.46) + IJH 29 @ 77.96 ($2,278, 22.47%, +$17.41) + IWM 7 @ 304.81 ($2,133, 21.03%, −$1.06) = $9,188 gross, 90.61%.** Cash sleeve $952 (9.39%). Day-trades **0/3** — no orders placed today at all. No open orders.
+
+**Fourth wake today against a schedule that asked for Monday, and I ran the same three-part gate: invalidation hit, guardrail breach, or genuinely new information.** None. Stops are 3.3–4.2% away (SPY <750 is the nearest at −3.32%), RSP at 24.16% is inside the 25% cap, gross 90.61% is inside 95%. **Nothing to execute, so nothing executed.** The run earned two findings anyway, and the first one is a story I started building and then had to kill.
+
+**Finding 1 — I nearly manufactured an "AI capex is derating" thesis out of two unrelated single names, and the cross-section refused to cooperate.** The wire handed me **AVGO −6.51% on a "$370 billion AI financing question"**, on top of **AMAT −5.60%** which I'd declined yesterday. Two large AI-adjacent names down 5–6% in a session is a very seductive shape, especially because a mega-cap AI derating is the one macro event that would retroactively justify my equal-weight/small-cap tilt. So I pulled the complex before writing a word of it: **NVDA −0.08%, MSFT −0.20%, AMD +4.10%, MU +1.31%, VRT +1.98%, SMH −0.93%.** That is not a theme. **AMD up 4% and MU up 1.3% on the day AVGO loses 6.5% is the definition of idiosyncratic** — a financing question about one company's book, and a margin guide at one company. **I want to name what almost happened: I had a conclusion I wanted (my tilt is right) and a headline that pointed at it, and the only thing that stopped me was checking six other tickers before typing.** The tell was that the story would have flattered a position I already hold.
+
+**Finding 2 — I settled the cash-sleeve question with arithmetic instead of with my own rule, and the arithmetic says something more useful than the rule did.** Rule 2 says "90.6% gross is the ceiling, the 9.4% cash is headroom, not a slot." Yesterday I caught myself treating a screen number as if it answered a question, so I went after this one the same way: **where does 90.6% actually come from, and what would deploying the cash buy me?**
+
+First, the constraint is not what I'd assumed. Per-sleeve room to the 25% cap totals **$952 — exactly the cash sleeve** — so `max_position_pct` is *not* binding in aggregate. The binding constraint is the 95% gross guardrail: **$445 of genuine headroom, 4.39% of bankroll.** So rule 2's number was roughly right but my stated reason for it was wrong.
+
+Then the part that actually decides it. Deploying that entire $445 at ~0.9 beta moves book beta **0.842 → 0.881**. That is **+3.9bps captured per +1% SPY move.** Against a 296bp deficit:
+
+> **SPY would have to rise 78% for the cash deployment alone to close my gap.**
+
+**The cash sleeve is not the problem, and I've been arguing about it for three days as though it were.** Worse, every mechanically-available route is bad on its own terms: 1 SPY breaches gross (98.3%), 1 RSP breaches the position cap (26.4%), and 1 IWM — the only clean fit — would add to my **highest-beta, tightest-stopped, only-losing sleeve**, concentrating the exact whipsaw risk I measured yesterday. **A good-sounding reason attached to the worst available instrument is how bad trades get placed, and I'd have gotten there by "fixing" cash drag.**
+
+**What that leaves is the finding.** With four sleeves under a 25% cap and a 95% gross ceiling, my book's beta is structurally pinned near 0.84–0.88. **I cannot close a 296bp deficit by rearranging what I own.** The only lever with enough size is the thing my scoreboard has been telling me for a month: **a fifth position, a researched single name, funded by trimming.** My portfolio structure and my performance gap are pointing at the same missing piece. Cash is a red herring and I'm done litigating it.
+
+**Aramco headline — checked, declined as information.** 17:18 UTC: Houthi-run Saba claims an attack on **Saudi Aramco's Najran facility**. Friday afternoon, geopolitical, weekend risk — the shape of a thing I should take seriously. **The market's verdict was unambiguous: USO 126.01 → 126.23 across the headline, XLE 62.02 flat, SPY unmoved.** Oil did not tick. Recurring Houthi strikes on Saudi border infrastructure are priced as routine, and **an event that moves nothing is not information, however alarming the headline reads.** No change to weekend posture. **I hold no bearish thesis, so cutting exposure into a Friday close against a 100%-invested benchmark remains an undefended bet dressed as prudence** — the same conclusion as the last three runs, reached from a live catalyst rather than from inertia.
+
+**Scoreboard.** SPY 743.28 → **775.72 = +4.36%.** I am **+1.40%. 296bps behind** — 145 (8/3), 244, 291, 290, 307, 298, 295, 277, 308, 336 (8/13), 317, 307, 306, **296 now.** First sub-300 reading since 8/12. **I want to be precise about why, because the flattering explanation is wrong.** Over the last hour SPY fell 0.109% and my book fell 0.017%. **Beta alone predicted I'd fall 0.092% and gain only ~1.7bps of ground; I gained ~9bps.** So the tilt added ~7bps beyond beta — **in one hour, which is noise, and yesterday I explicitly warned myself against reading exactly this kind of window.** The durable point is only the direction: an 0.84-beta book gains ground when SPY falls and loses it when SPY rises. **My deficit shrinking today is not evidence my tilt is working; it's evidence the market went down a little.**
+
+**Positions.** All four core beta, none near a stop: **SPY <750 (−3.32% away), RSP <214.50 (−3.70%), IJH <75.30 (−4.15%), IWM <294.00 (−3.50%).** Holding all four through the weekend.
+
+**Traps named.** **Narrative-fitting — the live one, caught mid-build:** AVGO+AMAT into an "AI derating" story that would have validated my own book, killed by checking six tickers. **Activity bias — the premise of a fourth unrequested wake**, gated before I looked at a single price. **Rule-as-substitute-for-thinking — refused:** I could have cited rule 2 and moved on; computing what the cash is actually worth (3.9bps/1%) was worth far more than obeying the rule. **Solving the wrong problem — dodged:** the cash sleeve was never the source of the deficit. **Statistic-laundering — refused again:** I declined to read a 10bp one-hour improvement as tilt vindication.
+
+**Pre-registered.**
+1. **Exits, close-based: SPY <750, RSP <214.50, IJH <75.30, IWM <294.00.** Unchanged, and not widened.
+2. **~90.6% gross is the ceiling — now with its real reason:** the 95% gross guardrail leaves $445 of headroom whose entire beta value is 3.9bps per 1% SPY. Cash is headroom, not a slot, and **not a lever worth pulling.**
+3. **If RSP > 25% of bankroll, trim to ~23%.** Mechanical, no view.
+4. **New ideas are funded by trimming RSP/IJH/IWM, never from cash.**
+5. **If the 1-month relative of RSP/IJH/IWM vs SPY averages worse than −100bps, rebalance the tilt toward SPY.** Last reading −14bps.
+6. **AMAT: gross margin guiding *up* sequentially. XLV: policy pullback plus cleared crowding. Energy: no entry on a geopolitical premium I can't forecast. BIRK: ≤36.76 plus real work. GLD: no line.**
+7. **Post-stop default is SPY, not cash.** After any stop fires, within two sessions: a written bearish thesis with invalidation and timescale, or the notional goes to SPY. Silence defaults to SPY.
+8. **NEW — the deficit is a single-name problem.** Beta rearrangement is capped at ~0.88 and cannot close 296bps. Monday's work is the fifth position, or an honest account of why no candidate cleared the checklist. **Six declines is a record I'm no longer allowed to be proud of.**
+
+**Next look Monday 2026-08-17 ~14:00 UTC (10:00 ET).** **Closing thought: three days, three numbers I'd been carrying without examining — a stale factor spread, a gross figure I mistook for exposure, and now a cash drag I'd been debating without ever pricing. Each time the examination ended the debate in one line of arithmetic. The pattern is that my errors aren't bad trades, they're unpriced assumptions that survive because arguing about them feels like work.**
+
 ## 2026-08-14 16:25 UTC — bankroll $10,142
 
 Friday **12:24 ET, ~3h36m to close. No trades.** Bankroll = 10,000 + (100,141.79 − 100,000) = **$10,141.79**, +1.42%. Book unchanged: **SPY 3 @ 756.02 ($2,330, 22.97%, +$61.63) + RSP 11 @ 219.88 ($2,450, 24.16%, +$31.35) + IJH 29 @ 77.96 ($2,278, 22.46%, +$17.27) + IWM 7 @ 304.81 ($2,132, 21.02%, −$1.45) = $9,190 gross, 90.62%.** Cash sleeve $952 (9.38%). Day-trades **0/3**. No open orders.
