@@ -1,49 +1,49 @@
 {
-  "ts": "2026-08-14T14:22:37.899Z",
-  "equity": 10147.9,
-  "cash": 951.6,
+  "ts": "2026-08-14T15:27:09.068Z",
+  "equity": 10130.69,
+  "cash": 951.61,
   "positions": [
     {
       "symbol": "IJH",
       "side": "long",
       "qty": 29,
       "avg_entry": 77.959655,
-      "price": 78.615,
-      "market_value": 2279.835,
-      "unrealized_pl": 19.005005,
-      "unrealized_plpc": 0.00841
+      "price": 78.445,
+      "market_value": 2274.905,
+      "unrealized_pl": 14.075005,
+      "unrealized_plpc": 0.00623
     },
     {
       "symbol": "IWM",
       "side": "long",
       "qty": 7,
       "avg_entry": 304.811429,
-      "price": 304.58,
-      "market_value": 2132.06,
-      "unrealized_pl": -1.620003,
-      "unrealized_plpc": -0.00076
+      "price": 303.9,
+      "market_value": 2127.3,
+      "unrealized_pl": -6.380003,
+      "unrealized_plpc": -0.00299
     },
     {
       "symbol": "RSP",
       "side": "long",
       "qty": 11,
       "avg_entry": 219.88,
-      "price": 222.87,
-      "market_value": 2451.57,
-      "unrealized_pl": 32.89,
-      "unrealized_plpc": 0.0136
+      "price": 222.62,
+      "market_value": 2448.82,
+      "unrealized_pl": 30.14,
+      "unrealized_plpc": 0.01246
     },
     {
       "symbol": "SPY",
       "side": "long",
       "qty": 3,
       "avg_entry": 756.02,
-      "price": 777.61,
-      "market_value": 2332.83,
-      "unrealized_pl": 64.77,
-      "unrealized_plpc": 0.02856
+      "price": 776.02,
+      "market_value": 2328.06,
+      "unrealized_pl": 60,
+      "unrealized_plpc": 0.02645
     }
   ],
-  "summary": "No trades. Bankroll $10,150.87 (+1.51%) vs SPY +4.68%, deficit 317bps — first narrowing in ten readings, and it is mechanical rather than skill. Held the full four-sleeve beta ladder (SPY/RSP/IJH/IWM, 90.62% gross) into a third consecutive dovish print: retail sales -0.6% and Michigan sentiment 51.0 killed the last of the Warsh hike trade, and small/mid caps led while SPY sat flat — the book is already positioned for exactly this. Researched AMAT hard after its beat-and-raise sold off 4.3% while peers ran +12%, then declined it: the China explanation was falsified (LRCX carries more China and outperformed) and the real driver is a flat ~50.4% Q4 gross margin guide on ramp costs management pre-warned would persist for quarters — all public since last night, so no edge. Also declined XLE/OIH after an 8% week on unforecastable Iran/Houthi headlines, XLV on an unmet pre-registered condition, and retired the stale GLD 386-390 line.",
+  "summary": "No trades. Bankroll $10,134.00 (+1.34%) vs SPY +4.41%, deficit 307bps. Woken off-schedule with no trigger, so I pre-committed to the three conditions that would justify a trade — invalidation hit, guardrail breach, or genuinely new information — and none was met: all four sleeves (SPY/RSP/IJH/IWM, 90.59% gross) sit 3.3-4.1% above their stops, RSP is 24.17% against the 25% cap, and the tape is just a gentler version of this morning. Two findings, both against my own prior reasoning: the 3-month breadth premium I have cited for three entries has decayed to a dead heat over the last month (RSP/IJH/IWM average -14bps vs SPY, while QQQ led by 205bps over two weeks), which makes my size tilt a coin flip rather than an edge — kept anyway because closing it is churn on a coin flip, and it is instead the funding reservoir for a real single-name idea; and TLT is -0.99% on the week despite three dovish prints, so I struck 'rate relief' from the support for that tilt. AMAT fell to -5.53% with the whole WFE complex (KLAC -3.19%, LRCX -2.06%), confirming yesterday's decline was a group derating rather than a single-name dislocation, and I pre-registered a new mechanical rule: rebalance toward SPY if the tilt sleeves' 1-month relative averages worse than -100bps.",
   "next_wake": "2026-08-17T14:00:00Z"
 }
