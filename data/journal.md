@@ -4,6 +4,63 @@ The Trader's running log — newest entries at the top. Written by Claude during
 
 > **Operator note (2026-07-19):** Your tradable bankroll is **$10,000**, NOT the Alpaca account balance. The 2026-07-19 entries below saying "$100,000 equity/cash" describe the raw paper account, which you may not size against. Every run: compute bankroll = `starting_capital` + (account equity − `account_equity_start` from `data/baseline.json`) and reason only in those terms.
 
+## 2026-08-14 19:45 UTC — bankroll $10,142
+
+Friday **15:45 ET, ~15 minutes to close. No trades.** Bankroll = 10,000 + (100,142.28 − 100,000) = **$10,142.28**, +1.42%. Book unchanged: **SPY 3 @ 756.02 ($2,328, 22.96%, +$60.39) + RSP 11 @ 219.88 ($2,450, 24.16%, +$31.68) + IJH 29 @ 77.96 ($2,279, 22.47%, +$18.28) + IWM 7 @ 304.81 ($2,133, 21.03%, −$0.36) = $9,191 gross, 90.62%.** Cash sleeve $951 (9.38%). Day-trades **0/3** — no orders placed today at all. No open orders.
+
+**Sixth wake today, and yesterday's 18:40 entry explicitly said there would not be one.** I ran the gate anyway, before looking for anything to do: no invalidation (stops 3.37–4.19% away), no guardrail breach (RSP 24.16% inside the cap, gross 90.62% inside 95%), no new information (the wire since 18:39 UTC is UBS/Canaccord price-target exhaust, an HCW Biologics restatement, and a Waymo CPUC approval — nothing market-level). **Fifteen minutes to close on a Friday is the single worst moment in the week to open a researched single name, and rule #8 was rewritten yesterday precisely to remove the deadline that would have pressured me into one here.** So: nothing to execute. Instead I audited the one pre-registered trigger carrying a stale reading — and found it is built backwards.
+
+**Finding — rule #5 is a buy-high momentum trigger wearing a risk-rule costume, and I wrote it myself.** Rule #5 says: *if the 1-month relative of RSP/IJH/IWM vs SPY averages worse than −100bps, rebalance toward SPY.* I refreshed the reading (**−2bps**, up from −14bps, nowhere near firing) and then, instead of filing the number, asked what the rule actually measures. Raw relative return decomposes exactly:
+
+> **raw rel = tilt alpha − (1 − beta) × SPY return**
+
+My book's (1 − beta) is **0.158**. So with the tilt earning *precisely zero* alpha:
+
+| SPY 1-month move | rule #5 reads |
+|---|---|
+| +2% | −32bps |
+| +4% | −63bps |
+| **+6.3%** | **−100bps → FIRES** |
+| +8% | −126bps |
+
+**A ~6% SPY month fires the rule on its own, with nothing whatsoever wrong with the tilt — and the action it prescribes is "buy SPY."** That is a trigger that tells me to rotate into the benchmark immediately after the benchmark has run hardest. I built a momentum-chasing rule, labelled it risk control, and have been dutifully reporting its reading for a week without once asking what it was a function of.
+
+**The correct estimator is beta-adjusted alpha, and it changes the sign of the conclusion:**
+
+| window | SPY | raw rel | **beta-adj alpha** |
+|---|---|---|---|
+| 21 sessions (7/16→now) | +3.37% | −2bps | **+26bps** |
+| 10 sessions (7/31→now) | +3.93% | +30bps | **+63bps** |
+| 5 sessions (8/07→now) | +0.39% | +71bps | **+75bps** |
+| **the hole (7/31→8/5)** | **+3.08%** | **−60bps** | **−34bps** |
+
+**The tilt has positive alpha in three of four windows and −34bps in the worst one.** The raw measure systematically understates it, because the tilt is lower-beta and the market went up.
+
+**Steelman I owe the rule, because I want to keep this tilt and that is exactly when I should distrust myself.** Raw relative return is what actually lands in my P&L against the benchmark — if the tilt drags 100bps/month in raw terms I am genuinely losing, and the reason is cold comfort. That is a real point. It loses anyway, for a specific reason: **rule #5 conflates two different decisions.** "Is the tilt earning its keep?" is a question about alpha. "Is my book too low-beta to keep up?" is a question about exposure. Raw rel answers neither cleanly — it mixes them and then attributes the whole thing to the tilt. If the truth is *no alpha and low beta*, the fix is to raise beta, **not** to specifically dump RSP/IJH/IWM. Rule #5 as written would sell the innocent party.
+
+**So #5 splits in two (below). Neither half fires today: alpha +26bps, and the beta shortfall is a choice I am making with open eyes, not a defect to be triggered on.**
+
+**Third independent confirmation of yesterday's finding, and it sharpens one claim I made.** I re-ran the 7/31→8/5 hole at the instrument level rather than off my equity curve. **SPY +3.08%; had I held today's exact book through it, I'd have made ~2.38% — a 70bp shortfall. I actually made +0.56%.** So of the ~252bps lost in that window, **~182bps is cash and ~70bps is composition** — the same ~2.6:1 ratio as yesterday's equity-curve decomposition, reached by a completely different route. Two methods agreeing is worth more than either alone. **But I must correct yesterday's gloss:** I implied the instruments were fine and only my cash weight was wrong. Within that window the tilt was **−60bps raw / −34bps beta-adjusted** — modestly negative, not neutral. The magnitude ordering is overwhelming and unchanged; the "instruments did fine" phrasing was too generous to me.
+
+**Scoreboard.** SPY 743.28 → **776.15 = +4.42%.** I am **+1.42%. 300bps behind** — 145 (8/3), 244, 291, 290, 307, 298, 295, 277, 308, 336 (8/13), 317, 307, 306, 296, 298, **300 now.** Two basis points wider than the 18:40 reading because SPY ticked up 11 cents. **That is noise and I am recording it as noise** — I spent yesterday refusing to read a 10bp improvement as vindication and the rule cuts both ways.
+
+**Positions.** All four core beta, none near a stop: **SPY <750 (−3.37% away), RSP <214.50 (−3.70%), IJH <75.30 (−4.19%), IWM <294.00 (−3.53%).** Holding all four through the weekend. No bearish thesis, and the strongest evidence in this journal says cutting exposure without one is the most expensive thing I know how to do.
+
+**Traps named.** **Rule-as-substitute-for-thinking — the live one, and the worst version yet:** I had reported rule #5's reading for a week without knowing what function I was reading. A rule I stop interrogating is worse than no rule, because it launders an unexamined judgment as discipline. **Narrative lock, fourth consecutive day, and again the stale artifact was mine** — a stale spread (8/14 15:30), a gross figure mistaken for exposure (16:25), an unpriced cash drag (17:35), a causal story I invented (18:40), and now **a trigger whose algebra I never checked.** **Motivated reasoning — flagged, not dodged:** the beta-adjusted estimator conveniently exonerates a tilt I own, so I wrote the steelman for the rule I was about to demote and made it win or lose on its merits. **Activity bias — gated, sixth time today, 15 minutes before a Friday close.** **Self-flattery — refused:** I corrected yesterday's "instruments did fine" to "instruments modestly lagged."
+
+**Pre-registered.**
+1. **Exits, close-based: SPY <750, RSP <214.50, IJH <75.30, IWM <294.00.** Unchanged, not widened.
+2. **~90.6% gross is the ceiling.** The 95% guardrail leaves $444 of headroom worth ~3.9bps per 1% SPY. Cash is headroom, not a slot.
+3. **If RSP > 25% of bankroll, trim to ~23%.** Mechanical, no view.
+4. **New ideas are funded by trimming RSP/IJH/IWM, never from cash.**
+5. **REPLACED — 5a: tilt quality.** If **beta-adjusted alpha** of RSP/IJH/IWM over 1 month averages worse than **−100bps**, rotate the tilt into SPY. Reading today: **+26bps.** Raw relative return is retired as a trigger — it fires on SPY rallies, not on tilt failure.
+6. **NEW — 5b: beta shortfall is its own decision, not a tilt problem.** Book beta 0.842 costs **~15.8bps per +1% SPY** against a 1.00-beta benchmark. This is a deliberate choice. It is fixed by raising exposure, never by scapegoating the tilt. **Re-argued monthly, on its own terms.**
+7. **AMAT: gross margin guiding *up* sequentially. XLV: policy pullback plus cleared crowding. Energy: no entry on a geopolitical premium I can't forecast. BIRK: ≤36.76 plus real work. GLD: no line.**
+8. **Post-stop default is SPY, not cash** — within two sessions, a written bearish thesis with invalidation and timescale, or the notional goes to SPY. Silence defaults to SPY. **The most load-bearing rule I have: 182bps of the deficit is exactly this error.**
+9. **No deadline on the fifth position.** The deficit is sunk, not compounding. A forced entry costs more than the gap does. **Seven declines is a fine record if the eighth idea is real.**
+
+**Next look Monday 2026-08-17 ~14:00 UTC (10:00 ET).** **Closing thought: the last five runs have each found one number I was carrying without examining, and today's was the most embarrassing kind — not a stale input or a wrong story, but a rule I authored, cited weekly, and never once differentiated. The pattern across all five is identical: nothing here has failed because a trade went wrong. Things fail because a quantity gets promoted to "known" and then never re-derived. Six no-trade runs in a day looks like inactivity; what it actually bought was five corrections to the machinery that will place the next trade.**
+
 ## 2026-08-14 18:40 UTC — bankroll $10,143
 
 Friday **14:40 ET, ~1h20m to close. No trades.** Bankroll = 10,000 + (100,142.89 − 100,000) = **$10,142.89**, +1.43%. Book unchanged: **SPY 3 @ 756.02 ($2,328, 22.95%, +$60.06) + RSP 11 @ 219.88 ($2,452, 24.17%, +$33.00) + IJH 29 @ 77.96 ($2,279, 22.47%, +$17.99) + IWM 7 @ 304.81 ($2,132, 21.02%, −$1.76) = $9,191 gross, 90.61%.** Cash sleeve $952 (9.39%). Day-trades **0/3** — no orders placed today at all. No open orders.

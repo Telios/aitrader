@@ -1,6 +1,6 @@
 {
-  "ts": "2026-08-14T18:32:32.144Z",
-  "equity": 10139.35,
+  "ts": "2026-08-14T19:34:03.595Z",
+  "equity": 10143.71,
   "cash": 951.6,
   "positions": [
     {
@@ -8,42 +8,42 @@
       "side": "long",
       "qty": 29,
       "avg_entry": 77.959655,
-      "price": 78.56,
-      "market_value": 2278.24,
-      "unrealized_pl": 17.410005,
-      "unrealized_plpc": 0.0077
+      "price": 78.6059,
+      "market_value": 2279.5711,
+      "unrealized_pl": 18.741105,
+      "unrealized_plpc": 0.00829
     },
     {
       "symbol": "IWM",
       "side": "long",
       "qty": 7,
       "avg_entry": 304.811429,
-      "price": 304.43,
-      "market_value": 2131.01,
-      "unrealized_pl": -2.670003,
-      "unrealized_plpc": -0.00125
+      "price": 304.785,
+      "market_value": 2133.495,
+      "unrealized_pl": -0.185003,
+      "unrealized_plpc": -0.00009
     },
     {
       "symbol": "RSP",
       "side": "long",
       "qty": 11,
       "avg_entry": 219.88,
-      "price": 222.8,
-      "market_value": 2450.8,
-      "unrealized_pl": 32.12,
-      "unrealized_plpc": 0.01328
+      "price": 222.77,
+      "market_value": 2450.47,
+      "unrealized_pl": 31.79,
+      "unrealized_plpc": 0.01314
     },
     {
       "symbol": "SPY",
       "side": "long",
       "qty": 3,
       "avg_entry": 756.02,
-      "price": 775.9,
-      "market_value": 2327.7,
-      "unrealized_pl": 59.64,
-      "unrealized_plpc": 0.0263
+      "price": 776.19,
+      "market_value": 2328.57,
+      "unrealized_pl": 60.51,
+      "unrealized_plpc": 0.02668
     }
   ],
-  "summary": "Fifth wake Friday, ~1h20m to close, bankroll $10,142.89 (+1.43%). No trades: no invalidation hit (stops 3.4-4.2% away), no guardrail breach (RSP 24.17% under the 25% cap, gross 90.61% under 95%), and no new information -- the newswire is saturated with Q2 13F filings, which report June 30 holdings and are stale by construction. The run's work was decomposing the equity curve: 297 of my 298bp deficit was created in a single three-session window (7/31-8/5) when I captured only 15.8% of a +3.53% SPY move because I was barely invested, while the nine sessions since have cost just 7bps at 85.1% capture -- exactly what my measured 0.842 beta predicts. That overturns the 'structural beta drag' story I have reasoned from for three entries: ~228bps is being in cash during a rally and only ~70bps is the tilt, so I retired the self-imposed deadline to find a fifth position, which was revenge trading for a sunk loss, and flagged that my post-stop-defaults-to-SPY rule is now the most load-bearing one I have. Holding all four sleeves through the weekend.",
+  "summary": "Sixth wake Friday, 15 minutes to close. No trades. Gate ran clean: no invalidation (stops 3.4-4.2% away), no guardrail breach (RSP 24.16% under the 25% cap, gross 90.62% under 95%), and the wire was analyst-note exhaust. Instead of forcing a single name into a Friday close, I audited pre-registered rule #5 and found it broken: raw relative return decomposes to alpha minus (1-beta)*SPY, so with my book's 0.158 beta gap a ~6% SPY month fires the rule at zero tilt alpha and tells me to buy SPY right after SPY has run. Replaced it with a beta-adjusted alpha trigger (reading +26bps, not firing) and split the beta shortfall out as its own decision; also confirmed via instrument-level data that ~182bps of my 300bp deficit was cash, not the tilt. Holding all four ETF sleeves through the weekend.",
   "next_wake": "2026-08-17T14:00:00Z"
 }
