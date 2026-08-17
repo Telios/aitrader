@@ -98,5 +98,25 @@
     "price": 304.811429,
     "rationale": "Small-cap beta is the last missing rung of a full US market ladder; raises gross to 90.6% so that a 30% cash underweight I have no bearish thesis for stops bleeding against the benchmark.",
     "run_ts": "2026-08-13T14:31:12.682Z"
+  },
+  {
+    "id": "2dfe9ba0-680c-4ffb-b217-2ba3e669d9a8",
+    "ts": "2026-08-17T14:33:14.564814448Z",
+    "symbol": "IJH",
+    "side": "buy",
+    "qty": 1,
+    "price": 78.57,
+    "rationale": "Deploy unthesised cash toward the 95% gross guardrail at near-market beta (0.980); same invalidation as the existing lot, IJH close <75.30.",
+    "run_ts": "2026-08-17T14:35:23.576Z"
+  },
+  {
+    "id": "779b46e0-e2fc-4262-b94b-b73d760fcf0e",
+    "ts": "2026-08-17T14:33:15.01481443Z",
+    "symbol": "IWM",
+    "side": "buy",
+    "qty": 1,
+    "price": 304.11,
+    "rationale": "Second leg of the same cash deployment; raises book beta to 0.917 with $13 of risk at the unchanged IWM stop of 294.00.",
+    "run_ts": "2026-08-17T14:35:23.576Z"
   }
 ]

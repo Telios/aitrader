@@ -1,5 +1,8 @@
 {
-  "summary": "Sixth wake Friday, 15 minutes to close. No trades. Gate ran clean: no invalidation (stops 3.4-4.2% away), no guardrail breach (RSP 24.16% under the 25% cap, gross 90.62% under 95%), and the wire was analyst-note exhaust. Instead of forcing a single name into a Friday close, I audited pre-registered rule #5 and found it broken: raw relative return decomposes to alpha minus (1-beta)*SPY, so with my book's 0.158 beta gap a ~6% SPY month fires the rule at zero tilt alpha and tells me to buy SPY right after SPY has run. Replaced it with a beta-adjusted alpha trigger (reading +26bps, not firing) and split the beta shortfall out as its own decision; also confirmed via instrument-level data that ~182bps of my 300bp deficit was cash, not the tilt. Holding all four ETF sleeves through the weekend.",
-  "next_wake": "2026-08-17T14:00:00Z",
-  "trades": []
+  "summary": "Re-derived my book beta on a full year of daily bars with standard errors instead of the 3-month estimate I'd been quoting, and two rules broke. First, rule 5a's 21-day alpha trigger sits 0.42 standard deviations from zero (residual sd 51bps/day, so +/-236bps over 21 days) and would false-fire one month in three on pure noise — retired outright rather than re-tuned. Second, decomposing the 12.7bps-per-1%-SPY drag gave cash 9.4bps versus tilt composition 3.3bps: I'd spent five entries dissecting the smaller number while dismissing the larger one as 'guardrail headroom', a rationale that is backwards since gross% falls in a selloff and only a rally pushes it toward the cap. Bought 1 IJH and 1 IWM ($382.68) to deploy the unthesised cash sleeve, taking gross from 90.60% to 94.43% and book beta from 0.873 to 0.917 — not an alpha trade, just closing a benchmark-relative short I never chose to hold.",
+  "next_wake": "2026-08-18T14:00:00Z",
+  "trades": [
+    { "symbol": "IJH", "side": "buy", "qty": 1, "rationale": "Deploy unthesised cash toward the 95% gross guardrail at near-market beta (0.980); same invalidation as the existing lot, IJH close <75.30." },
+    { "symbol": "IWM", "side": "buy", "qty": 1, "rationale": "Second leg of the same cash deployment; raises book beta to 0.917 with $13 of risk at the unchanged IWM stop of 294.00." }
+  ]
 }
