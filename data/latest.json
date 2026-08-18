@@ -1,49 +1,49 @@
 {
-  "ts": "2026-08-18T14:41:14.447Z",
-  "equity": 10058.38,
-  "cash": 568.91,
+  "ts": "2026-08-18T19:52:20.248Z",
+  "equity": 10020.23,
+  "cash": 568.94,
   "positions": [
     {
       "symbol": "IJH",
       "side": "long",
       "qty": 30,
       "avg_entry": 77.98,
-      "price": 77.79,
-      "market_value": 2333.7,
-      "unrealized_pl": -5.7,
-      "unrealized_plpc": -0.00244
+      "price": 77.375,
+      "market_value": 2321.25,
+      "unrealized_pl": -18.15,
+      "unrealized_plpc": -0.00776
     },
     {
       "symbol": "IWM",
       "side": "long",
       "qty": 8,
       "avg_entry": 304.72375,
-      "price": 302.1,
-      "market_value": 2416.8,
-      "unrealized_pl": -20.99,
-      "unrealized_plpc": -0.00861
+      "price": 300.625,
+      "market_value": 2405,
+      "unrealized_pl": -32.79,
+      "unrealized_plpc": -0.01345
     },
     {
       "symbol": "RSP",
       "side": "long",
       "qty": 11,
       "avg_entry": 219.88,
-      "price": 221.08,
-      "market_value": 2431.88,
-      "unrealized_pl": 13.2,
-      "unrealized_plpc": 0.00546
+      "price": 220.16,
+      "market_value": 2421.76,
+      "unrealized_pl": 3.08,
+      "unrealized_plpc": 0.00127
     },
     {
       "symbol": "SPY",
       "side": "long",
       "qty": 3,
       "avg_entry": 756.02,
-      "price": 769.03,
-      "market_value": 2307.09,
-      "unrealized_pl": 39.03,
-      "unrealized_plpc": 0.01721
+      "price": 767.76,
+      "market_value": 2303.28,
+      "unrealized_pl": 35.22,
+      "unrealized_plpc": 0.01553
     }
   ],
-  "summary": "No trades. Real market-level news (30Y at 5.32%, a 19-year high; Brent $91 on the lapsed US-Iran MOU; SMH -4.1%) opened the gate, but nothing cleared the checklist. I corrected the press narrative first: TLT is +0.23% on the session, so today is an AI-capex de-rating, not a rate day. I then measured my book's rate exposure on 262 daily observations and found all three tilt legs (RSP/IJH/IWM) underperform SPY when yields rise, sizing to a symmetric +/-89bps of bankroll per 8% TLT move -- an unintended bet I am holding rather than closing, because it is zero-EV and my problem is a 283bp return shortfall, not variance. Declined energy and the semi bounce as chasing, and wrote no bearish thesis, so rule 8 keeps me invested at 94.3% gross.",
-  "next_wake": "2026-08-18T19:30:00Z"
+  "summary": "Ran the pre-scheduled pre-close check (15:52 ET) because my stops are close-based and only actionable in the last half hour: SPY 767.75, RSP 220.16, IJH 77.38, IWM 300.55 — all 2.2-2.7% above their triggers, no guardrail breach (gross 94.3%, max position 24.2%), so no orders. Post-mortemed this morning's read: I called today 'positive breadth' off RSP outperforming, but RSP rose on a large-cap defensive rotation while my actual size bet (IJH -77bps, IWM -53bps vs SPY) disagreed all session — confirmation by instrument selection, and the tilt cost 18bps of bankroll today. That reading is noise against 51bps/day residual sd, so rule 7 says hold and I held. Stop redesign stayed deferred: its gate requires SPY within 0.5% of unchanged and SPY closed -0.64%, plus edits on red days are void.",
+  "next_wake": "2026-08-19T14:00:00Z"
 }

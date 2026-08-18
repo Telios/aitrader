@@ -4,6 +4,52 @@ The Trader's running log — newest entries at the top. Written by Claude during
 
 > **Operator note (2026-07-19):** Your tradable bankroll is **$10,000**, NOT the Alpaca account balance. The 2026-07-19 entries below saying "$100,000 equity/cash" describe the raw paper account, which you may not size against. Every run: compute bankroll = `starting_capital` + (account equity − `account_equity_start` from `data/baseline.json`) and reason only in those terms.
 
+## 2026-08-18 19:52 UTC — bankroll $10,020
+
+Tuesday **15:52 ET, 8 minutes to close. No trades.** Bankroll = 10,000 + (100,019.87 − 100,000) = **$10,019.87**, +0.20%. Book unchanged: **SPY 3 @ 767.75 ($2,303, 22.99%, +$35.31) + RSP 11 @ 220.16 ($2,422, 24.17%, +$3.19) + IJH 30 @ 77.38 ($2,321, 23.17%, −$18.00) + IWM 8 @ 300.55 ($2,404, 24.00%, −$33.51) = $9,451 gross, 94.32%.** Cash sleeve $569 (5.68%). Day-trades **0/3**, zero orders placed today, none open.
+
+**This is the run I scheduled this morning, and it did what it was scheduled to do.** My stops are close-based, so the last half-hour is the only moment they are actionable. Checked at 15:50 ET: **SPY 767.75 vs 750 (−2.31%), RSP 220.16 vs 214.50 (−2.57%), IJH 77.38 vs 75.30 (−2.68%), IWM 300.55 vs 294.00 (−2.18%).** Nothing within 2%, nothing fires, no guardrail breach (max position RSP 24.17% < 25%, gross 94.32% < 95%). A two-minute check, as promised. Recording that a justified wake produced no order is the point of pre-registering it.
+
+**The one thing worth writing: my 10:45 read was wrong within the same session, and not in the way I hedged against.** This morning I wrote "breadth today is positive, which is the tell" — XLV/XLE/XLP/XLU/XLF all green, **RSP +0.1% while SPY −0.5%** — then carefully declined to bank it as evidence. Good instinct, wrong reason. The number I should have distrusted was not the *magnitude* but the *instrument*. Today's closing splits vs SPY:
+
+| | day % | vs SPY |
+|---|---|---|
+| SPY | −0.64% | — |
+| **RSP** | −0.28% | **+35 bps** |
+| **IJH** | −1.40% | **−77 bps** |
+| **IWM** | −1.16% | **−53 bps** |
+
+**RSP outperformed all day. It still did. And the size legs never confirmed for a minute.** Equal-weight large-cap rose because *large-cap defensives* were bid — healthcare, staples, utilities, energy — which is a defensive rotation happening entirely inside the S&P 500. That lifts RSP mechanically and says nothing whatsoever about small and mid caps. **I saw the one instrument that agreed with me and called it "breadth."** RSP is not a breadth signal here; it is a sector-weighting signal that happened to point the same direction. My actual size bet, IJH and IWM, was voting against me the whole time I was writing that paragraph.
+
+**Attribution, so this is measured and not narrated.** Book-weighted, the tilt lagged SPY by **31bps** today; tilt is 71.3% of bankroll → **−22bps**, offset by **+4bps** from the cash sleeve in a down tape. Net **−18bps of bankroll vs SPY**, against an actual full-day figure of −18.4bps (bankroll −0.82%, SPY −0.64%). The decomposition closes, so I know what happened rather than believing what happened.
+
+**And it changes nothing, which is rule 7 doing its job.** 18bps in one session is deep inside the tilt's 51bps/day residual noise — the exact quantity I computed on 8/17 to prove no trigger at my horizon can distinguish signal from coin flips. Having just measured that a one-day reading is meaningless, trading on today's one-day reading would be the fastest self-contradiction in this journal. **Held, unchanged, on economic reasoning and the monthly calendar.**
+
+**Rule 2 (stop redesign) — condition checked, not met, deferred.** It requires SPY within 0.5% of unchanged and no position within 1.5% of a stop. Second half is satisfied (closest is IWM at 2.18%); **SPY is −0.64%, so the gate is shut.** The backstop clause — *any stop edit on a red day is void* — also binds. I still believe the finding from this morning (four stops on 0.95-correlated instruments are one stop with a 2.6% price tag), and I still don't get to act on it today. **A commitment device that only binds when you agree with it isn't one.** Waiting.
+
+**Ideas declined.** Nothing new researched in an 8-minute window, and I want that stated plainly rather than dressed up: **entering a fresh name minutes before a close, on a tape carrying $91 Brent and a 19-year-high 30-year, is not research, it's a coin flip with a story attached.** The energy trade is still declined for the same reason as this morning — I cannot forecast Hormuz, and the premium is already paid.
+
+**Scoreboard.** SPY 743.28 → **767.75 = +3.29%.** I am **+0.20%. 309bps behind** — 145 (8/3), 244, 291, 290, 307, 298, 295, 277, 308, 336 (8/13), 317, 307, 306, 296, 298, 300, 307, 283, **309 now.** **This morning's 24bp "improvement" gave back 26bps in five hours, exactly as I said it would when I called it arithmetic rather than skill.** Being right about that is worth more than the 24bps was.
+
+**Traps named.** **Activity bias — dodged, in its most tempting form:** a wake I scheduled myself, minutes left, and no order. The pressure to justify a run with a trade is precisely why the run's purpose was written down in advance. **Narrative lock — caught, and this time on a narrative six hours old, not six days.** I built a "positive breadth" story at 10:45, and it was already contradicted by two of my own four positions at the moment I typed it. **Confirmation by instrument selection — new failure mode, worth naming:** when three instruments measure the same idea and one agrees, quoting that one is not evidence, it is selection. I will check the *disagreeing* legs first from here on. **Chasing — dodged:** no late-day energy, no semi bounce.
+
+**Pre-registered.**
+1. **Exits, close-based, UNCHANGED: SPY <750, RSP <214.50, IJH <75.30, IWM <294.00.** Known to be defective (8/18 AM finding 3). Not edited on a red day.
+2. **Stop redesign remains scheduled, not improvised.** Trigger: SPY within 0.5% of unchanged *and* no position within 1.5% of its stop. Checked today, not met. **Any stop edit made on a red day is void.**
+3. **94.3% gross is the operating level; ~95% is the guardrail.** Above 95%, trim mechanically to ~94%, no view.
+4. **If any single position exceeds 25% of bankroll, trim to ~23%.** RSP 24.17% is closest; breaches at $227.72.
+5. **New ideas are funded by trimming, never from the $569 sleeve.**
+6. **The tilt's rate bet is measured, held, monitored: ±89bps per 8% TLT move.** Symmetric, no view on rates, so held. Re-measured monthly with standard errors, never quoted from an entry.
+7. **No statistical trigger on tilt alpha.** Residual sd 51bps/day. **Today's −31bps tilt reading is noise and gets no action** — that is the rule paying for itself the day after it was written.
+8. **Book beta ~0.92** costs ~8bps per +1% SPY. Deliberate, re-argued monthly.
+9. **Watchlist: AMAT — gross margin guiding *up* sequentially. XLV — policy pullback plus cleared crowding, and not on a day it leads. Energy — no entry on a move I did not forecast. BIRK ≤36.76 plus real work. GLD: no line.**
+10. **Post-stop default is SPY, not cash** — within two sessions, a written bearish thesis with invalidation and timescale, or the notional goes to SPY.
+11. **No deadline on the fifth position.**
+
+**Next look Wednesday 2026-08-19 ~14:00 UTC (10:00 ET).** Nothing overnight requires me: stops are close-based and >2.1% away, and I hold no position sized to a gap.
+
+**Closing thought: the morning entry congratulated itself for not banking a favourable reading as evidence, and it still had the analysis backwards — because the discipline I applied was "don't over-weight one day" when the error was "don't read three instruments off the one that agrees." Skepticism aimed at the size of a number is cheap; I had already decided the number was real and was only haggling over how much it proved. The check that would have caught it costs one line — look at whichever leg disagrees, first — and I have four legs precisely so that one of them can tell me I'm wrong.**
+
 ## 2026-08-18 14:45 UTC — bankroll $10,062
 
 Tuesday **10:45 ET, ~5h15m to close. No trades.** Bankroll = 10,000 + (100,061.54 − 100,000) = **$10,061.54**, +0.62%. Book unchanged: **SPY 3 @ 768.91 ($2,307, 22.93%, +$38.67) + RSP 11 @ 220.98 ($2,431, 24.16%, +$12.10) + IJH 30 @ 77.77 ($2,333, 23.19%, −$6.45) + IWM 8 @ 301.93 ($2,415, 24.01%, −$22.39) = $9,486 gross, 94.28%.** Cash sleeve $576 (5.72%). Day-trades **0/3**, no orders placed, no open orders.
