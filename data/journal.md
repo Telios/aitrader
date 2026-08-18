@@ -4,6 +4,71 @@ The Trader's running log — newest entries at the top. Written by Claude during
 
 > **Operator note (2026-07-19):** Your tradable bankroll is **$10,000**, NOT the Alpaca account balance. The 2026-07-19 entries below saying "$100,000 equity/cash" describe the raw paper account, which you may not size against. Every run: compute bankroll = `starting_capital` + (account equity − `account_equity_start` from `data/baseline.json`) and reason only in those terms.
 
+## 2026-08-18 14:45 UTC — bankroll $10,062
+
+Tuesday **10:45 ET, ~5h15m to close. No trades.** Bankroll = 10,000 + (100,061.54 − 100,000) = **$10,061.54**, +0.62%. Book unchanged: **SPY 3 @ 768.91 ($2,307, 22.93%, +$38.67) + RSP 11 @ 220.98 ($2,431, 24.16%, +$12.10) + IJH 30 @ 77.77 ($2,333, 23.19%, −$6.45) + IWM 8 @ 301.93 ($2,415, 24.01%, −$22.39) = $9,486 gross, 94.28%.** Cash sleeve $576 (5.72%). Day-trades **0/3**, no orders placed, no open orders.
+
+**The gate opened today for the first time in a while — there is genuine market-level news.** 30-year Treasury **5.32%, a 19-year high**; 10-year 4.74%. Brent **$91** after the US–Iran MOU lapsed with Trump threatening military action over the Strait of Hormuz. Semis are being taken apart: **SMH −4.1%**, INTC −6.0%, LRCX −6.0%, MU −5.7%, AMAT −5.2%, AMD −5.1%, ASML −4.2%, KLAC −4.2%, TSM −3.8%. So I did not get to end the run on "nothing happened." I had to actually decide.
+
+**First correction, to the press and to myself: today is not a rate day.** Every write-up attributes the semi rout to yields, and I nearly copied that down. **TLT is +0.23% on the session.** The intraday yield spike faded; the bond market is roughly flat and the chip complex is down 4%. An equity move that large against a bond move that small is not a discount-rate move — it is an AI-capex sentiment move (Eisman on Meta's 55% expense growth, Eigen's 2008 comparison, BofA's "all-in = sell signal," China's record $245B domestic chip revenue with SMIC/CXMT leading, which lands hardest on memory — and memory is exactly what led down). **Naming the wrong driver would have mattered**, because the trades that follow from "rates" and from "AI de-rating" are different, and one of them touches my book.
+
+**Second: breadth today is positive, which is the tell.** XLV +1.4%, XLE +1.2%, XLP +1.2%, XLU +0.6%, XLF +0.5%, XLY +0.4%, **RSP +0.1% while SPY is −0.5%.** Real de-risking takes defensives down too and bids TLT hard. This is rotation. I record that it went my way today and immediately decline to bank it as evidence — see the regression below, which says the opposite about the days that actually matter.
+
+**Finding 1 — I finally measured my book's rate exposure instead of reciting the textbook, and the textbook is backwards.** With the 30Y at a 19-year high, the obvious question is which leg gets hurt. Two-factor regression on **262 aligned daily observations (Aug 2025 → yesterday)**, r = a + b·SPY + d·TLT, and the relative form (r − SPY) = a + d·TLT:
+
+| | beta_SPY | d_TLT | s.e. | t |
+|---|---|---|---|---|
+| IWM | 1.202 | 0.148 | 0.074 | 2.00 |
+| IJH | 0.947 | 0.192 | 0.063 | 3.05 |
+| RSP | 0.660 | 0.186 | 0.050 | 3.73 |
+| **relative to SPY** | | **IWM 0.210 / IJH 0.176 / RSP 0.081** | | **2.84 / 2.87 / 1.45** |
+
+On the **25 worst TLT days** in the sample (avg −1.08%), IWM lagged SPY by **12.1bps**, IJH by **14.0bps**, RSP by **2.4bps**. **All three coefficients are positive: my entire tilt underperforms when yields rise.** The duration story everyone tells — mega-cap tech is the long-duration asset, so SPY is the rate-sensitive one — is not what my instruments do. Empirically the credit channel beats the duration channel, and the rate-sensitive leg of my book is the tilt I own, not the benchmark I am chasing.
+
+**Finding 2 — that makes my tilt an unintentional bet on rates, and I sized it.** Scaling the relative coefficients by current market values:
+
+| TLT move | tilt vs SPY |
+|---|---|
+| −8% (30Y ~5.32→5.80) | **−88.6 bps of bankroll** |
+| −3% | −33.2 bps |
+| +3% | +33.2 bps |
+| +8% | +88.6 bps |
+
+**A 48bp rise in the 30Y costs me ~89bps against SPY — roughly a third of my entire deficit — from a bet I never decided to make.** I bought RSP/IJH/IWM for market broadening and got short duration-adjusted credit as a package deal.
+
+**So why am I not rotating the tilt into SPY today? Because the checklist fails on item 4, and the reason is the one that separates this from yesterday's trade.** Yesterday I deployed the cash sleeve on an explicitly no-alpha argument, and it cleared because **cash against a 100%-long benchmark has *negative* expected value** — equities drift up, so an unthesised cash position is a short I never chose. **This rate bet is *symmetric*: ±89bps, and I have no view on the 30Y.** A zero-EV bet is not a negative-EV bet. Removing it buys variance reduction and nothing else — and my problem is not variance, it is a 283bp return shortfall. **Cutting variance while behind is the wrong direction.** Item 4 asks for gain ≥2× loss; a symmetric swap offers 1×. Not placed. The distinction is worth keeping: *negative-EV positions get closed, zero-EV positions get held and watched.*
+
+**Finding 3 — the expensive boring one, and it is a defect I am deliberately not fixing today.** My four stops sit 2.46–3.17% below spot on instruments with ~0.95 pairwise correlation. That is not four stops. **It is one stop, and it fires on a single ordinary ~3% SPY pullback — the kind that happens several times a year.** If all four fill, I lose **$265 = 2.64% of bankroll**, and then rule 8 marches me straight back into SPY within two sessions. **The machine's behaviour in a routine dip is: liquidate the whole book near the low, re-buy the benchmark 48 hours later.** That is not risk control, it is a scheduled churn with a stop-loss costume on — the *third* instance of the pathology I caught in rule #5 on 8/14 and rule #5a on 8/17, and this time it is living inside pre-registered rule #1, the one I have called "unchanged, not widened" for a week as though that were a virtue.
+
+The correct fix is probably that **SPY needs no price stop at all** (a stop on the benchmark is a bet against the benchmark) and the tilt's invalidation should be relative, not absolute — except that rule 5a was retired precisely because the tilt's relative signal cannot be resolved from 51bps/day of residual noise at any horizon I trade on. So the honest answer is that the tilt has **no valid price-based invalidation**, and holding it is a calendar-and-sizing decision.
+
+**I am not making that change today, and the reason is the whole point.** Every argument above points toward "sell less," and I would be making it on the day the 30Y hit a 19-year high and oil went to $91 on a Hormuz threat. **Loosening a risk control in the direction of not-selling, during the exact regime that control was written for, is the most suspicious edit available to me, however good the algebra looks.** The steelman for keeping the stops is strong: a stop is a commitment device, and "my benchmark has no stop either" is precisely the sentence someone says before riding a drawdown to zero. Cost of deferring: if the market dips 3% first, I churn once, maybe 20–30bps. Cost of loosening today and being wrong: 300bps+ with the control removed. **Asymmetric, so it waits — and it waits on the calendar, not on my mood.**
+
+**Ideas declined.** **Energy — declined, and this is the situation rule 7 was written for.** XLE +5.2% in five days, +1.2% today, ~18% since July. I cannot forecast the Strait of Hormuz, and buying a geopolitical premium after the headline is the definition of being someone's exit liquidity if the MOU gets renewed. **Fading the semis — declined.** SMH −4% is a big number and "it fell a lot" is not an edge; I have no informational advantage on memory pricing or China capacity, and the driver has not reversed. **A bearish thesis — considered and not written.** I can list the bear case (19-year-high long yields, $91 Brent, stretched positioning, AI-capex doubts) but every item is on the front page of Yahoo Finance, which is the opposite of an edge, and SPY is −0.45% today and flat over two weeks. Rule 8: silence defaults to invested. I have no bearish thesis, so I stay long.
+
+**Scoreboard.** SPY 743.28 → **768.91 = +3.45%.** I am **+0.62%. 283bps behind** — 145 (8/3), 244, 291, 290, 307, 298, 295, 277, 308, 336 (8/13), 317, 307, 306, 296, 298, 300, 307, **283 now.** **The 24bp narrowing is not skill.** SPY fell 0.83% since yesterday's mark and my 0.92-beta book with a 5.7% cash sleeve fell less. That is arithmetic, and it will reverse on the next up day. Recorded as noise, in the same tone I used when it went the other way.
+
+**Positions.** All four core beta, none near a stop: **SPY <750 (−2.46% away), RSP <214.50 (−2.93%), IJH <75.30 (−3.17%), IWM <294.00 (−2.62%).** Closest is SPY, and it needs another −2.5% *today* to close through.
+
+**Traps named.** **Activity bias — dodged.** Real news, a 4% move in a major complex, five hours of session left, and the correct output was still zero orders. **Chasing — dodged twice**, energy and the semi bounce. **Narrative lock — dodged on someone else's narrative for once:** the entire financial press said "yields did this" and TLT was green; I checked the bond before repeating the story about the bond. **Motivated reasoning — flagged and acted on.** Findings 2 and 3 both conveniently recommend "hold what you own" and "sell less," which is what I wanted to do anyway. I let finding 2 through because it turns on an EV sign I can defend, and I explicitly *refused* finding 3 despite believing it, because I cannot separate the argument from the incentive on a day like today. **Rule-as-substitute-for-thinking — caught for the third consecutive time**, now in rule #1, the rule I was proudest of leaving alone.
+
+**Pre-registered.**
+1. **Exits, close-based, UNCHANGED today: SPY <750, RSP <214.50, IJH <75.30, IWM <294.00.** Known to be defective (finding 3). Not edited during a selloff.
+2. **NEW — stop redesign is scheduled, not improvised.** On the next session where SPY is within 0.5% of unchanged and no position is within 1.5% of its stop, I rewrite rule #1 in advance and in full: SPY's price stop retired as a bet against the benchmark, tilt held on calendar review with no price trigger. **If I ever find myself editing a stop on a red day, the edit is void.**
+3. **94.3% gross is the operating level; ~95% is the guardrail.** Above 95%, trim mechanically to ~94%, no view.
+4. **If any single position exceeds 25% of bankroll, trim to ~23%.** RSP 24.16% and IWM 24.01% are the two to watch; RSP breaches at $228.65.
+5. **New ideas are funded by trimming, never from the $576 sleeve** — which is guardrail-mandated, not discretionary.
+6. **NEW — the tilt's rate bet is measured, held, and monitored: ±89bps per 8% TLT move.** Held because it is symmetric and I have no view on rates. **The moment I acquire a defensible rate view, the tilt is the lever I pull — not SPY, not cash.** Re-measured monthly with standard errors, never quoted from this entry.
+7. **No statistical trigger on tilt alpha.** Residual sd 51bps/day; unresolvable at my horizon. Held or dropped on economic reasoning, reviewed monthly.
+8. **Book beta ~0.92** costs ~8bps per +1% SPY. Deliberate, re-argued monthly, fixed by exposure and never by scapegoating the tilt.
+9. **Watchlist: AMAT — gross margin guiding *up* sequentially (guided *down* on 8/14, so still no). XLV — policy pullback plus cleared crowding, and not on a day it leads. Energy — no entry on an 18% move I did not forecast; a Hormuz headline is not a forecast. BIRK ≤36.76 plus real work. GLD: no line.**
+10. **Post-stop default is SPY, not cash** — within two sessions, a written bearish thesis with invalidation and timescale, or the notional goes to SPY. Silence defaults to SPY.
+11. **No deadline on the fifth position.** Nine declines is a fine record if the tenth idea is real.
+
+**Next look today 19:30 UTC (15:30 ET), 30 minutes before the close.** This one is justified rather than restless: **my stops are close-based, so the half-hour before the close is the only moment they are actually actionable**, SPY sits 2.46% from its trigger, and the session carries a live geopolitical tape. If SPY is not falling hard, that run is a two-minute check.
+
+**Closing thought: I have written for a week that things fail here when a quantity gets promoted to "known," and today the pattern finally caught a rule instead of a number — my stops, which I have recited as "unchanged, not widened" as if leaving something alone were the same as having checked it. It isn't. Four stops on 0.95-correlated instruments are one stop with a 2.6% price tag, and I never summed them because each one looked fine on its own line. But the finding I am most sure of is the one I refused to act on: the argument to loosen those stops arrived on the day I most wanted to hear it, and an argument you can't separate from your incentive isn't ready to be traded on, only to be scheduled.**
+
 ## 2026-08-17 14:45 UTC — bankroll $10,126
 
 Monday **10:45 ET, ~5h15m to close. Traded: +1 IJH @ 78.57, +1 IWM @ 304.11 ($382.68).** Bankroll = 10,000 + (100,126.02 − 100,000) = **$10,126.02**, +1.26%. Book now **SPY 3 @ 775.49 ($2,326, 22.98%) + RSP 11 @ 222.01 ($2,442, 24.13%) + IJH 30 @ 78.56 ($2,357, 23.28%) + IWM 8 @ 304.07 ($2,433, 24.03%) = $9,558 gross, 94.43%.** Cash sleeve $564 (5.57%), down from $952. Day-trades **0/3** — both fills are intended holds.

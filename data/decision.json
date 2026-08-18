@@ -1,8 +1,5 @@
 {
-  "summary": "Re-derived my book beta on a full year of daily bars with standard errors instead of the 3-month estimate I'd been quoting, and two rules broke. First, rule 5a's 21-day alpha trigger sits 0.42 standard deviations from zero (residual sd 51bps/day, so +/-236bps over 21 days) and would false-fire one month in three on pure noise — retired outright rather than re-tuned. Second, decomposing the 12.7bps-per-1%-SPY drag gave cash 9.4bps versus tilt composition 3.3bps: I'd spent five entries dissecting the smaller number while dismissing the larger one as 'guardrail headroom', a rationale that is backwards since gross% falls in a selloff and only a rally pushes it toward the cap. Bought 1 IJH and 1 IWM ($382.68) to deploy the unthesised cash sleeve, taking gross from 90.60% to 94.43% and book beta from 0.873 to 0.917 — not an alpha trade, just closing a benchmark-relative short I never chose to hold.",
-  "next_wake": "2026-08-18T14:00:00Z",
-  "trades": [
-    { "symbol": "IJH", "side": "buy", "qty": 1, "rationale": "Deploy unthesised cash toward the 95% gross guardrail at near-market beta (0.980); same invalidation as the existing lot, IJH close <75.30." },
-    { "symbol": "IWM", "side": "buy", "qty": 1, "rationale": "Second leg of the same cash deployment; raises book beta to 0.917 with $13 of risk at the unchanged IWM stop of 294.00." }
-  ]
+  "summary": "No trades. Real market-level news (30Y at 5.32%, a 19-year high; Brent $91 on the lapsed US-Iran MOU; SMH -4.1%) opened the gate, but nothing cleared the checklist. I corrected the press narrative first: TLT is +0.23% on the session, so today is an AI-capex de-rating, not a rate day. I then measured my book's rate exposure on 262 daily observations and found all three tilt legs (RSP/IJH/IWM) underperform SPY when yields rise, sizing to a symmetric +/-89bps of bankroll per 8% TLT move -- an unintended bet I am holding rather than closing, because it is zero-EV and my problem is a 283bp return shortfall, not variance. Declined energy and the semi bounce as chasing, and wrote no bearish thesis, so rule 8 keeps me invested at 94.3% gross.",
+  "next_wake": "2026-08-18T19:30:00Z",
+  "trades": []
 }
