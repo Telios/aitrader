@@ -1,49 +1,49 @@
 {
-  "ts": "2026-08-21T17:35:18.110Z",
-  "equity": 10002.99,
-  "cash": 568.91,
+  "ts": "2026-08-21T19:51:41.616Z",
+  "equity": 10013.28,
+  "cash": 568.92,
   "positions": [
     {
       "symbol": "IJH",
       "side": "long",
       "qty": 30,
       "avg_entry": 77.98,
-      "price": 76.685,
-      "market_value": 2300.55,
-      "unrealized_pl": -38.85,
-      "unrealized_plpc": -0.01661
+      "price": 76.805,
+      "market_value": 2304.15,
+      "unrealized_pl": -35.25,
+      "unrealized_plpc": -0.01507
     },
     {
       "symbol": "IWM",
       "side": "long",
       "qty": 8,
       "avg_entry": 304.72375,
-      "price": 299.76,
-      "market_value": 2398.08,
-      "unrealized_pl": -39.71,
-      "unrealized_plpc": -0.01629
+      "price": 300.21,
+      "market_value": 2401.68,
+      "unrealized_pl": -36.11,
+      "unrealized_plpc": -0.01481
     },
     {
       "symbol": "RSP",
       "side": "long",
       "qty": 11,
       "avg_entry": 219.88,
-      "price": 221.71,
-      "market_value": 2438.81,
-      "unrealized_pl": 20.13,
-      "unrealized_plpc": 0.00832
+      "price": 221.8,
+      "market_value": 2439.8,
+      "unrealized_pl": 21.12,
+      "unrealized_plpc": 0.00873
     },
     {
       "symbol": "SPY",
       "side": "long",
       "qty": 3,
       "avg_entry": 756.02,
-      "price": 765.545,
-      "market_value": 2296.635,
-      "unrealized_pl": 28.575,
-      "unrealized_plpc": 0.0126
+      "price": 766.245,
+      "market_value": 2298.735,
+      "unrealized_pl": 30.675,
+      "unrealized_plpc": 0.01352
     }
   ],
-  "summary": "Fourth wake today (third unrequested), 13:28 ET on monthly opex Friday. No trades: bankroll $10,004.09 (+0.04%) vs SPY +3.05%, 301bps behind; book unchanged at 94.31% gross across SPY/RSP/IJH/IWM, all legs 22.97-24.38% against the 25% cap, tilt tracker -1.06bps against a -600bps trigger, credit fine (HY beating IG by 51bps; LQD's drop is TLT duration). Tape since the last entry was rig counts, sell-side churn, and gold/bitcoin extending - a move I declined to chase and that declining still looks right for. Two findings, both from endpoints I had never called in five weeks: the account's own equity history puts the true closing high-water bankroll at $10,148.15 (8/14), not the $10,126.02 I had cached for five runs, so the -8% breaker is $9,336.30 and drawdown restates to -1.42% - and I made that error in rule 2 in the same entry where I corrected rule 4 for exactly the same class of cached-number bug, with both errors pointing structurally toward permitting more risk. Second, the full activity ledger (44 records: 27 FILL, 16 FEE, 1 JNLC, zero INT, zero DIV) proves cash earns no interest, so the sleeve drag I have quoted as 30-50bps/yr is really ~46bps at an 8% market and ~133bps at SPY's trailing 23.3%: the sleeve is not repayable drag but a compulsory 5.7% short against my own benchmark, of which only $68.84 is addressable and none of that in whole shares. Dividend treatment stays untested with a stated date and cost - first ex-div ~2026-09-18, one API call.",
+  "summary": "Fifth wake today, 7 minutes to an opex Friday close, bankroll $10,015.59 (+0.16% vs SPY +3.16%, 300bps behind). No trades. All pre-registered rules re-checked off the first prices pulled and all pass: tilt tracker +1.1bps vs a -600bps invalidation, HY/IG cross-ratio +49bps (duration weak, credit fine, no event), circuit-breaker re-read from the account's own equity history and reproduced at $9,336.30 with drawdown -1.30%, and the nearest position cap needs +2.59% on RSP. Named a new trap - pre-weekend urgency, which feels like prudence but resolves to the same instruction as activity bias, and is provably wrong here since my 5.68% cash sleeve leaves me under-exposed to the identical gap my benchmark carries.",
   "next_wake": "2026-08-24T13:45:00Z"
 }
