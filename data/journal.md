@@ -4,6 +4,78 @@ The Trader's running log — newest entries at the top. Written by Claude during
 
 > **Operator note (2026-07-19):** Your tradable bankroll is **$10,000**, NOT the Alpaca account balance. The 2026-07-19 entries below saying "$100,000 equity/cash" describe the raw paper account, which you may not size against. Every run: compute bankroll = `starting_capital` + (account equity − `account_equity_start` from `data/baseline.json`) and reason only in those terms.
 
+## 2026-08-21 16:40 UTC — bankroll $10,003
+
+Friday **12:37 ET, ~3h20m to close. No trades.** Bankroll = 10,000 + (100,002.54 − 100,000) = **$10,002.54**, +0.03%. Book unchanged: **SPY 3 @ 766.11 ($2,298.32, 22.98%, +$30.26) + RSP 11 @ 221.78 ($2,439.58, 24.39%, +$20.90) + IJH 30 @ 76.66 ($2,299.65, 22.99%, −$39.75) + IWM 8 @ 299.51 ($2,396.08, 23.96%, −$41.71) = $9,433.62 gross, 94.31%.** Cash sleeve $568.92 (5.69%). Day-trades **0/3**; last order 8/17, none open.
+
+**Third wake today, second one I did not ask for.** I pre-registered Monday 13:45 at 10:35 ET, was woken at 11:37, re-registered Monday, and here I am again at 12:37. **So the same first question as an hour ago: did anything happen.** New on the tape since 15:37: **Oman's state agency says the Omani and Iranian FMs discussed conditions for resuming negotiations** — a de-escalation headline on the one thing I named as weekend risk last entry. **Crude did not care: USO 134.46 → 134.77 across the session, XLE 63.81 → 63.90.** Everything else is Friday-afternoon sell-side price-target churn (JPM on DE, MRNA, OKTA, ROST; Morgan Stanley on six utilities). **SPY 764.57 → 766.27 over seven half-hour bars. Nothing. And the de-escalation is symmetric anyway — I was not hedged, so I have nothing to unhedge.**
+
+**Rules first, read off the first prices pulled this run (rule 3).** **1a** — no SPY price stop. **1b** — tilt tracker from the 8/19 close: SPY −0.41%, RSP −0.09%, IJH −0.47%, IWM −0.73% → **book −0.42% vs SPY −0.41% = −1.6bps cumulative** (was −3.9bps) against a −600bps trigger. **1c** — **HYG 79.61 (−0.12%), LQD 105.88 (−0.66%); cross-ratio 0.7518 vs 0.7478, HY beating IG by 53bps.** TLT 82.03. Spreads tightening; LQD is duration. No event. **2** — bankroll −1.22% from the $10,126.02 high-water mark, breaker $9,315.94. **4** — re-derived, never cached: **RSP cap $227.33 (+2.50%)** binds first, then IWM $312.58, IJH $83.35, SPY $833.55; 95% gross needs a +14.6% book move.
+
+**Finding — the measurement I deferred to mid-October was available on day one, and the reason I deferred it was a statistics error dressed as caution.**
+
+This morning I flagged that P(win) rests on an *assumed* 6%/yr tracking error and wrote rule 10: re-estimate once ~40 fully-deployed sessions exist, because "live data cannot yet distinguish 6% from 2%." **Both halves of that are wrong.**
+
+**(a) I applied the sample size a *mean* needs to a question about a *variance*.** The number that made me despair — t = 0.29 on book alpha after 262 observations — is about the mean. Volatility converges far faster: se(σ̂)/σ̂ = 1/√(2(n−1)).
+
+| n | precision on σ | t-stat achievable on the mean |
+|---|---|---|
+| 13 | **±20%** | 0.06 |
+| 63 | ±9% | 0.14 |
+| 262 | ±4% | 0.29 |
+
+**Thirteen sessions pin σ to ±20%. That distinguishes 6% from 2% about six times over.** I had the hopelessness of one estimator in my hands and transferred it to a different estimator without checking.
+
+**(b) I was waiting to accumulate account history for a quantity my account contains no information about.** The book is a fixed-weight combination of four ETFs; its residual against SPY is a deterministic function of four public price series I can pull to any length. **There is no private data in my statement.** So I measured it — current weights, 287 daily bars, adjusted:
+
+| window | book-vs-SPY TE | SPY's own vol | **ratio** |
+|---|---|---|---|
+| 13d | **4.03%** | 7.53% | **0.535** |
+| 21d | 5.14% | 12.75% | 0.403 |
+| 42d | 5.91% | 11.88% | 0.497 |
+| 63d | 6.00% | 13.59% | 0.442 |
+| 126d | 5.85% | 14.08% | 0.415 |
+| 287d | **6.30%** | 12.39% | **0.508** |
+
+**The naive read is in the first column and it is a trap.** Last 13 days TE 4.03% vs prior 274 days 6.29%, **F = 2.52, p ≈ 0.014** — a clean-looking rejection, and it would have had me writing that my dispersion has died and P(win) with it. **The third column kills it.** SPY's own vol over those same 13 days is **7.53% against a 12.39% full-sample** — August is simply quiet — and **TE/SPY-vol is 0.535, the highest reading in the table, above the 0.508 full-sample.** Per unit of market volatility my dispersion did not fall; it ticked up. **The significant F-test is a volatility-regime artifact.** (Caveats owed: the ratio wobbles 0.40–0.54, and I chose the 13d window after looking at it. But the direction is the whole point — the "TE collapsed" story *requires* that ratio to fall, and it rose.)
+
+**So the honest restatement is that TE was never a constant to assume or measure. It is a loading on market volatility, ≈0.47 × SPY vol, and it has been that across every window from 13 to 287 days.** Which means P(win) is conditional on a volatility forecast I do not have:
+
+| horizon | TE 4.0% (Aug vol persists) | TE 6.0% (1-yr vol anchor) |
+|---|---|---|
+| 3 mo | **6.2%** | 15.2% |
+| 5 mo | 11.6% | 21.3% |
+| 8 mo | 17.3% | 26.5% |
+
+**Verdict: the 6% survives as a long-run anchor and I keep quoting it, but it is now anchored to SPY's 12.4% one-year vol rather than to nothing.** If this low-vol August persists, my odds at three months roughly halve. **No position changes.** Rule 8 already forbids adding tracking error, and even the pessimistic column is far above the ≈0 (worse, after the sleeve's 30–50bps) that rotating to pure SPY guarantees. **What changes is that a number I have cited in five consecutive entries is now measured, and I know what it is a function of.**
+
+**Ideas declined.** **None researched, and that is the rule working rather than laziness.** Rule 14 allows one name properly per run, spent on Deere at 10:35; this is the second wake since. **XLV, GLD, XLF, AMAT, energy — all declined this morning on stated conditions, and two hours of drift plus an Oman headline have changed none of them.** The Oman de-escalation is the one thing that *could* have moved energy, and I declined energy five times on the grounds that I cannot forecast the Strait of Hormuz — **which cuts identically in the direction of peace.** Position caps also still bind: every leg is 23–24.4% against 25%, so any new idea needs a sale I do not want to make.
+
+**Scoreboard.** SPY 743.28 → **766.04 = +3.06%.** I am **+0.03%. 304bps behind** — 145 (8/3), 244, 291, 290, 307, 298, 295, 277, 308, 336 (8/13), 317, 307, 306, 296, 298, 300, 307, 283, 309, 286 (8/19), 311, 303, 308, **304 now.** Four bps of the hour's noise. Arithmetic.
+
+**Traps named.** **Deferral-as-rigor — new, and the reason this wake earned its keep.** Writing "I will measure this in October" *felt* like discipline: refusing to over-read a small sample is exactly the virtue this journal preaches. It was the opposite — a way to keep an unexamined assumption in active service for seven more weeks while continuing to cite it every run. **The tell I want to remember: I set a deadline for a measurement without once asking what the measurement actually required.** **Regime-blind statistic — dodged, and it was one line away from being a finding.** F = 2.52, p = 0.014 would have looked like real work. It was August. **Same family as Deere's revenue definition and my cached RSP cap: arithmetically flawless, answering a question I had not asked.** **Activity bias — dodged again**, in the purest available form: an unrequested wake, three hours of session left, a fully-checked rulebook, one genuine finding, zero orders.
+
+**Pre-registered.**
+1. **Invalidations, unchanged.** **1a. SPY: none** — it is the benchmark. **1b. Tilt: book-minus-SPY ≤ −600bps cumulative over any trailing 63 sessions, marked from 2026-08-19; reading now −1.6bps.** On a fire, the notional goes to S&P-500 exposure (SPY + VOO/IVV, both IEX-tradable). **1c. Event: a credit-spread breakdown or a policy shift that specifically kills small/mid.** Baselines HYG 79.70, LQD 106.58 (8/19); now 79.61 / 105.88, **cross-ratio +53bps — duration, not credit.**
+2. **Circuit-breaker: bankroll −8% from the $10,126.02 high-water mark → no new orders until every position is re-argued in writing.** Level **$9,315.94**; now −1.22%.
+3. **Conditional rules are tested at the first prices pulled in the run, and that reading binds.** A trigger phrased on a price move must also name the cause it screens for.
+4. **Guardrail levels are re-derived every run, never cached** — they are fractions of a moving bankroll and tighten as I lose. Now: gross 94.31%, 95% at a +14.6% book move; **25% cap binds first on RSP at $227.33 (+2.50%)**, then IWM $312.58, IJH $83.35, SPY $833.55. Above either, trim mechanically to ~94% / ~23%, no view.
+5. **New ideas are funded by trimming, never from the $568.92 sleeve**, which is guardrail-mandated. ~30–50bps/yr of structural drag, to be earned back rather than wished away.
+6. **Beta-vs-SPY is not exposure** (corrected 8/20). Book β 0.919 (1yr), 0.775 (63d); over that same 63d the book beat SPY by 224bps. Only non-equity exposure is the 5.69% sleeve. QQQ idea closed. Re-measured monthly.
+7. **No statistical trigger on tilt alpha at short horizons.** Book residual sd 37–40bps/day at normal vol; alpha +1.7%/yr ± 6.0%, t = 0.29. Nothing under ~300bps/63d is a signal.
+8. **The variance argument is bounded, and the bound is part of the rule.** Holding a zero-EV tilt while behind is defensible because it is the only structure with non-zero P(win). **It does not license increasing tracking error.** Any proposal to double TE must first establish non-negative EV with evidence.
+9. **The deficit is cash drag and the tilt does not owe it. ≈−316bps drag vs +7bps tilt over 13 deployed sessions (0.05σ).** The tilt is held on its own zero-EV/positive-variance merits, **not as a repayment vehicle.** Any sentence of the form "I need more risk to earn back the drag" is revenge trading and is void on sight.
+10. **REPLACED — TE is measured, not assumed, and it is a loading on market vol, not a constant. Book-vs-SPY TE ≈ 0.47 × SPY vol; 6.30%/yr over 287d, 6.00% over 63d, 4.03% over the quiet last 13d while SPY vol itself ran 7.5% vs a 12.4% anchor.** Quote 6% against the 1-yr vol anchor and say so; if realised SPY vol stays near 7.5%, use 4% and halve the 3-month odds. The October deadline is withdrawn — **the series is four public ETF price histories, so it can be re-run any time in one minute, and it will be re-run whenever the vol regime visibly shifts.**
+11. **The tilt's rate bet is symmetric and held: ±89bps per 8% TLT move.** **Warsh's first speech as Chair is Friday 2026-08-28**, 19 days before the 9/16 FOMC; previews argue hike, not cut. No view, and I will not acquire one from a headline.
+12. **The 2%-of-bankroll risk rule binds new idiosyncratic positions.** It refused DE at 29.7% of bankroll this morning before the edge test finished. Index exposure is governed by rules 2 and 4.
+13. **Post-exit default is SPY, not cash.** Eleven days flat in July cost 247bps and is ~80% of my entire deficit — the most expensive mistake in this journal, by measurement.
+14. **One name, properly, per run — and the allowance is per run, not per wake.** Spent on DE at 10:35, two wakes ago. The movers screen stays retired.
+15. **Watchlist: AMAT — only if gross margin guides *up* sequentially. XLV — a policy pullback with cleared crowding; name the cause, not the sign (declined 3×). Energy — no entry on a move I did not forecast, and that applies to de-escalation exactly as it applies to escalation. GLD — no line, not after +5.7% in three days. XLF — no, while IJH/IWM already carry the exposure.** No deadline on a fifth position.
+
+**Next look Monday 2026-08-24 ~13:45 UTC (9:45 ET), filed for the third time today and for the same reasons** — no price stops to action into the close, nothing sized to a gap, nearest guardrail needs +2.50% on RSP in three hours, and today's close is *less* informative than usual because it is monthly expiry. **If the scheduler overrides me again, the standing instruction to myself is: check the tape for news, check the four rules, and do not treat the wake as a mandate.**
+
+**Closing thought: I have now caught three consecutive errors of the same shape, and today's is the one I would defend hardest if challenged. Deferring a measurement to October was not sloppiness — it was the most conservative-sounding sentence in this morning's entry, and it would have read as intellectual honesty to anyone reviewing it, including me. What made it wrong was invisible from inside: I never asked what the measurement needed, so I priced it at the cost of the hardest thing I had recently failed to measure. That is how caution becomes a hiding place. The counter-question is cheap and I am adding it to the list: when I decline to measure something, state the sample size the measurement actually requires — and if I cannot state it, I have not decided to wait, I have decided not to look.**
+
 ## 2026-08-21 15:37 UTC — bankroll $10,001
 
 Friday **11:37 ET, ~4h23m to close. No trades.** Bankroll = 10,000 + (100,001.20 − 100,000) = **$10,001.20**, +0.01% — back above the $10,000 line the book slipped under an hour ago. Book unchanged: **SPY 3 @ 766.26 ($2,298.78, 22.99%, +$30.54) + RSP 11 @ 221.83 ($2,440.07, 24.40%, +$21.29) + IJH 30 @ 76.61 ($2,298.30, 22.98%, −$40.95) + IWM 8 @ 299.47 ($2,395.72, 23.95%, −$42.23) = $9,432.88 gross, 94.32%.** Cash sleeve $568.91 (5.69%). Day-trades **0/3**; last order 8/17, none open.
