@@ -1,49 +1,49 @@
 {
-  "ts": "2026-08-21T14:42:09.507Z",
-  "equity": 9976.52,
-  "cash": 568.9,
+  "ts": "2026-08-21T15:39:10.851Z",
+  "equity": 10004.63,
+  "cash": 568.91,
   "positions": [
     {
       "symbol": "IJH",
       "side": "long",
       "qty": 30,
       "avg_entry": 77.98,
-      "price": 76.425,
-      "market_value": 2292.75,
-      "unrealized_pl": -46.65,
-      "unrealized_plpc": -0.01994
+      "price": 76.635,
+      "market_value": 2299.05,
+      "unrealized_pl": -40.35,
+      "unrealized_plpc": -0.01725
     },
     {
       "symbol": "IWM",
       "side": "long",
       "qty": 8,
       "avg_entry": 304.72375,
-      "price": 298.195,
-      "market_value": 2385.56,
-      "unrealized_pl": -52.23,
-      "unrealized_plpc": -0.02143
+      "price": 299.43,
+      "market_value": 2395.44,
+      "unrealized_pl": -42.35,
+      "unrealized_plpc": -0.01737
     },
     {
       "symbol": "RSP",
       "side": "long",
       "qty": 11,
       "avg_entry": 219.88,
-      "price": 221.5,
-      "market_value": 2436.5,
-      "unrealized_pl": 17.82,
-      "unrealized_plpc": 0.00737
+      "price": 221.91,
+      "market_value": 2441.01,
+      "unrealized_pl": 22.33,
+      "unrealized_plpc": 0.00923
     },
     {
       "symbol": "SPY",
       "side": "long",
       "qty": 3,
       "avg_entry": 756.02,
-      "price": 764.27,
-      "market_value": 2292.81,
-      "unrealized_pl": 24.75,
-      "unrealized_plpc": 0.01091
+      "price": 766.74,
+      "market_value": 2300.22,
+      "unrealized_pl": 32.16,
+      "unrealized_plpc": 0.01418
     }
   ],
-  "summary": "No trades. Bankroll $9,981.65 (-0.18%), 303bps behind SPY. All invalidations clear: tilt tracker +0.8bps vs a -600bps trigger, credit calm (HYG/LQD cross-ratio improved 57bps, so LQD's weakness is duration not spread), gross 94.30%, circuit-breaker -1.43% from high-water. Researched Deere properly after its 8/20 beat and declined it: the headline 'sales $12.608B vs $10.730B' stacks total revenue against an equipment-operations consensus, the real case is post-earnings drift I have no advantage in, and the 2% risk rule sizes it to 29.7% of bankroll against a 25% cap. Also declined XLV, GLD and XLF, and quantified for the first time why I hold the zero-EV tilt rather than rotating to SPY (P(closing the gap) 16/22/27% at 3/5/8 months vs ~0% for pure SPY).",
+  "summary": "Unscheduled second run 58 minutes after my 10:35 ET entry; no new information on the tape (newest headline predates my last write-up) and no trades. All pre-registered rules check clean: tilt tracker -3.9bps vs a -600bps trigger, HYG/LQD cross-ratio +51bps so credit is tightening not breaking, bankroll -1.23% from high-water vs an -8% breaker, nearest guardrail RSP's 25% cap at $227.30 (+2.47%). Re-ran the deficit attribution with fresh data: roughly -316bps of cash drag versus +7bps from the tilt over 13 deployed sessions (0.05 sigma), which means my entire 308bps gap to SPY is the price of being underinvested in July and the tilt owes none of it - so I retired the framing of the tilt as a repayment vehicle and logged that any 'take more risk to earn back the drag' argument is revenge trading, void on sight.",
   "next_wake": "2026-08-24T13:45:00Z"
 }
