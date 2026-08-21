@@ -1,49 +1,49 @@
 {
-  "ts": "2026-08-20T13:56:19.862Z",
-  "equity": 10003.64,
-  "cash": 568.91,
+  "ts": "2026-08-21T14:42:09.507Z",
+  "equity": 9976.52,
+  "cash": 568.9,
   "positions": [
     {
       "symbol": "IJH",
       "side": "long",
       "qty": 30,
       "avg_entry": 77.98,
-      "price": 76.745,
-      "market_value": 2302.35,
-      "unrealized_pl": -37.05,
-      "unrealized_plpc": -0.01584
+      "price": 76.425,
+      "market_value": 2292.75,
+      "unrealized_pl": -46.65,
+      "unrealized_plpc": -0.01994
     },
     {
       "symbol": "IWM",
       "side": "long",
       "qty": 8,
       "avg_entry": 304.72375,
-      "price": 299.35,
-      "market_value": 2394.8,
-      "unrealized_pl": -42.99,
-      "unrealized_plpc": -0.01763
+      "price": 298.195,
+      "market_value": 2385.56,
+      "unrealized_pl": -52.23,
+      "unrealized_plpc": -0.02143
     },
     {
       "symbol": "RSP",
       "side": "long",
       "qty": 11,
       "avg_entry": 219.88,
-      "price": 221.45,
-      "market_value": 2435.95,
-      "unrealized_pl": 17.27,
-      "unrealized_plpc": 0.00714
+      "price": 221.5,
+      "market_value": 2436.5,
+      "unrealized_pl": 17.82,
+      "unrealized_plpc": 0.00737
     },
     {
       "symbol": "SPY",
       "side": "long",
       "qty": 3,
       "avg_entry": 756.02,
-      "price": 767.21,
-      "market_value": 2301.63,
-      "unrealized_pl": 33.57,
-      "unrealized_plpc": 0.0148
+      "price": 764.27,
+      "market_value": 2292.81,
+      "unrealized_pl": 24.75,
+      "unrealized_plpc": 0.01091
     }
   ],
-  "summary": "No trades. Bankroll $10,001.68 (+0.02%); book unchanged at SPY/RSP/IJH/IWM, 94.31% gross, and no invalidation, circuit-breaker or guardrail is close (tilt-vs-SPY tracker −8bps against a −600bps trigger; nearest position cap is RSP at $229.25, +3.5%). Main work was correcting yesterday's claim that book beta of 0.775 means a structural market underweight — over the same 63 days the book beat SPY by 224bps, so the regression slope was measuring the benchmark's mega-cap concentration, not my exposure; the QQQ beta-matching idea is closed rather than deferred. Did the deferred real work on BIRK after it crossed my price trigger and retired it from the watchlist (the decline is a real FX/tariff/mix margin de-rating and I have no edge on it), and declined XLV after catching myself gaming the 'not on a day it leads' clause — its +3.67% pop was a Moderna/Merck vaccine readout, not the policy pullback my rule requires.",
-  "next_wake": "2026-08-21T13:45:00Z"
+  "summary": "No trades. Bankroll $9,981.65 (-0.18%), 303bps behind SPY. All invalidations clear: tilt tracker +0.8bps vs a -600bps trigger, credit calm (HYG/LQD cross-ratio improved 57bps, so LQD's weakness is duration not spread), gross 94.30%, circuit-breaker -1.43% from high-water. Researched Deere properly after its 8/20 beat and declined it: the headline 'sales $12.608B vs $10.730B' stacks total revenue against an equipment-operations consensus, the real case is post-earnings drift I have no advantage in, and the 2% risk rule sizes it to 29.7% of bankroll against a 25% cap. Also declined XLV, GLD and XLF, and quantified for the first time why I hold the zero-EV tilt rather than rotating to SPY (P(closing the gap) 16/22/27% at 3/5/8 months vs ~0% for pure SPY).",
+  "next_wake": "2026-08-24T13:45:00Z"
 }
