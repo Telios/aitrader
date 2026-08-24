@@ -4,6 +4,28 @@ The Trader's running log — newest entries at the top. Written by Claude during
 
 > **Operator note (2026-07-19):** Your tradable bankroll is **$10,000**, NOT the Alpaca account balance. The 2026-07-19 entries below saying "$100,000 equity/cash" describe the raw paper account, which you may not size against. Every run: compute bankroll = `starting_capital` + (account equity − `account_equity_start` from `data/baseline.json`) and reason only in those terms.
 
+## 2026-08-24 18:45 UTC — bankroll $9,968
+
+Monday **14:41 ET, ~1h19m to close. No trades.** Sixth wake today, the day's last under `max_runs_per_day: 6`, none of them requested. Bankroll = 10,000 + (99,967.60 − 100,000) = **$9,967.60**, −0.32%. Book unchanged since 8/17: **SPY 3 @ 756.02 ($2,292.69, 23.00%) + RSP 11 @ 219.88 ($2,437.71, 24.46%) + IJH 30 @ 77.98 ($2,284.13, 22.91%) + IWM 8 @ 304.72 ($2,384.16, 23.92%) = $9,398.69 gross, 94.29%.** Sleeve $568.91 (5.71%). Last fill 8/17 (IWM 1 @ 304.11, IJH 1 @ 78.57), day-trades **0/3**, `status=open` → `[]`.
+
+**Rules re-derived from source off the first prices pulled (rule 3).** **1b** tilt tracker from the 8/19 close: book −0.799% vs SPY −0.632% = **−16.7bps** against −600bps. Six readings today: +13.1 → +2.0 → −10.3 → −22.3 → −17.6 → −16.7. **1c** HYG 79.695 / LQD 106.235 → **HY over IG by 32.3bps** since 8/19; TLT 82.63. Credit fine, no event. **2** `/v2/account/portfolio/history` re-read; peak equity 100,148.15 at the 08-15 row reproduced exactly → HW bankroll **$10,148.15**, breaker **$9,336.30**, now **−1.78%** and **633bps clear**. **4** 95% gross needs +15.01%; **RSP cap $226.54 (+2.22%)** binds first, then IWM $311.49, SPY $830.63, IJH $83.06. **7** risk budget $199.35. Nothing to action.
+
+**Rule 8: blank. The tape's whole afternoon is sell-side price-target lines, a Trump Truth Social post telling Canadian officials to "fall in line," and a 50%-auto-tariff ETF explainer.** The Canada escalation is now on its third headline of the day and still has no date I can price. No dated forward catalyst, so no candidate — the third blank in three runs, and Wednesday's PCE/NVDA remains the test I set for whether rule 8 has an aperture at all.
+
+**One correction, and it retires a number rather than adding one.** Every entry for two weeks has closed rule 5 with the same line: sleeve slack $70.53 against a smallest brick of IJH $76.14, therefore *unreachable in whole shares.* I checked the premise this run instead of retyping it — **`/v2/assets` reports `fractionable: true` for all four legs.** The slack has been reachable the entire time by notional order. So the arithmetic I have been performing every run was answering a question that was not the binding one.
+
+**The decision does not change, and the honest reason is worse for me than the old one.** Deploying $70.53 is worth ~5bps of bankroll over the remaining horizon and it spends the entire 71bp buffer under my 95% ceiling — after which every up day pushes gross fractionally over and asks for a mechanical trim. Five basis points against a 314bps deficit is not a decision, it is noise wearing a decision's clothes. **But "not worth it" and "not possible" are different sentences, and I had been writing the second one.** A constraint I never re-tested became a fact I recited; the check cost one API call and I did not make it for two weeks because the conclusion was one I liked. Per rule 17 this earns no new rule — it **deletes** a line: the slack-vs-brick calculation comes out of the per-run checklist, alongside the tilt tracker, on the same grounds. Neither has ever been one input away from an order.
+
+**Trap named: recited-premise.** Not narrative lock (yesterday's thesis) and not vindication bias (this morning's) — it is a *factual* input that entered the rulebook once, was true-adjacent, and then got re-derived-in-appearance every run while its actual basis went unexamined. It is the specific failure mode that rule 3's "re-derive from source" was written to prevent, and rule 3 did not catch it, because I was re-deriving the *arithmetic* faithfully off a premise I never re-read. **Re-deriving a number from source is not the same as re-checking what the number is for.** **Activity bias — dodged**, sixth time today, in the last 80 minutes of the session.
+
+**GLD 424.66**, a second down session (428.35 → 425.61 → 424.66). Same discipline as this morning: two red days do not retroactively make sitting out +7.5% correct.
+
+**Scoreboard.** SPY 743.28 → **764.23 = +2.82%.** I am **−0.32%. 314bps behind** — 285 at 9:52, 296, 308, 320, 314, **314 now.** Flat on the hour; the day's whole range is 285→320, all of it noise inside a 37–40bps/day residual sd. Arithmetic.
+
+**Pre-registered: unchanged from 9:52 ET, all eight, every number above re-derived rather than copied.** Nothing touched an invalidation, a guardrail, or a thesis. One deletion to **5**, above. Comfortable overnight: four broad index ETFs, 5.71% under-exposed to the same gap SPY carries.
+
+**Next look Wednesday 2026-08-26 ~13:45 UTC (9:45 ET)** — after July PCE, with NVDA that evening and Warsh Friday. Tuesday holds nothing dated. If woken before then: a wake is not a mandate.
+
 ## 2026-08-24 17:40 UTC — bankroll $9,956
 
 Monday **13:35 ET, ~2h25m to close. No trades.** Fifth wake today, none requested. Bankroll = 10,000 + (99,956.34 − 100,000) = **$9,956.34**, −0.44%. Book unchanged since 8/17: **SPY 3 @ 756.02 ($2,290.19, 23.00%) + RSP 11 @ 219.88 ($2,434.25, 24.45%) + IJH 30 @ 77.98 ($2,281.20, 22.91%) + IWM 8 @ 304.72 ($2,381.80, 23.92%) = $9,387.43 gross, 94.29%.** Sleeve $568.91 (5.71%). Last fill 8/17, day-trades **0/3**, `status=open` → `[]`.
