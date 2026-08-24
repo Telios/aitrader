@@ -4,6 +4,24 @@ The Trader's running log — newest entries at the top. Written by Claude during
 
 > **Operator note (2026-07-19):** Your tradable bankroll is **$10,000**, NOT the Alpaca account balance. The 2026-07-19 entries below saying "$100,000 equity/cash" describe the raw paper account, which you may not size against. Every run: compute bankroll = `starting_capital` + (account equity − `account_equity_start` from `data/baseline.json`) and reason only in those terms.
 
+## 2026-08-24 14:50 UTC — bankroll $9,981
+
+Monday **10:45 ET, ~5h15m to close. No trades.** Bankroll = 10,000 + (99,981.26 − 100,000) = **$9,981.26**, −0.19%. Book unchanged since 8/17: **SPY 3 @ 756.02 ($2,291.61, 22.96%) + RSP 11 @ 219.88 ($2,440.40, 24.45%) + IJH 30 @ 77.98 ($2,289.60, 22.94%) + IWM 8 @ 304.72 ($2,390.24, 23.95%) = $9,412.35 gross, 94.30%.** Sleeve $568.91 (5.70%). Day-trades **0/3** (last fill 8/17); no open orders.
+
+**Rules re-derived from source off the first prices pulled (rule 3), not carried from the 9:52 entry.** **1b** tilt tracker from the 8/19 close: book −0.659% vs SPY −0.679% = **+2.0bps** against −600bps. **1c** HYG 79.645 / LQD 106.135 → **HY over IG by 35bps** since 8/19 (was 26bps at 9:52) — spreads tightening, no credit event; TLT 82.545, flat on the morning. **2** `/v2/account/portfolio/history` re-read, peak equity 100,148.15 at the 8/15 row reproduced exactly → HW bankroll **$10,148.15**, breaker **$9,336.30**, now **−1.64%** and 646bps clear. **4** 95% gross needs +14.84%; **RSP cap $226.85 (+2.25%)** binds first, then IWM $311.91, IJH $83.18, SPY $831.77. **5** floor $499.06, slack $69.85 against a smallest brick of IJH $76.32 — unreachable, as it has been every run. **7** risk budget $199.63. Nothing to action.
+
+**Rule 8's first live test, and it returned a blank rather than a decline — which is the whole point of the rule.** This morning I retired the movers screen and required ideas to originate from a dated forward catalyst. So I read the tape and it gave me: thirty sell-side price-target lines, a Taiwan indictment of an NVDA manager, AMC governance, Bitcoin's 7-sigma move. Under the old funnel at least two of those become candidates I then get to feel rigorous about rejecting. Under rule 8 none of them is even a candidate, because none comes with a calendar entry I could have formed a view on before the print. **The week's three dated events — PCE and NVDA Wednesday, Warsh Friday — are the three most-forecast items on the calendar, and I have no differentiated view on any of them.** I am not going to manufacture one to fill the allowance. Unspent.
+
+**One honest note on the wake.** I pre-registered Wednesday and was woken 50 minutes after the last entry; `max_runs_per_day: 6` governs, `next_wake` is a floor. Friday's entry already established this and it does not need a second derivation or a rule — noting it in a clause is the anti-ratchet discipline working.
+
+**Scoreboard.** SPY 743.28 → **763.87 = +2.77%.** I am **−0.19%. 296bps behind** — 285 at 9:52, 296 now. The 11bps of widening in 50 minutes is SPY up 0.12% while I sat 5.7% in cash; **that is rule 5's compulsory short doing exactly what it is defined to do, on a green tape, and it is the one line of this entry that is a real cost rather than an observation.** Arithmetic.
+
+**Traps named. Activity bias — dodged**, on an unrequested second wake with five hours of session left. **Analysis-displacement — dodged**, which is why this entry is a fifth the length of the one below it: the tape moved 12bps and produced no information, and an entry proportional to what actually happened is the correct output.
+
+**Pre-registered: unchanged from 9:52 ET, all eight, every number above re-derived rather than copied.** Nothing in the last hour touched an invalidation, a guardrail, or a thesis.
+
+**Next look Wednesday 2026-08-26 ~13:45 UTC (9:45 ET)** — after July PCE, with NVDA that evening and Warsh Friday. If woken before then: a wake is not a mandate.
+
 ## 2026-08-24 13:55 UTC — bankroll $9,980
 
 Monday **9:52 ET. No trades.** Bankroll = 10,000 + (99,979.72 − 100,000) = **$9,979.72**, −0.20%. Book unchanged since 8/17: **SPY 3 @ 756.02 ($2,289.05, 24.3% of gross) + RSP 11 @ 219.88 ($2,442.77, 26.0%) + IJH 30 @ 77.98 ($2,292.45, 24.4%) + IWM 8 @ 304.72 ($2,386.54, 25.4%) = $9,410.81 gross, 94.30%.** Sleeve $568.91 (5.70%). Last order 8/17; day-trades **0/3**; no open orders.
