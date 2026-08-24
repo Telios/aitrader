@@ -1,49 +1,49 @@
 {
-  "ts": "2026-08-24T15:42:12.435Z",
-  "equity": 9970.81,
-  "cash": 568.99,
+  "ts": "2026-08-24T16:40:39.719Z",
+  "equity": 9964.28,
+  "cash": 568.91,
   "positions": [
     {
       "symbol": "IJH",
       "side": "long",
       "qty": 30,
       "avg_entry": 77.98,
-      "price": 76.13,
-      "market_value": 2283.9,
-      "unrealized_pl": -55.5,
-      "unrealized_plpc": -0.02372
+      "price": 76.06,
+      "market_value": 2281.8,
+      "unrealized_pl": -57.6,
+      "unrealized_plpc": -0.02462
     },
     {
       "symbol": "IWM",
       "side": "long",
       "qty": 8,
       "avg_entry": 304.72375,
-      "price": 298.56,
-      "market_value": 2388.48,
-      "unrealized_pl": -49.31,
-      "unrealized_plpc": -0.02023
+      "price": 298.09,
+      "market_value": 2384.72,
+      "unrealized_pl": -53.07,
+      "unrealized_plpc": -0.02177
     },
     {
       "symbol": "RSP",
       "side": "long",
       "qty": 11,
       "avg_entry": 219.88,
-      "price": 221.52,
-      "market_value": 2436.72,
-      "unrealized_pl": 18.04,
-      "unrealized_plpc": 0.00746
+      "price": 221.45,
+      "market_value": 2435.95,
+      "unrealized_pl": 17.27,
+      "unrealized_plpc": 0.00714
     },
     {
       "symbol": "SPY",
       "side": "long",
       "qty": 3,
       "avg_entry": 756.02,
-      "price": 764.24,
-      "market_value": 2292.72,
-      "unrealized_pl": 24.66,
-      "unrealized_plpc": 0.01087
+      "price": 764.3,
+      "market_value": 2292.9,
+      "unrealized_pl": 24.84,
+      "unrealized_plpc": 0.01095
     }
   ],
-  "summary": "Third wake today, none requested; no trades. Bankroll $9,971.19 (-0.29%) vs SPY +2.79%, 308bps behind. Book unchanged since 8/17 (SPY/RSP/IJH/IWM, 94.29% gross, 5.71% sleeve); every risk number re-derived from source: tilt tracker -10.3bps vs -600bps, HY over IG +28.9bps (no credit event), drawdown -1.74% vs the -8% breaker at $9,336.30, RSP cap binding first at $226.62 (+2.29%). Nothing touched an invalidation or a guardrail, and rule 8's dated-catalyst funnel produced no candidate for the second run running — the 50% Canada auto tariff headline is a rotation inside the tape, not something I had a forward view on.",
+  "summary": "Fourth unrequested wake Monday, 12:40 ET. No trades. Bankroll $9,967.21 (-0.33%); book unchanged since 8/17 (SPY 3, RSP 11, IJH 30, IWM 8 = $9,398.30 gross, 94.29%). All risk levels re-derived from source: tilt tracker -22.3bps against a -600bps trigger, credit fine (HY over IG by 31.9bps since 8/19), circuit-breaker $9,336.30 reproduced from portfolio history and 676bps clear, nearest guardrail RSP at $226.53 (+2.27%). Rule 8 surfaced its first genuinely dated candidate - crude down ~3% on the day Bessent details Iran secondary sanctions - and I declined it on a pre-registered condition (no energy entry on a move I did not forecast, in either direction); a sign that surprises me is a statement about my priors, not an edge.",
   "next_wake": "2026-08-26T13:45:00Z"
 }
