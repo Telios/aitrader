@@ -1,6 +1,6 @@
 {
-  "ts": "2026-08-24T16:40:39.719Z",
-  "equity": 9964.28,
+  "ts": "2026-08-24T17:33:58.811Z",
+  "equity": 9957.25,
   "cash": 568.91,
   "positions": [
     {
@@ -8,42 +8,42 @@
       "side": "long",
       "qty": 30,
       "avg_entry": 77.98,
-      "price": 76.06,
-      "market_value": 2281.8,
-      "unrealized_pl": -57.6,
-      "unrealized_plpc": -0.02462
+      "price": 76.03,
+      "market_value": 2280.9,
+      "unrealized_pl": -58.5,
+      "unrealized_plpc": -0.02501
     },
     {
       "symbol": "IWM",
       "side": "long",
       "qty": 8,
       "avg_entry": 304.72375,
-      "price": 298.09,
-      "market_value": 2384.72,
-      "unrealized_pl": -53.07,
-      "unrealized_plpc": -0.02177
+      "price": 297.72,
+      "market_value": 2381.76,
+      "unrealized_pl": -56.03,
+      "unrealized_plpc": -0.02298
     },
     {
       "symbol": "RSP",
       "side": "long",
       "qty": 11,
       "avg_entry": 219.88,
-      "price": 221.45,
-      "market_value": 2435.95,
-      "unrealized_pl": 17.27,
-      "unrealized_plpc": 0.00714
+      "price": 221.385,
+      "market_value": 2435.235,
+      "unrealized_pl": 16.555,
+      "unrealized_plpc": 0.00684
     },
     {
       "symbol": "SPY",
       "side": "long",
       "qty": 3,
       "avg_entry": 756.02,
-      "price": 764.3,
-      "market_value": 2292.9,
-      "unrealized_pl": 24.84,
-      "unrealized_plpc": 0.01095
+      "price": 763.48,
+      "market_value": 2290.44,
+      "unrealized_pl": 22.38,
+      "unrealized_plpc": 0.00987
     }
   ],
-  "summary": "Fourth unrequested wake Monday, 12:40 ET. No trades. Bankroll $9,967.21 (-0.33%); book unchanged since 8/17 (SPY 3, RSP 11, IJH 30, IWM 8 = $9,398.30 gross, 94.29%). All risk levels re-derived from source: tilt tracker -22.3bps against a -600bps trigger, credit fine (HY over IG by 31.9bps since 8/19), circuit-breaker $9,336.30 reproduced from portfolio history and 676bps clear, nearest guardrail RSP at $226.53 (+2.27%). Rule 8 surfaced its first genuinely dated candidate - crude down ~3% on the day Bessent details Iran secondary sanctions - and I declined it on a pre-registered condition (no energy entry on a move I did not forecast, in either direction); a sign that surprises me is a statement about my priors, not an edge.",
+  "summary": "No trades. Bankroll $9,956.34 (-0.44%); book unchanged since 8/17 (SPY/RSP/IJH/IWM, $9,387.43 gross = 94.29%), day-trades 0/3. All eight pre-registered rules re-derived from source: tilt tracker -17.6bps vs a -600bps trigger, HY over IG by 31.3bps (no credit event), circuit-breaker $9,336.30 with 611bps of clearance, RSP the first binding position cap at $226.28 (+2.25%). The Iran sanctions package I declined at 12:40 landed in full and crude fell through it (USO 132.45 -> 131.97), so the pre-registered 'no energy entry on a move I did not forecast' condition is scored correct on outcome as well as process - though the reasoning, not the tape, is what justifies it. Bessent's 'a major financial institution will be sanctioned this week' is a genuine dated catalyst but fails a step earlier than energy did: I cannot name the security it prices, and XLF is +0.04% on the day.",
   "next_wake": "2026-08-26T13:45:00Z"
 }
