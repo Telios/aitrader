@@ -1,49 +1,49 @@
 {
-  "ts": "2026-08-26T14:00:05.424Z",
-  "equity": 10014.85,
-  "cash": 568.95,
+  "ts": "2026-08-31T19:29:36.802Z",
+  "equity": 9889.92,
+  "cash": 568.91,
   "positions": [
     {
       "symbol": "IJH",
       "side": "long",
       "qty": 30,
       "avg_entry": 77.98,
-      "price": 76.73,
-      "market_value": 2301.9,
-      "unrealized_pl": -37.5,
-      "unrealized_plpc": -0.01603
+      "price": 75.32,
+      "market_value": 2259.6,
+      "unrealized_pl": -79.8,
+      "unrealized_plpc": -0.03411
     },
     {
       "symbol": "IWM",
       "side": "long",
       "qty": 8,
       "avg_entry": 304.72375,
-      "price": 299.62,
-      "market_value": 2396.96,
-      "unrealized_pl": -40.83,
-      "unrealized_plpc": -0.01675
+      "price": 293.525,
+      "market_value": 2348.2,
+      "unrealized_pl": -89.59,
+      "unrealized_plpc": -0.03675
     },
     {
       "symbol": "RSP",
       "side": "long",
       "qty": 11,
       "avg_entry": 219.88,
-      "price": 222.43,
-      "market_value": 2446.73,
-      "unrealized_pl": 28.05,
-      "unrealized_plpc": 0.0116
+      "price": 219.42,
+      "market_value": 2413.62,
+      "unrealized_pl": -5.06,
+      "unrealized_plpc": -0.00209
     },
     {
       "symbol": "SPY",
       "side": "long",
       "qty": 3,
       "avg_entry": 756.02,
-      "price": 766.77,
-      "market_value": 2300.31,
-      "unrealized_pl": 32.25,
-      "unrealized_plpc": 0.01422
+      "price": 766.53,
+      "market_value": 2299.59,
+      "unrealized_pl": 31.53,
+      "unrealized_plpc": 0.0139
     }
   ],
-  "summary": "No trades. Bankroll $10,013.92 (+0.14%), book unchanged since 8/17: SPY/RSP/IJH/IWM at 94.32% gross, 5.68% sleeve; every guardrail, invalidation and the -8% circuit breaker re-derived from source and clear (tilt tracker +3.8bps vs -600bps trigger, 677bps above the breaker, RSP cap binds first at +2.31%). July PCE printed in line on core (3.3% y/y) and produced no candidate, the first leg of the test I pre-registered for my dated-catalyst research rule. The number that mattered this run: I measured my book's NVDA weight at 1.84% against SPY's ~7.8%, so I carry an unchosen 5.96pp relative underweight into tonight's earnings print, worth about +/-45bps of tracking overnight against a 297bps deficit. I have no view on the print and cutting it would mean paying spread on four legs to reduce tracking error while behind, so I hold.",
-  "next_wake": "2026-08-27T13:45:00Z"
+  "summary": "No trades. Bankroll $9,889.10 (-1.11%) vs SPY +3.11% — 422bps behind, the worst reading of the experiment, with 125bps of it arriving in three sessions while SPY was flat. The cause is legible and is the tilt alone: since 8/26 NVDA +4.6%, QQQ +0.5%, SPY +0.1%, RSP -1.2%, IJH -1.7%, IWM -1.8%, a clean size gradient, with TLT explaining only ~8bps of the 128bps tracker move — this is breadth, not duration. At 1.9 sigma against a 37-40bps/day residual sd it is not a signal by my pre-registered threshold (-600bps, now -128bps), so I held: cutting the tilt into SPY here is loss-triggered de-risking, which locks in the deficit and leaves a guaranteed loss to the benchmark via the compulsory 5.75% cash sleeve. All guardrails clear — gross 94.25% vs 95%, nearest cap needs +2.41% on RSP, breaker $9,336.30 is 592bps away, day-trades 0/3. Declined energy on oil near $90 (Iran risk) and EIX -24% under pre-registered no-chase conditions; executed the pre-registered narrowing of rule 8 after two runs the scheduler never fired.",
+  "next_wake": "2026-09-01T14:30:00Z"
 }
