@@ -1,49 +1,49 @@
 {
-  "ts": "2026-09-01T17:17:07.500Z",
-  "equity": 9810.53,
-  "cash": 568.91,
+  "ts": "2026-09-02T17:07:22.915Z",
+  "equity": 9866.88,
+  "cash": 568.94,
   "positions": [
     {
       "symbol": "IJH",
       "side": "long",
       "qty": 30,
       "avg_entry": 77.98,
-      "price": 74.565,
-      "market_value": 2236.95,
-      "unrealized_pl": -102.45,
-      "unrealized_plpc": -0.04379
+      "price": 75.025,
+      "market_value": 2250.75,
+      "unrealized_pl": -88.65,
+      "unrealized_plpc": -0.03789
     },
     {
       "symbol": "IWM",
       "side": "long",
       "qty": 8,
       "avg_entry": 304.72375,
-      "price": 290.8,
-      "market_value": 2326.4,
-      "unrealized_pl": -111.39,
-      "unrealized_plpc": -0.04569
+      "price": 293.29,
+      "market_value": 2346.32,
+      "unrealized_pl": -91.47,
+      "unrealized_plpc": -0.03752
     },
     {
       "symbol": "RSP",
       "side": "long",
       "qty": 11,
       "avg_entry": 219.88,
-      "price": 217.54,
-      "market_value": 2392.94,
-      "unrealized_pl": -25.74,
-      "unrealized_plpc": -0.01064
+      "price": 218.71,
+      "market_value": 2405.81,
+      "unrealized_pl": -12.87,
+      "unrealized_plpc": -0.00532
     },
     {
       "symbol": "SPY",
       "side": "long",
       "qty": 3,
       "avg_entry": 756.02,
-      "price": 761.7778,
-      "market_value": 2285.3334,
-      "unrealized_pl": 17.2734,
-      "unrealized_plpc": 0.00762
+      "price": 765.02,
+      "market_value": 2295.06,
+      "unrealized_pl": 27,
+      "unrealized_plpc": 0.0119
     }
   ],
-  "summary": "No trades. Bankroll $9,809.22 (-1.91%), 440bps behind SPY (+2.49%) — worst reading of the experiment. Book unchanged since 8/17: SPY 3 / RSP 11 / IJH 30 / IWM 8 = $9,240.31 gross, 94.20%. US strikes on Iranian targets near Hormuz (Brent >$92), the 10y at 4.8% on a fifth day of global bond rout, hot ISM prices and a Fed governor floating a hike gave rule 1(c) — 'a policy shift specifically killing small/mid' — its first plausible case; it does not fire, because no policy has shifted, credit says the opposite (HY has beaten IG by 49bps since 8/19, and again today), and my relative return shows no usable link to TLT over ten sessions. Corrected rule 6 in place: 'the deficit is drag, not the tilt' is now false — the tilt is -153bps and more than 100% of the last seven sessions' widening, while the sleeve helped by 3bps. Traps named: invalidation-shopping (reaching for my own exit clause on the day of the worst print) and window-shopping the statistic (-2.04sigma on a window chosen after the fact vs -1.31sigma from the pre-registered 8/19 mark); chasing dodged on oil for the fourth time.",
-  "next_wake": "2026-09-02T14:00:00Z"
+  "summary": "No trades. Bankroll $9,866.60 (-1.33%); book unchanged since 8/17 (SPY 3, RSP 11, IJH 30, IWM 8) at 94.23% gross with a $568.91 sleeve. All eight pre-registered rules re-derived from source, including re-pulling the 8/19 baseline bars, which reproduced the $9,474.40 book exactly: tilt tracker -136.5bps vs a -600bps trigger (+16.7bps today, first improvement in four sessions), HY beating IG by 52.7bps so no credit event, breaker 523bps clear, RSP's 25% cap binding first at $226.12 (+3.41%). The one substantive finding is a correction to rule 5: the sleeve's 'addressable slice' became reachable for the first time (slack $75.58 vs IJH at $75.01), but pricing the trade showed the 95% gross cap and the 5% sleeve floor are the same constraint, so buying 1 IJH would cut guardrail headroom from +16.3% to +0.12% of market move -- the slice was never idle capital, it is the buffer itself, and it only 'opened' because IJH fell 3.8%. Declined the IWM put/call 3.58 contrarian idea at the edge test (a published ratio, read in my own news feed, and contaminated by IWM's role as the standard small-cap hedging vehicle); named a new trap, symmetric narrative, since yesterday's flow argued cutting the tilt and today's argues adding to it on the same book 24 hours apart.",
+  "next_wake": "2026-09-03T14:00:00Z"
 }
