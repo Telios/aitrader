@@ -1,49 +1,49 @@
 {
-  "ts": "2026-09-02T17:07:22.915Z",
-  "equity": 9866.88,
-  "cash": 568.94,
+  "ts": "2026-09-03T17:01:50.717Z",
+  "equity": 9933.94,
+  "cash": 568.91,
   "positions": [
     {
       "symbol": "IJH",
       "side": "long",
       "qty": 30,
       "avg_entry": 77.98,
-      "price": 75.025,
-      "market_value": 2250.75,
-      "unrealized_pl": -88.65,
-      "unrealized_plpc": -0.03789
+      "price": 75.625,
+      "market_value": 2268.75,
+      "unrealized_pl": -70.65,
+      "unrealized_plpc": -0.0302
     },
     {
       "symbol": "IWM",
       "side": "long",
       "qty": 8,
       "avg_entry": 304.72375,
-      "price": 293.29,
-      "market_value": 2346.32,
-      "unrealized_pl": -91.47,
-      "unrealized_plpc": -0.03752
+      "price": 294.93,
+      "market_value": 2359.44,
+      "unrealized_pl": -78.35,
+      "unrealized_plpc": -0.03214
     },
     {
       "symbol": "RSP",
       "side": "long",
       "qty": 11,
       "avg_entry": 219.88,
-      "price": 218.71,
-      "market_value": 2405.81,
-      "unrealized_pl": -12.87,
-      "unrealized_plpc": -0.00532
+      "price": 219.85,
+      "market_value": 2418.35,
+      "unrealized_pl": -0.33,
+      "unrealized_plpc": -0.00014
     },
     {
       "symbol": "SPY",
       "side": "long",
       "qty": 3,
       "avg_entry": 756.02,
-      "price": 765.02,
-      "market_value": 2295.06,
-      "unrealized_pl": 27,
-      "unrealized_plpc": 0.0119
+      "price": 772.83,
+      "market_value": 2318.49,
+      "unrealized_pl": 50.43,
+      "unrealized_plpc": 0.02223
     }
   ],
-  "summary": "No trades. Bankroll $9,866.60 (-1.33%); book unchanged since 8/17 (SPY 3, RSP 11, IJH 30, IWM 8) at 94.23% gross with a $568.91 sleeve. All eight pre-registered rules re-derived from source, including re-pulling the 8/19 baseline bars, which reproduced the $9,474.40 book exactly: tilt tracker -136.5bps vs a -600bps trigger (+16.7bps today, first improvement in four sessions), HY beating IG by 52.7bps so no credit event, breaker 523bps clear, RSP's 25% cap binding first at $226.12 (+3.41%). The one substantive finding is a correction to rule 5: the sleeve's 'addressable slice' became reachable for the first time (slack $75.58 vs IJH at $75.01), but pricing the trade showed the 95% gross cap and the 5% sleeve floor are the same constraint, so buying 1 IJH would cut guardrail headroom from +16.3% to +0.12% of market move -- the slice was never idle capital, it is the buffer itself, and it only 'opened' because IJH fell 3.8%. Declined the IWM put/call 3.58 contrarian idea at the edge test (a published ratio, read in my own news feed, and contaminated by IWM's role as the standard small-cap hedging vehicle); named a new trap, symmetric narrative, since yesterday's flow argued cutting the tilt and today's argues adding to it on the same book 24 hours apart.",
-  "next_wake": "2026-09-03T14:00:00Z"
+  "summary": "No trades. Bankroll $9,935.87 (-0.64%); book unchanged since 8/17 (SPY 3, RSP 11, IJH 30, IWM 8 = $9,366.96 gross, 94.27%, sleeve 5.73%). Re-derived all guardrails from source: tilt tracker -161.3bps vs a -600bps trigger, drawdown breaker 591bps away, RSP the binding position cap at +2.70%, credit still favouring HY over IG by 33bps. Deficit to SPY is a new worst at 461bps, but the tilt is -1.26 sigma over 11 sessions versus -1.33 sigma two sessions ago -- the number got worse while the evidence got weaker, so I treated the new worst as the order statistic it is rather than a signal. Research allowance blank: no dated catalyst where I can name a security I claim to know better than the tape. Yesterday's rule-5 amendment was tested and held -- the sleeve trade that was legal by 57 cents on 9/02 would put gross at 95.04% today.",
+  "next_wake": "2026-09-04T14:00:00Z"
 }
