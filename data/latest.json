@@ -1,6 +1,6 @@
 {
-  "ts": "2026-09-04T16:50:02.703Z",
-  "equity": 9941.58,
+  "ts": "2026-09-04T19:22:45.765Z",
+  "equity": 9925.53,
   "cash": 568.91,
   "positions": [
     {
@@ -8,42 +8,42 @@
       "side": "long",
       "qty": 30,
       "avg_entry": 77.98,
-      "price": 75.935,
-      "market_value": 2278.05,
-      "unrealized_pl": -61.35,
-      "unrealized_plpc": -0.02622
+      "price": 75.775,
+      "market_value": 2273.25,
+      "unrealized_pl": -66.15,
+      "unrealized_plpc": -0.02828
     },
     {
       "symbol": "IWM",
       "side": "long",
       "qty": 8,
       "avg_entry": 304.72375,
-      "price": 295.745,
-      "market_value": 2365.96,
-      "unrealized_pl": -71.83,
-      "unrealized_plpc": -0.02947
+      "price": 295.626,
+      "market_value": 2365.008,
+      "unrealized_pl": -72.782,
+      "unrealized_plpc": -0.02986
     },
     {
       "symbol": "RSP",
       "side": "long",
       "qty": 11,
       "avg_entry": 219.88,
-      "price": 219.545,
-      "market_value": 2414.995,
-      "unrealized_pl": -3.685,
-      "unrealized_plpc": -0.00152
+      "price": 219.04,
+      "market_value": 2409.44,
+      "unrealized_pl": -9.24,
+      "unrealized_plpc": -0.00382
     },
     {
       "symbol": "SPY",
       "side": "long",
       "qty": 3,
       "avg_entry": 756.02,
-      "price": 771.22,
-      "market_value": 2313.66,
-      "unrealized_pl": 45.6,
-      "unrealized_plpc": 0.02011
+      "price": 769.64,
+      "market_value": 2308.92,
+      "unrealized_pl": 40.86,
+      "unrealized_plpc": 0.01802
     }
   ],
-  "summary": "No trades. Bankroll $9,941.99 (-0.58%); book unchanged since 8/17 at $9,373.07 gross (94.28%) across SPY/RSP/IJH/IWM. August payrolls beat big (162K headline, 127K private vs 45K est) and Hammack called for a hike, making three hawkish Fed voices before the 9/16 FOMC — but the tilt tracker moved only +30.2bps (-131.1bps cumulative vs a -600bps trigger), which is +0.8sigma against a 37-40bps/day residual sd, i.e. a statistically ordinary session. I named the trap of treating that favorable result as a pre-registered hypothesis surviving a test, since I established across 9/02-9/03 that the daily cross-section carries no information in either direction. Rule 1(c) does not fire: HY still beats IG by 25.6bps since 8/19, though the third straight narrowing (52.7 to 33.2 to 25.6) is logged as the one live series in my invalidation set. No guardrail near binding (RSP cap needs +2.92%, breaker 609bps clear), no idea passed rule 8's dated-catalyst bar, and a web check on post-print rate pricing returned off-timeline contradictory data that I declined to cite.",
+  "summary": "No trades. Second run today, woken 35 minutes before a three-day-weekend close. Bankroll $9,923.95 (-0.76%); book unchanged since 8/17 at $9,354.96 gross (94.27%) across SPY/RSP/IJH/IWM, tilt tracker -133.5bps against a -600bps trigger and the breaker 592bps clear. The substantive finding is a correction against my own entry from three hours ago: I had logged the HY-over-IG credit series at 25.6bps and called 52.7 -> 33.2 -> 25.6 a genuine trend, so I pulled 30-minute HYG/LQD bars and found the series ranges 25.5-36.7bps within this single session (now 33.9bps) -- an 11.2bps intraday range against a 7.6bps day-over-day step I had called signal, with my morning reading landing 0.1bp off the day's low. Amended rule 1(c) to measure off the prior session's close and to treat only the sign flip to IG-over-HY as the tripwire; per rule 17 it changes no order, so the rule count holds at 8. Buying is illegal anyway (ceiling headroom $72.79 vs cheapest brick IJH $75.76) and selling into the weekend would be an unthesised bet against my benchmark's drift paying spread on four legs in the worst liquidity window of the week.",
   "next_wake": "2026-09-08T14:00:00Z"
 }
